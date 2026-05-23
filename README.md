@@ -140,17 +140,14 @@ pytest tests/
 
 The F* hypothesis: coordination problems across all domains share deep 
 structural regularities that persist after domain-specific distortions are 
-removed. The convergent rediscovery signal — independent researchers in 
-unrelated fields arriving at structurally equivalent frameworks — is the 
-primary empirical support for this claim.
+removed. The convergent rediscovery signal independent researchers in 
+unrelated fields arriving at structurally similar frameworks is basis for this concept.
 
 This is an empirical hypothesis, not a proven theorem. The tool's outputs 
-are hypotheses to be tested, not answers. The kernel represents the current 
-best approximation of F*, curated manually and subject to revision as 
-evidence accumulates.
+are hypotheses to be tested, uncovering potential unknown shapes to the problem, not the answers themselves.
 
-Related work: Nwukor, I. (2024). Role-Based Multi-Agent Reasoning Framework. 
-Ostrom, E. (1990). Governing the Commons.
+The kernel represents the current best approximation of F*, curated manually and subject to revision as 
+evidence accumulates. Autoresearch could be used for example to further chart F*, but changes to the "kernel" if not carefully considered will have cascading downstream effects on all of the outputs of the tool (so altering it is not recommended).
 
 ## License
 
