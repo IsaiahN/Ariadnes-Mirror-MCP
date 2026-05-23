@@ -153,6 +153,13 @@ The tool is the hypothesis put to the test.
 The tool's outputs' uncover potential shapes of a problem and structurally analogous solutions 
 from other domains to present potential solutions but the validation work will still be required. 
 
+### How F* Mappings Work
+Each theory in the kernel or added to thread libraries are categorized as one of these three:
+
+- **Blueprints** are full-coverage frameworks that describe an entire coordination space at all levels, independently derived and empirically validated across domains, and the strongest signal that a theory is measuring something real about F* rather than its origin domain.
+- **Frameworks** explains a coherent subsystem with defined scope and internal logic, useful for concretizing hypotheses within a bounded problem space.
+- **Partials** are high-precision instruments that describe one mechanism exactly, used to sharpen predictions and identify known unsolvable subproblems within a hypothesis.
+- 
 ### On the Kernel
 
 The kernel is the system's approximation of F*. Its quality directly 
