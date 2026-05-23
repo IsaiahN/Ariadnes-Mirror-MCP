@@ -1,0 +1,61 @@
+coverage:
+  breadth_score: 0.4
+  convergent_discoveries: []
+  coverage_type: partial
+  depth_score: 1.0
+  fstar_dimensions_covered:
+  - adversarial_alignment
+  - information_asymmetry
+  fstar_refinements:
+  - proxy_divergence
+  novel_concepts:
+  - Metric fixation
+  - Proxy failure
+description: When a measure becomes a target, it ceases to be a good measure.
+distortion_profile:
+  actor_autonomy: 0.8
+  actor_count_regime: medium to massive
+  actor_intentionality: strategic/gaming
+  boundary_domains:
+  - Economics
+  - Management
+  emergent_problems:
+  - Metric corruption
+  incentive_legibility: 0.9
+  intersection_type: adversarial
+  physical_constraints:
+  - observability
+  resource_dynamics: zero-sum (metric)
+  resource_type: status/rewards
+  thermodynamic_regime: low
+domain: Economics
+f_star_coordinates:
+  actor_complexity: 0.7
+  boundary_permeability: 0.4
+  coupling_tightness: 0.8
+  information_asymmetry: 0.9
+  resource_pressure: 0.5
+  time_pressure: 0.6
+falsifiability_note: Predicts that optimizing for a proxy variable will eventually lead to a decrease in the quality of the underlying latent variable it was intended to represent.
+id: goodharts_law
+key_refs:
+- 'Goodhart, C. (1975). Problems of Monetary Management: The UK Experience.'
+- 'Strathern, M. (1997). Improving Ratings: Audit in the British University System.'
+known_failure_modes:
+- Metric gaming
+- Latent variable neglect
+- Systemic drift from goals
+name: Goodhart's Law
+scale_level: social/institutional
+structural_tags:
+- adversarial
+- regulatory
+structural_topology:
+  directionality: Goal -> Metric -> Behavior
+  feedback_loops: Pathological positive feedback
+  roles:
+  - Principal (Metric setter)
+  - Agent (Metric follower)
+  - Proxy Measure
+  scale: Institutional
+  time_horizon: Short-term (gaming)

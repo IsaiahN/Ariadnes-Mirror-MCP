@@ -1,0 +1,62 @@
+coverage:
+  breadth_score: 0.95
+  convergent_discoveries: []
+  coverage_type: blueprint
+  depth_score: 0.8
+  fstar_dimensions_covered:
+  - information_asymmetry
+  - actor_complexity
+  fstar_refinements:
+  - double_bind_dynamics
+  novel_concepts:
+  - Difference that makes a difference
+  - Double bind
+  - Schismogenesis
+description: The study of the interaction of ideas, where ideas are seen as living in an ecosystem of information.
+distortion_profile:
+  actor_autonomy: 0.7
+  actor_count_regime: medium
+  actor_intentionality: cognitive/social
+  boundary_domains:
+  - Anthropology
+  - Psychology
+  emergent_problems:
+  - Context collapse
+  incentive_legibility: 0.3
+  intersection_type: informational
+  physical_constraints:
+  - substrate neutral
+  resource_dynamics: semantic
+  resource_type: patterns/meaning
+  thermodynamic_regime: low
+domain: Anthropology/Cybernetics
+f_star_coordinates:
+  actor_complexity: 0.9
+  boundary_permeability: 0.7
+  coupling_tightness: 0.4
+  information_asymmetry: 0.9
+  resource_pressure: 0.2
+  time_pressure: 0.3
+falsifiability_note: Predicts that contradictory signals at different levels of abstraction (meta-messages) will cause predictable systemic dysfunction (double binds).
+id: bateson_ecology_of_mind
+key_refs:
+- 'Bateson, G. (1972). Steps to an Ecology of Mind.'
+known_failure_modes:
+- Paradoxical communication
+- Meta-message mismatch
+- Systemic schismogenesis
+name: Ecology of Mind
+scale_level: universal
+structural_tags:
+- layered
+- network
+- cyclic
+structural_topology:
+  directionality: Multi-level
+  feedback_loops: Complex/Recursive
+  roles:
+  - Message
+  - Meta-message
+  - Context
+  scale: Universal
+  time_horizon: Generational

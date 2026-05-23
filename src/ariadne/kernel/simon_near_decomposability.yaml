@@ -1,0 +1,61 @@
+coverage:
+  breadth_score: 0.8
+  convergent_discoveries: []
+  coverage_type: framework
+  depth_score: 0.8
+  fstar_dimensions_covered:
+  - information_asymmetry
+  - actor_complexity
+  fstar_refinements:
+  - decomposability_hierarchy
+  novel_concepts:
+  - Near-decomposability
+  - Bounded rationality
+description: Complex systems are often composed of hierarchies where internal interactions are much stronger than external ones.
+distortion_profile:
+  actor_autonomy: 0.6
+  actor_count_regime: medium
+  actor_intentionality: bounded
+  boundary_domains:
+  - Economics
+  - Computer Science
+  emergent_problems:
+  - Interface mismatch
+  incentive_legibility: 0.8
+  intersection_type: hierarchical
+  physical_constraints:
+  - communication costs
+  resource_dynamics: discrete
+  resource_type: attention/processing
+  thermodynamic_regime: low
+domain: Systems Science
+f_star_coordinates:
+  actor_complexity: 0.8
+  boundary_permeability: 0.4
+  coupling_tightness: 0.3
+  information_asymmetry: 0.6
+  resource_pressure: 0.5
+  time_pressure: 0.4
+falsifiability_note: Predicts that removing cross-module dependencies will have significantly less impact on local dynamics than removing intra-module dependencies.
+id: simon_near_decomposability
+key_refs:
+- 'Simon, H. A. (1962). The Architecture of Complexity.'
+known_failure_modes:
+- Hidden dependencies
+- Global coupling spikes
+- Over-modularization
+name: Near-Decomposability
+scale_level: universal
+structural_tags:
+- hierarchical
+- modular
+- layered
+structural_topology:
+  directionality: Hierarchical
+  feedback_loops: Localized
+  roles:
+  - Module
+  - Hierarchy
+  - Interface
+  scale: Universal
+  time_horizon: Evolutionary

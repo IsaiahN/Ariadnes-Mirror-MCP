@@ -1,0 +1,63 @@
+coverage:
+  breadth_score: 0.75
+  convergent_discoveries: []
+  coverage_type: framework
+  depth_score: 0.85
+  fstar_dimensions_covered:
+  - coupling_tightness
+  - actor_complexity
+  - resource_pressure
+  fstar_refinements:
+  - ruggedness_tuning
+  novel_concepts:
+  - Epistasis (N)
+  - Connectivity (K)
+  - Rugged Landscape
+description: A model for studying the relationship between system complexity (connectivity) and the "ruggedness" of its fitness landscape.
+distortion_profile:
+  actor_autonomy: 0.1
+  actor_count_regime: low to high
+  actor_intentionality: adaptive
+  boundary_domains:
+  - Evolutionary Biology
+  - Computer Science
+  emergent_problems:
+  - Complexity catastrophe
+  incentive_legibility: 0.5
+  intersection_type: adaptive
+  physical_constraints:
+  - search space size
+  resource_dynamics: fitness
+  resource_type: relative success
+  thermodynamic_regime: medium
+domain: Complexity Science
+f_star_coordinates:
+  actor_complexity: 0.6
+  boundary_permeability: 0.3
+  coupling_tightness: 0.9
+  information_asymmetry: 0.4
+  resource_pressure: 0.6
+  time_pressure: 0.7
+falsifiability_note: Predicts that as K (coupling) increases relative to N (components), the number of local optima increases and their average fitness decreases (Complexity Catastrophe).
+id: kauffman_nk_landscapes
+key_refs:
+- 'Kauffman, S. A. (1993). The Origins of Order.'
+known_failure_modes:
+- Over-coupling (stasis)
+- Under-coupling (drift)
+- Local optima trapping
+name: Kauffman NK Landscapes
+scale_level: universal
+structural_tags:
+- network
+- evolutionary
+- modular
+structural_topology:
+  directionality: Search-directed
+  feedback_loops: Local adaptation
+  roles:
+  - Component
+  - Linkage
+  - Landscape
+  scale: Universal
+  time_horizon: Evolutionary

@@ -1,0 +1,65 @@
+coverage:
+  breadth_score: 0.9
+  convergent_discoveries:
+  - concept: Requisite Complexity
+    found_in: software_engineering
+    local_name: Cyclomatic Complexity
+  coverage_type: blueprint
+  depth_score: 1.0
+  fstar_dimensions_covered:
+  - actor_complexity
+  - information_asymmetry
+  - coupling_tightness
+  fstar_refinements:
+  - complexity_mapping
+  novel_concepts:
+  - Variety
+  - Regulator
+description: A system's internal variety must match the variety of the disturbances it must regulate.
+distortion_profile:
+  actor_autonomy: 0.5
+  actor_count_regime: low
+  actor_intentionality: regulatory
+  boundary_domains:
+  - Control Theory
+  - Information Theory
+  emergent_problems:
+  - Variety overload
+  incentive_legibility: 1.0
+  intersection_type: regulatory
+  physical_constraints:
+  - channel capacity
+  resource_dynamics: informational
+  resource_type: bits/states
+  thermodynamic_regime: low/informational
+domain: Cybernetics
+f_star_coordinates:
+  actor_complexity: 0.9
+  boundary_permeability: 0.3
+  coupling_tightness: 0.8
+  information_asymmetry: 0.8
+  resource_pressure: 0.4
+  time_pressure: 0.5
+falsifiability_note: Predicts that a regulator with fewer states than the disturbances it encounters will be unable to maintain its objective variables within bounds.
+id: ashby_requisite_variety
+key_refs:
+- 'Ashby, W. R. (1956). An Introduction to Cybernetics.'
+known_failure_modes:
+- Variety overload
+- Information bottleneck
+- Delayed feedback
+name: Ashby's Law of Requisite Variety
+scale_level: universal
+structural_tags:
+- regulatory
+- layered
+- modular
+structural_topology:
+  directionality: Disturbance -> System; Controller -> System
+  feedback_loops: Negative feedback
+  roles:
+  - Regulator
+  - System
+  - Environment/Disturbances
+  scale: Universal
+  time_horizon: Continuous

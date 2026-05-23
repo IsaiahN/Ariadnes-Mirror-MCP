@@ -1,0 +1,67 @@
+coverage:
+  breadth_score: 0.85
+  convergent_discoveries:
+  - concept: Autocatalysis
+    found_in: biochemistry
+    local_name: Metabolic Cycles
+  coverage_type: blueprint
+  depth_score: 0.9
+  fstar_dimensions_covered:
+  - resource_pressure
+  - coupling_tightness
+  - time_pressure
+  fstar_refinements:
+  - far_from_equilibrium_dynamics
+  novel_concepts:
+  - Dissipative Structures
+  - Non-equilibrium thermodynamics
+  - Self-organization
+description: Open systems far from equilibrium that maintain order by dissipating energy/entropy.
+distortion_profile:
+  actor_autonomy: 0.0
+  actor_count_regime: massive
+  actor_intentionality: emergent
+  boundary_domains:
+  - Physics
+  - Chemistry
+  emergent_problems:
+  - Symmetry breaking
+  incentive_legibility: 0.0
+  intersection_type: physical
+  physical_constraints:
+  - energy gradients
+  - entropy export
+  resource_dynamics: continuous flow
+  resource_type: energy/matter
+  thermodynamic_regime: high/non-equilibrium
+domain: Physics/Complexity
+f_star_coordinates:
+  actor_complexity: 0.1
+  boundary_permeability: 1.0
+  coupling_tightness: 0.9
+  information_asymmetry: 0.2
+  resource_pressure: 0.9
+  time_pressure: 0.7
+falsifiability_note: Predicts that order will collapse if the energy gradient (resource pressure) falls below a critical threshold.
+id: prigogine_dissipative_structures
+key_refs:
+- 'Prigogine, I. (1980). From Being to Becoming.'
+known_failure_modes:
+- Gradient depletion
+- Perturbation beyond stability limit
+- Scale-up collapse
+name: Dissipative Structures
+scale_level: universal
+structural_tags:
+- cyclic
+- evolutionary
+- network
+structural_topology:
+  directionality: Gradient -> Dissipation
+  feedback_loops: Positive (reinforcing) and Negative (stabilizing)
+  roles:
+  - Energy Source
+  - Entropy Sink
+  - Dissipative Flow
+  scale: Universal
+  time_horizon: Transient to Stable

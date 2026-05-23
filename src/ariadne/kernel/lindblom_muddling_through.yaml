@@ -1,0 +1,62 @@
+coverage:
+  breadth_score: 0.7
+  convergent_discoveries: []
+  coverage_type: framework
+  depth_score: 0.75
+  fstar_dimensions_covered:
+  - actor_complexity
+  - time_pressure
+  - information_asymmetry
+  fstar_refinements:
+  - incrementalism_threshold
+  novel_concepts:
+  - Incrementalism
+  - Root vs. Branch method
+  - Successive Limited Comparisons
+description: Decision-making in complex environments usually proceeds through small, incremental steps rather than comprehensive rational analysis.
+distortion_profile:
+  actor_autonomy: 0.8
+  actor_count_regime: medium
+  actor_intentionality: bounded/political
+  boundary_domains:
+  - Public Administration
+  - Political Science
+  emergent_problems:
+  - Strategic drift
+  incentive_legibility: 0.6
+  intersection_type: political
+  physical_constraints:
+  - cognitive limits
+  resource_dynamics: political capital
+  resource_type: consensus
+  thermodynamic_regime: low
+domain: Political Science/Management
+f_star_coordinates:
+  actor_complexity: 0.8
+  boundary_permeability: 0.4
+  coupling_tightness: 0.5
+  information_asymmetry: 0.8
+  resource_pressure: 0.4
+  time_pressure: 0.7
+falsifiability_note: Predicts that large-scale, non-incremental changes in complex systems will have higher failure rates and more unpredictable outcomes than series of small changes.
+id: lindblom_muddling_through
+key_refs:
+- 'Lindblom, C. E. (1959). The Science of "Muddling Through".'
+known_failure_modes:
+- Goal displacement
+- Systematic drift
+- Crisis of small steps
+name: Muddling Through (Incrementalism)
+scale_level: social/institutional
+structural_tags:
+- layered
+- evolutionary
+structural_topology:
+  directionality: Linear-Incremental
+  feedback_loops: Corrective/Successive
+  roles:
+  - Decision Maker
+  - Policy/State
+  - Environment
+  scale: Institutional
+  time_horizon: Short-term/Continuous

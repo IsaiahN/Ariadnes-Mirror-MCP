@@ -1,0 +1,63 @@
+coverage:
+  breadth_score: 0.6
+  convergent_discoveries: []
+  coverage_type: framework
+  depth_score: 0.8
+  fstar_dimensions_covered:
+  - information_asymmetry
+  - resource_pressure
+  - actor_complexity
+  fstar_refinements:
+  - spontaneous_order_dynamics
+  novel_concepts:
+  - Spontaneous Order
+  - Grown vs. Designed Order
+  - Knowledge Problem
+description: The distinction between orders that emerge spontaneously (cosmos) and those that are deliberately constructed (taxis).
+distortion_profile:
+  actor_autonomy: 0.9
+  actor_count_regime: massive
+  actor_intentionality: local/strategic
+  boundary_domains:
+  - Economics
+  - Political Philosophy
+  emergent_problems:
+  - Knowledge dispersion
+  incentive_legibility: 0.7
+  intersection_type: social
+  physical_constraints:
+  - signal noise
+  resource_dynamics: market/social
+  resource_type: local information
+  thermodynamic_regime: low
+domain: Economics/Philosophy
+f_star_coordinates:
+  actor_complexity: 0.8
+  boundary_permeability: 0.7
+  coupling_tightness: 0.3
+  information_asymmetry: 1.0
+  resource_pressure: 0.6
+  time_pressure: 0.5
+falsifiability_note: Predicts that central planners will systematically fail to utilize the dispersed, tacit knowledge available to local actors in a grown order.
+id: hayek_grown_order
+key_refs:
+- 'Hayek, F. A. (1973). Law, Legislation and Liberty, Volume 1: Rules and Order.'
+known_failure_modes:
+- Calculation problem
+- Institutional sclerosis
+- Constructivist fallacy
+name: Grown vs. Designed Order
+scale_level: institutional/social
+structural_tags:
+- market
+- evolutionary
+- network
+structural_topology:
+  directionality: Bottom-up (Grown) vs Top-down (Designed)
+  feedback_loops: Distributed (Grown) vs Centralized (Designed)
+  roles:
+  - Planner
+  - Individual Actor
+  - Rule System
+  scale: Institutional
+  time_horizon: Generational

@@ -1,0 +1,66 @@
+coverage:
+  breadth_score: 0.8
+  convergent_discoveries:
+  - concept: Meaning-making
+    found_in: bateson_ecology_of_mind
+    local_name: Contextual Patterns
+  coverage_type: framework
+  depth_score: 0.8
+  fstar_dimensions_covered:
+  - information_asymmetry
+  - boundary_permeability
+  fstar_refinements:
+  - communicative_autopoiesis
+  novel_concepts:
+  - Binary Coding (e.g. legal/illegal)
+  - Functional Differentiation
+  - Structural Coupling
+description: Social systems are composed not of people, but of communications, organized as autopoietic, self-referential systems.
+distortion_profile:
+  actor_autonomy: 0.9
+  actor_count_regime: massive
+  actor_intentionality: communicative
+  boundary_domains:
+  - Sociology
+  - Law
+  - Economics
+  emergent_problems:
+  - Systemic irritation
+  incentive_legibility: 0.4
+  intersection_type: social
+  physical_constraints:
+  - communication medium
+  resource_dynamics: communicative
+  resource_type: social meaning
+  thermodynamic_regime: low
+domain: Sociology
+f_star_coordinates:
+  actor_complexity: 0.9
+  boundary_permeability: 0.3
+  coupling_tightness: 0.4
+  information_asymmetry: 0.9
+  resource_pressure: 0.3
+  time_pressure: 0.5
+falsifiability_note: Predicts that social systems will only process environmental changes if they can be translated into the system's specific binary code.
+id: luhmann_social_systems
+key_refs:
+- 'Luhmann, N. (1995). Social Systems.'
+known_failure_modes:
+- Translation failure
+- Hyper-differentiation
+- Paradoxical signaling
+name: Luhmann Social Systems
+scale_level: social
+structural_tags:
+- cyclic
+- network
+- layered
+structural_topology:
+  directionality: Self-referential
+  feedback_loops: Operative closure
+  roles:
+  - Communication
+  - System
+  - Environment
+  scale: Institutional
+  time_horizon: Generational

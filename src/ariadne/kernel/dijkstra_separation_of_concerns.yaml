@@ -1,0 +1,61 @@
+coverage:
+  breadth_score: 0.4
+  convergent_discoveries: []
+  coverage_type: partial
+  depth_score: 1.0
+  fstar_dimensions_covered:
+  - coupling_tightness
+  - actor_complexity
+  fstar_refinements:
+  - concern_orthogonality
+  novel_concepts:
+  - Separation of Concerns
+  - Modularity
+description: A design principle for separating a computer program into distinct sections such that each section addresses a separate concern.
+distortion_profile:
+  actor_autonomy: 0.0
+  actor_count_regime: low
+  actor_intentionality: designer-imposed
+  boundary_domains:
+  - Computer Science
+  - Software Engineering
+  emergent_problems:
+  - Leaky abstractions
+  incentive_legibility: 1.0
+  intersection_type: formal/logical
+  physical_constraints:
+  - complexity limits
+  resource_dynamics: cognitive load
+  resource_type: attention
+  thermodynamic_regime: low
+domain: Computer Science
+f_star_coordinates:
+  actor_complexity: 0.6
+  boundary_permeability: 0.1
+  coupling_tightness: 0.2
+  information_asymmetry: 0.3
+  resource_pressure: 0.2
+  time_pressure: 0.1
+falsifiability_note: Predicts that systems with high coupling between concerns will have significantly higher maintenance costs and higher bug rates during modification.
+id: dijkstra_separation_of_concerns
+key_refs:
+- 'Dijkstra, E. W. (1974). On the role of scientific thought.'
+known_failure_modes:
+- Over-engineering
+- Fragmented state
+- Interface bloat
+name: Separation of Concerns
+scale_level: universal/formal
+structural_tags:
+- modular
+- layered
+- hierarchical
+structural_topology:
+  directionality: Orthogonal
+  feedback_loops: Minimized
+  roles:
+  - Concern
+  - Module
+  - Interface
+  scale: Universal
+  time_horizon: Stable

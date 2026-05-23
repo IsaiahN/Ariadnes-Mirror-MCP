@@ -1,0 +1,62 @@
+coverage:
+  breadth_score: 0.8
+  convergent_discoveries: []
+  coverage_type: framework
+  depth_score: 0.8
+  fstar_dimensions_covered:
+  - boundary_permeability
+  - resource_pressure
+  - coupling_tightness
+  fstar_refinements:
+  - ecological_inheritance
+  novel_concepts:
+  - Niche Construction
+  - Ecological Inheritance
+description: Organisms actively modify their environment, and these modifications can create new selection pressures for themselves and other species.
+distortion_profile:
+  actor_autonomy: 0.4
+  actor_count_regime: medium to massive
+  actor_intentionality: reflexive/active
+  boundary_domains:
+  - Ecology
+  - Evolutionary Biology
+  emergent_problems:
+  - Feedback lag
+  incentive_legibility: 0.2
+  intersection_type: ecological
+  physical_constraints:
+  - environmental capacity
+  resource_dynamics: bidirectional
+  resource_type: environmental states
+  thermodynamic_regime: medium/biological
+domain: Evolutionary Biology
+f_star_coordinates:
+  actor_complexity: 0.5
+  boundary_permeability: 0.9
+  coupling_tightness: 0.7
+  information_asymmetry: 0.4
+  resource_pressure: 0.8
+  time_pressure: 0.5
+falsifiability_note: Predicts that organism-induced environmental changes will result in non-random shifts in selection pressures that would not occur in a passive environment.
+id: niche_construction_theory
+key_refs:
+- 'Odling-Smee, F. J., Laland, K. N., & Feldman, M. W. (2003). Niche Construction: The Neglected Process in Evolution.'
+known_failure_modes:
+- Niche destruction (over-exploitation)
+- Time-lagged feedback failure
+- Competitive niche pre-emption
+name: Niche Construction Theory
+scale_level: organism/ecosystem
+structural_tags:
+- network
+- cyclic
+- evolutionary
+structural_topology:
+  directionality: Bidirectional (Organism <-> Environment)
+  feedback_loops: Eco-evolutionary feedback
+  roles:
+  - Organism
+  - Environment
+  - Selection Pressure
+  scale: Ecosystem
+  time_horizon: Evolutionary

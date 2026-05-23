@@ -1,0 +1,61 @@
+coverage:
+  breadth_score: 0.5
+  convergent_discoveries: []
+  coverage_type: partial
+  depth_score: 1.0
+  fstar_dimensions_covered:
+  - actor_complexity
+  - adversarial_alignment
+  fstar_refinements:
+  - impossibility_frontier
+  novel_concepts:
+  - Independence of Irrelevant Alternatives
+  - Non-dictatorship
+  - Pareto Efficiency
+description: No rank-order voting system can convert the ranked preferences of individuals into a community-wide ranking while meeting a specific set of fairness criteria.
+distortion_profile:
+  actor_autonomy: 1.0
+  actor_count_regime: medium to massive
+  actor_intentionality: preference-bearing
+  boundary_domains:
+  - Economics
+  - Mathematics
+  emergent_problems:
+  - Cycling (Condorcet Paradox)
+  incentive_legibility: 1.0
+  intersection_type: formal
+  physical_constraints:
+  - rank ordering
+  resource_dynamics: formal
+  resource_type: social choice
+  thermodynamic_regime: low
+domain: Social Choice Theory
+f_star_coordinates:
+  actor_complexity: 0.4
+  boundary_permeability: 0.2
+  coupling_tightness: 0.3
+  information_asymmetry: 0.5
+  resource_pressure: 0.1
+  time_pressure: 0.2
+falsifiability_note: Mathematically proven; falsifiability applies to its application to specific voting systems (predicts that any such system will violate one of the axioms).
+id: arrows_impossibility
+key_refs:
+- 'Arrow, K. J. (1951). Social Choice and Individual Values.'
+known_failure_modes:
+- Strategic voting
+- Dictatorial emergence
+- Irrational collective preference
+name: Arrow's Impossibility Theorem
+scale_level: institutional
+structural_tags:
+- market
+- adversarial
+structural_topology:
+  directionality: Aggregate
+  feedback_loops: None (one-shot aggregate)
+  roles:
+  - Voter
+  - Alternative
+  - Aggregator
+  scale: Institutional
+  time_horizon: Discrete

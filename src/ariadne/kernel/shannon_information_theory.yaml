@@ -1,0 +1,63 @@
+coverage:
+  breadth_score: 0.7
+  convergent_discoveries: []
+  coverage_type: framework
+  depth_score: 0.9
+  fstar_dimensions_covered:
+  - information_asymmetry
+  - coupling_tightness
+  fstar_refinements:
+  - channel_capacity_limits
+  novel_concepts:
+  - Entropy (Information)
+  - Redundancy
+  - Channel Capacity
+description: The mathematical study of the quantification, storage, and communication of information.
+distortion_profile:
+  actor_autonomy: 0.0
+  actor_count_regime: low
+  actor_intentionality: passive
+  boundary_domains:
+  - Engineering
+  - Physics
+  emergent_problems:
+  - Signal degradation
+  incentive_legibility: 1.0
+  intersection_type: physical/signal
+  physical_constraints:
+  - bandwidth
+  - noise floor
+  resource_dynamics: informational
+  resource_type: bits
+  thermodynamic_regime: low
+domain: Communication Theory
+f_star_coordinates:
+  actor_complexity: 0.2
+  boundary_permeability: 0.4
+  coupling_tightness: 0.7
+  information_asymmetry: 1.0
+  resource_pressure: 0.8
+  time_pressure: 0.5
+falsifiability_note: Predicts that information cannot be transmitted at a rate higher than the channel capacity with an arbitrarily low error rate.
+id: shannon_information_theory
+key_refs:
+- 'Shannon, C. E. (1948). A Mathematical Theory of Communication.'
+known_failure_modes:
+- Noise overflow
+- Encoding error
+- Latency jitter
+name: Shannon Information Theory
+scale_level: universal
+structural_tags:
+- network
+- layered
+structural_topology:
+  directionality: Source -> Encoder -> Channel -> Decoder -> Destination
+  feedback_loops: Optional (ACK/NACK)
+  roles:
+  - Source
+  - Receiver
+  - Channel
+  - Noise
+  scale: Universal
+  time_horizon: Instantaneous

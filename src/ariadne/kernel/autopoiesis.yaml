@@ -1,0 +1,66 @@
+coverage:
+  breadth_score: 0.8
+  convergent_discoveries:
+  - concept: Self-referentiality
+    found_in: social_systems
+    local_name: Luhmann Autopoiesis
+  coverage_type: blueprint
+  depth_score: 0.85
+  fstar_dimensions_covered:
+  - boundary_permeability
+  - actor_complexity
+  - coupling_tightness
+  fstar_refinements:
+  - operational_closure
+  novel_concepts:
+  - Autopoiesis
+  - Operational Closure
+  - Structural Coupling
+description: Systems that are capable of reproducing and maintaining themselves through their own operations.
+distortion_profile:
+  actor_autonomy: 1.0
+  actor_count_regime: single/systemic
+  actor_intentionality: self-maintaining
+  boundary_domains:
+  - Biology
+  - Systems Theory
+  emergent_problems:
+  - Rigidity
+  incentive_legibility: 0.5
+  intersection_type: operational
+  physical_constraints:
+  - boundary maintenance
+  resource_dynamics: metabolic
+  resource_type: matter/energy
+  thermodynamic_regime: medium/biological
+domain: Systems Biology
+f_star_coordinates:
+  actor_complexity: 0.7
+  boundary_permeability: 0.2
+  coupling_tightness: 0.9
+  information_asymmetry: 0.5
+  resource_pressure: 0.7
+  time_pressure: 0.4
+falsifiability_note: Predicts that if a system's internal operations stop producing the components that produce the operations, the system will cease to exist as a distinct entity.
+id: autopoiesis
+key_refs:
+- 'Maturana, H. R., & Varela, F. J. (1980). Autopoiesis and Cognition.'
+known_failure_modes:
+- Resource starvation
+- Internal decoherence
+- Decoupling from environment
+name: Autopoiesis
+scale_level: organism
+structural_tags:
+- cyclic
+- regulatory
+- network
+structural_topology:
+  directionality: Circular
+  feedback_loops: Self-reproducing
+  roles:
+  - Producer
+  - Product
+  - Boundary
+  scale: Universal
+  time_horizon: Life-cycle

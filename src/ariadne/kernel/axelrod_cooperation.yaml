@@ -1,0 +1,63 @@
+coverage:
+  breadth_score: 0.75
+  convergent_discoveries: []
+  coverage_type: framework
+  depth_score: 0.95
+  fstar_dimensions_covered:
+  - coupling_tightness
+  - time_pressure
+  - adversarial_alignment
+  fstar_refinements:
+  - shadow_of_the_future
+  novel_concepts:
+  - Tit-for-Tat
+  - Shadow of the Future
+  - Reciprocity
+description: Cooperation can emerge in a world of egoists without central authority, provided the shadow of the future is long enough.
+distortion_profile:
+  actor_autonomy: 1.0
+  actor_count_regime: low (dyadic)
+  actor_intentionality: rational/egoist
+  boundary_domains:
+  - Game Theory
+  - Biology
+  emergent_problems:
+  - Defection cycles
+  incentive_legibility: 1.0
+  intersection_type: adversarial/cooperative
+  physical_constraints:
+  - interaction frequency
+  resource_dynamics: zero-sum/positive-sum
+  resource_type: fitness/utility
+  thermodynamic_regime: low
+domain: Game Theory/Political Science
+f_star_coordinates:
+  actor_complexity: 0.4
+  boundary_permeability: 0.5
+  coupling_tightness: 0.8
+  information_asymmetry: 0.2
+  resource_pressure: 0.7
+  time_pressure: 0.6
+falsifiability_note: Predicts that cooperation will collapse if the probability of future interaction (w) drops below a threshold determined by the payoff matrix.
+id: axelrod_cooperation
+key_refs:
+- 'Axelrod, R. (1984). The Evolution of Cooperation.'
+known_failure_modes:
+- Signal noise (accidental defection)
+- Short time horizon
+- Misperception of payoffs
+name: Evolution of Cooperation
+scale_level: social
+structural_tags:
+- adversarial
+- cooperative
+- cyclic
+structural_topology:
+  directionality: Iterative/Dyadic
+  feedback_loops: Reciprocity
+  roles:
+  - Player
+  - Strategy
+  - Payoff Matrix
+  scale: Social
+  time_horizon: Iterative/Long-term

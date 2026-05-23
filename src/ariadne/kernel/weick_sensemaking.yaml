@@ -1,0 +1,63 @@
+coverage:
+  breadth_score: 0.7
+  convergent_discoveries: []
+  coverage_type: framework
+  depth_score: 0.8
+  fstar_dimensions_covered:
+  - actor_complexity
+  - boundary_permeability
+  - information_asymmetry
+  fstar_refinements:
+  - enactment_patterns
+  novel_concepts:
+  - Enactment
+  - Retrospective Sensemaking
+  - Identity Construction
+description: The process by which people give meaning to their collective experiences, especially in organizations.
+distortion_profile:
+  actor_autonomy: 0.9
+  actor_count_regime: medium
+  actor_intentionality: interpretive
+  boundary_domains:
+  - Organizational Theory
+  - Psychology
+  emergent_problems:
+  - Pluralistic ignorance
+  incentive_legibility: 0.3
+  intersection_type: cognitive/social
+  physical_constraints:
+  - informational noise
+  resource_dynamics: semantic
+  resource_type: meaning
+  thermodynamic_regime: low
+domain: Organizational Sociology
+f_star_coordinates:
+  actor_complexity: 0.9
+  boundary_permeability: 0.6
+  coupling_tightness: 0.4
+  information_asymmetry: 0.8
+  resource_pressure: 0.3
+  time_pressure: 0.6
+falsifiability_note: Predicts that in high-ambiguity situations, actors will prioritize "plausibility" over "accuracy" in their narrative construction.
+id: weick_sensemaking
+key_refs:
+- 'Weick, K. E. (1995). Sensemaking in Organizations.'
+known_failure_modes:
+- Groupthink
+- Retrospective bias
+- Action paralysis (due to lack of meaning)
+name: Sensemaking
+scale_level: social/institutional
+structural_tags:
+- network
+- layered
+- cyclic
+structural_topology:
+  directionality: Recursive
+  feedback_loops: Action -> Outcome -> Interpretation -> Action
+  roles:
+  - Actor
+  - Environment
+  - Narrative
+  scale: Institutional
+  time_horizon: Continuous

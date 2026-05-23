@@ -1,0 +1,64 @@
+coverage:
+  breadth_score: 0.65
+  convergent_discoveries: []
+  coverage_type: framework
+  depth_score: 0.85
+  fstar_dimensions_covered:
+  - coupling_tightness
+  - time_pressure
+  - resource_pressure
+  fstar_refinements:
+  - institutional_lag_constant
+  novel_concepts:
+  - Trained Incapacity
+  - Institutional Inertia
+  - Cultural Lag
+description: The tendency of institutions to persist in their established patterns even when environment or technology changes.
+distortion_profile:
+  actor_autonomy: 0.5
+  actor_count_regime: medium to massive
+  actor_intentionality: habitual/institutional
+  boundary_domains:
+  - Sociology
+  - Institutional Economics
+  emergent_problems:
+  - Sclerosis
+  incentive_legibility: 0.4
+  intersection_type: institutional
+  physical_constraints:
+  - sunk costs
+  resource_dynamics: path-dependent
+  resource_type: legitimacy/habit
+  thermodynamic_regime: low
+domain: Sociology/Economics
+f_star_coordinates:
+  actor_complexity: 0.7
+  boundary_permeability: 0.2
+  coupling_tightness: 0.8
+  information_asymmetry: 0.6
+  resource_pressure: 0.7
+  time_pressure: 0.8
+falsifiability_note: Predicts a significant time lag between technical/environmental change and institutional adaptation.
+id: veblen_institutional_inertia
+key_refs:
+- 'Veblen, T. (1899). The Theory of the Leisure Class.'
+- 'North, D. C. (1990). Institutions, Institutional Change and Economic Performance.'
+known_failure_modes:
+- Adaptation failure
+- Path dependency trap
+- Crisis-induced collapse
+name: Institutional Inertia
+scale_level: institutional
+structural_tags:
+- hierarchical
+- layered
+- modular
+structural_topology:
+  directionality: Static/Conservative
+  feedback_loops: Stabilizing/Negative
+  roles:
+  - Institution
+  - Environment
+  - Habit/Routine
+  scale: Institutional
+  time_horizon: Long-term/Decadal

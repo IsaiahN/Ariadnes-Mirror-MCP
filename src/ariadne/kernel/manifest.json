@@ -1,13 +1,90 @@
 {
-  "version": "1.1.1",
+  "version": "1.1.2",
   "theories": [
     {
       "theory": {
         "id": "adaptive_immune_system"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "e50c626f254e8d7b48814e1931ea7b91c081523d5d42b742a2e3d8e58ade81a4",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "arrows_impossibility"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "ce4747fe5834d4358b6b01180481c64ed8887d5e7c103786a6ad044546bc03dd",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "ashby_requisite_variety"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "d70baa056d084b958af211be0da2e0627ded73d97caddaafee6328530d6e7d93",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "autopoiesis"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "72cdf8bdb24c6ad198582de332743d23241eb1e30451d4d1892025cc6f329c13",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "axelrod_cooperation"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "4e4e5ac78007b477d41353c24ab9a1d9c24b0d5a60951a7dbc3abcacd28e9ab5",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "bateson_ecology_of_mind"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "6a40ad4fb6fca297ecfe2fd4d946b47d72b8f5e99a0ad32759281f166d71dbc2",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "dijkstra_separation_of_concerns"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "5d96632d394322da72283dd3302a501a981faf2e5779641a7aa2d9b93c8e68a6",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "dunbars_number"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "1ee8a2ecdb0ba3459426f5b984cbf1c799c0625e41e7465088eeee5b05dc2891",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -16,9 +93,9 @@
       "theory": {
         "id": "ess_evolutionary_stable_strategy"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "dacd130561c526f6b0b9ade738adc4490662572d3bdfc7833f1114757f1297b6",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -27,9 +104,9 @@
       "theory": {
         "id": "federated_learning"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "4fc09bd60cff66d9f0225c75e5c06154f2ad7d5a4d3d10caaee7afc9a2171317",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -38,9 +115,20 @@
       "theory": {
         "id": "gift_economy"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "798a445d21c01f79798fabadecb261a2b358a9e3c8acc7b7e293794a0b928b3b",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "goodharts_law"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "1646844955c82b0c39eb1301e08800a7c27bc031e033868a716a3dab6e76b755",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -49,9 +137,20 @@
       "theory": {
         "id": "halting_problem"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "49e4b540530f046977708862b7cb08e05e474fdd9f40692eb98207321183ae8a",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "hayek_grown_order"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "c2a84d4c7d3b08e33c2df1ca02db0cf50c88b9442ef9121db70f38a34eb9766b",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -60,9 +159,9 @@
       "theory": {
         "id": "hayek_price_system"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "7cc6bcb5d135c9047c494c8a23504cb9eb9199fac57eb95b22d0f374bcef5b4d",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -71,9 +170,20 @@
       "theory": {
         "id": "jazz_improvisation"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "cf25a44577a6ba00e58be22b5bcb2c9646a1a212fdde2e182d77e042be9df394",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "kauffman_nk_landscapes"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "3b27e296f96650c888bebe136f9fb9e8499160795aa6c457b12cd1e7a8b1ee8a",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -82,9 +192,31 @@
       "theory": {
         "id": "lambda_calculus"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "5cb4288fc9ea65605859ec66c2fa890775a3e6ede814b5ddfbbc7e781d4ee5db",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "lindblom_muddling_through"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "78db3d3a92299fa97eb8807c0618cca91eacd65f7f52a714fc4e6896097307fe",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "luhmann_social_systems"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "f19235035535c942d3cafcb1b3cdb238b25e1e18332ee798b17e4e6b37ec3949",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -93,9 +225,9 @@
       "theory": {
         "id": "mimetic_desire"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "554fccc15d659cc3d1141e7cc5be9d082fbbb0651969202299c66e13c4c00aa7",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -104,9 +236,20 @@
       "theory": {
         "id": "minsky_instability"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "96b009b4ba30462e372cb5226c01512548f74767fede877d771366984140884b",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "niche_construction_theory"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "aacf4d668dc644ab09be679c8e050cdf4826b51502ad68ea922f5f28c2cbec5c",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -115,9 +258,9 @@
       "theory": {
         "id": "ooda_loop"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "c17baa43b26456b3b184663c2bf35a8a721dcc56478340c2ee5dc9bb188e85b1",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -126,9 +269,20 @@
       "theory": {
         "id": "optimal_foraging_theory"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "7d1dcf47c644af28b179139f4544a158fb242d5e5048341ceffd3207a0b81e13",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "ostrom_iad_framework"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "18d9d86e5e7b5286401981932e49aeb76a606dce21f1f0c00e92dbe44ce22447",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -137,9 +291,9 @@
       "theory": {
         "id": "ostrom_polycentric_governance"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "9f13ac4a961a737f9e91efa4c828ae065b6718d0292a5807485895c0f0fab234",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -148,9 +302,9 @@
       "theory": {
         "id": "ouroboros_qcycle"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "6645ef044d75cb89ed3f7ce4c9dd83a4fbf7a7e32d214e3027db72f3f234048f",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -159,9 +313,9 @@
       "theory": {
         "id": "panarchy"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "9345d076c3c8cbdfe017d4b7b6b05e7e563ab935437817b9bf3b881ca39b514b",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -170,9 +324,20 @@
       "theory": {
         "id": "percolation_theory"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "944e2a1325b583ead19ebced56884511269b5e51ecfa4ce8f755539c423b47d9",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "polanyi_tacit_knowledge"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "15ac1d082529d964bbb732e81c092271f73cf2836be77c80aae33b1c0ac5be3f",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -181,9 +346,20 @@
       "theory": {
         "id": "predictive_processing"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "46d742aa26b5a6923b40abbb88855014a46bb318aa36ed73811a67f58b7bb504",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "prigogine_dissipative_structures"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "8843f558d900f3cb3c2071819e3c4c14abdfbd0f960fa7e190ff35c660e062a6",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -192,9 +368,9 @@
       "theory": {
         "id": "principal_agent_theory"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "ebfabfaac7feb2834812dbabef632d530c628d5fc18a4676640c530f9185cd29",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -203,9 +379,9 @@
       "theory": {
         "id": "punctuated_equilibrium"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "643f1b67348f1361a4e8ea26a728b325d6c02fd746c4ad81941a45755c5f24d2",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -214,9 +390,9 @@
       "theory": {
         "id": "raft_consensus"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "223d123379e07e6010d955efaf3bc62528331d6c4b9763fe75664d723b067005",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -225,9 +401,9 @@
       "theory": {
         "id": "red_queen_hypothesis"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "fc785ab83ab1279f63e0d3572395c27bf88475ec3d39edb17ec8680f7e0b8ed6",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -236,9 +412,9 @@
       "theory": {
         "id": "second_law_thermodynamics"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "8f008f3ae6b7138809c86cb64dd381c2e8b20e3310f3f4fd4a99da79cd4e8520",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -247,9 +423,31 @@
       "theory": {
         "id": "self_organized_criticality"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "09633359d1b829e5970ff9424b84b60c308bdca792395184ad0f93e71f41b441",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "shannon_information_theory"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "e57f948aecd800b70a4b67b90f4eaed82d9b4242a54cd030946435867db831bb",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "simon_near_decomposability"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "b9590614c0066c839519b805cf208bb529315721acb0a99a16f8174ba1a1d79c",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
@@ -258,19 +456,67 @@
       "theory": {
         "id": "small_world_network"
       },
-      "kernel_version": "1.1.1",
+      "kernel_version": "1.1.2",
       "content_hash": "2ece480d85276f9a82600dd0a469384b7358042f39ea344d75fe4c9b71fea508",
-      "inclusion_rationale": "Base theory set",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "v_ostrom_constitutional_rules"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "b44c327e8595d47843272031315c84b74cf665e779f8f63b46d4f0da61482f76",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "veblen_institutional_inertia"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "4d2935ccc67181d7a09bb249041f111c62aafb61338029a5c7b86691aac2ae6d",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "weick_sensemaking"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "26e5c284d88e36301fea067c9e7cfec59d021fc7d26be95404daee06953bb4d6",
+      "inclusion_rationale": "Expanded theory library",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "wittgenstein_language_games"
+      },
+      "kernel_version": "1.1.2",
+      "content_hash": "e909f129360ae10d0e0994f64044c61a30a9320467ddb1f64b4b9acab8b91275",
+      "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
       ]
     }
   ],
-  "manifest_hash": "7725a2166dfd1a41ee264162a728ed6f097eb89682b24bde749392de4c84b5b4",
+  "manifest_hash": "02d2b78105cf47a746e0e6ee1df99fea9d7b9bcc22770aaedf0636bcb4bf36b7",
   "primary_blueprints": [
     "ostrom_polycentric_governance",
     "ouroboros_qcycle",
-    "panarchy"
+    "panarchy",
+    "ashby_requisite_variety",
+    "prigogine_dissipative_structures",
+    "autopoiesis",
+    "bateson_ecology_of_mind"
   ],
   "known_fstar_gaps": [
     "interstellar_logistics_scale",

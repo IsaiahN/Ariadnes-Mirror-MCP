@@ -1,0 +1,63 @@
+coverage:
+  breadth_score: 0.75
+  convergent_discoveries: []
+  coverage_type: framework
+  depth_score: 0.9
+  fstar_dimensions_covered:
+  - actor_complexity
+  - boundary_permeability
+  - information_asymmetry
+  fstar_refinements:
+  - constitutional_level_analysis
+  novel_concepts:
+  - Constitutional Rules
+  - Collective-choice Rules
+  - Operational Rules
+description: A nested hierarchy of rules that govern behavior and the changing of rules themselves.
+distortion_profile:
+  actor_autonomy: 0.8
+  actor_count_regime: medium
+  actor_intentionality: rule-governed/strategic
+  boundary_domains:
+  - Political Science
+  - Public Choice
+  emergent_problems:
+  - Rule ambiguity
+  incentive_legibility: 0.8
+  intersection_type: hierarchical/institutional
+  physical_constraints:
+  - enforcement costs
+  resource_dynamics: hierarchical
+  resource_type: authority
+  thermodynamic_regime: low
+domain: Political Science
+f_star_coordinates:
+  actor_complexity: 0.8
+  boundary_permeability: 0.3
+  coupling_tightness: 0.7
+  information_asymmetry: 0.6
+  resource_pressure: 0.5
+  time_pressure: 0.4
+falsifiability_note: Predicts that changes at the operational level are constrained by collective-choice rules, which are in turn constrained by constitutional rules.
+id: v_ostrom_constitutional_rules
+key_refs:
+- 'Ostrom, V. (1987). The Political Theory of a Compound Republic.'
+known_failure_modes:
+- Constitutional crisis
+- Rule nesting failure
+- Enforcement decoupling
+name: Constitutional Rules Hierarchy
+scale_level: institutional
+structural_tags:
+- hierarchical
+- layered
+- regulatory
+structural_topology:
+  directionality: Top-down constraint; Bottom-up feedback
+  feedback_loops: Multi-level
+  roles:
+  - Citizen/User
+  - Rule-maker
+  - Rule-changer
+  scale: Institutional
+  time_horizon: Generational/Stable

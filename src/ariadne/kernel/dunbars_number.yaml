@@ -1,0 +1,59 @@
+coverage:
+  breadth_score: 0.5
+  convergent_discoveries: []
+  coverage_type: partial
+  depth_score: 0.9
+  fstar_dimensions_covered:
+  - actor_complexity
+  - coupling_tightness
+  fstar_refinements:
+  - cognitive_limit_threshold
+  novel_concepts:
+  - Cognitive limit
+  - Social brain hypothesis
+description: A suggested cognitive limit to the number of people with whom one can maintain stable social relationships.
+distortion_profile:
+  actor_autonomy: 1.0
+  actor_count_regime: low to medium
+  actor_intentionality: social
+  boundary_domains:
+  - Anthropology
+  - Evolutionary Psychology
+  emergent_problems:
+  - Group fragmentation
+  incentive_legibility: 0.5
+  intersection_type: cognitive/social
+  physical_constraints:
+  - neocortex size
+  resource_dynamics: fixed capacity
+  resource_type: social attention
+  thermodynamic_regime: low
+domain: Anthropology/Psychology
+f_star_coordinates:
+  actor_complexity: 0.6
+  boundary_permeability: 0.2
+  coupling_tightness: 0.5
+  information_asymmetry: 0.3
+  resource_pressure: 0.4
+  time_pressure: 0.3
+falsifiability_note: Predicts that group cohesion will significantly decrease or require formal hierarchy once group size exceeds ~150 members.
+id: dunbars_number
+key_refs:
+- 'Dunbar, R. I. M. (1992). Neocortex size as a constraint on group size in primates.'
+known_failure_modes:
+- Scaling collapse
+- Information overload
+- Anonymity emergence
+name: Dunbar's Number
+scale_level: social
+structural_tags:
+- modular
+- network
+structural_topology:
+  directionality: Peer-to-peer
+  feedback_loops: Trust-based
+  roles:
+  - Individual
+  - Social Network
+  scale: Social (small group)
+  time_horizon: Stable

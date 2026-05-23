@@ -1,0 +1,61 @@
+coverage:
+  breadth_score: 0.6
+  convergent_discoveries: []
+  coverage_type: framework
+  depth_score: 0.8
+  fstar_dimensions_covered:
+  - information_asymmetry
+  - actor_complexity
+  fstar_refinements:
+  - ineffability_index
+  novel_concepts:
+  - Tacit Knowledge
+  - Personal Knowledge
+  - Indwelling
+description: The idea that we know more than we can tell; knowledge that is difficult to transfer to another person by means of writing it down or verbalizing it.
+distortion_profile:
+  actor_autonomy: 1.0
+  actor_count_regime: individual
+  actor_intentionality: cognitive
+  boundary_domains:
+  - Philosophy
+  - Cognitive Science
+  emergent_problems:
+  - Knowledge loss
+  incentive_legibility: 0.2
+  intersection_type: cognitive
+  physical_constraints:
+  - neural architecture
+  resource_dynamics: developmental
+  resource_type: expertise
+  thermodynamic_regime: low
+domain: Philosophy/Epistemology
+f_star_coordinates:
+  actor_complexity: 1.0
+  boundary_permeability: 0.1
+  coupling_tightness: 0.2
+  information_asymmetry: 1.0
+  resource_pressure: 0.2
+  time_pressure: 0.4
+falsifiability_note: Predicts that explicit rules alone will be insufficient for high-performance execution of complex tasks.
+id: polanyi_tacit_knowledge
+key_refs:
+- 'Polanyi, M. (1958). Personal Knowledge.'
+known_failure_modes:
+- Articulation gap
+- Expert-novice disconnect
+- Replication failure
+name: Polanyi's Tacit Knowledge
+scale_level: social
+structural_tags:
+- layered
+- modular
+structural_topology:
+  directionality: Internal -> External
+  feedback_loops: Learning by doing
+  roles:
+  - Knower
+  - Action
+  - Explicit Rule
+  scale: Local
+  time_horizon: Individual life

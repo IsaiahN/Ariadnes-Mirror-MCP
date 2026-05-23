@@ -1,0 +1,64 @@
+coverage:
+  breadth_score: 0.85
+  convergent_discoveries: []
+  coverage_type: framework
+  depth_score: 0.9
+  fstar_dimensions_covered:
+  - actor_complexity
+  - resource_pressure
+  - information_asymmetry
+  - coupling_tightness
+  fstar_refinements:
+  - action_arena_analysis
+  novel_concepts:
+  - Action Arena
+  - Rules-in-use
+  - Working Rules
+description: A framework for analyzing how institutions (rules, norms, and shared strategies) affect the incentives and behaviors of actors in collective action situations.
+distortion_profile:
+  actor_autonomy: 0.8
+  actor_count_regime: medium
+  actor_intentionality: strategic
+  boundary_domains:
+  - Political Science
+  - Economics
+  emergent_problems:
+  - Social dilemmas
+  incentive_legibility: 0.8
+  intersection_type: institutional
+  physical_constraints:
+  - biophysical conditions
+  resource_dynamics: common-pool
+  resource_type: natural/social
+  thermodynamic_regime: low
+domain: Institutional Economics
+f_star_coordinates:
+  actor_complexity: 0.8
+  boundary_permeability: 0.5
+  coupling_tightness: 0.6
+  information_asymmetry: 0.7
+  resource_pressure: 0.8
+  time_pressure: 0.5
+falsifiability_note: Predicts that a change in any of the seven rule types (boundary, position, choice, etc.) will result in a predictable shift in participant incentives and outcomes.
+id: ostrom_iad_framework
+key_refs:
+- 'Ostrom, E. (2005). Understanding Institutional Diversity.'
+known_failure_modes:
+- External rule imposition
+- Local rule collapse
+- Rule-reality gap
+name: Institutional Analysis and Development (IAD)
+scale_level: institutional
+structural_tags:
+- regulatory
+- hierarchical
+- market
+structural_topology:
+  directionality: Inputs -> Action Arena -> Outcomes
+  feedback_loops: Evaluative
+  roles:
+  - Actor
+  - Action Situation
+  - Evaluator
+  scale: Institutional
+  time_horizon: Stable to Adaptive

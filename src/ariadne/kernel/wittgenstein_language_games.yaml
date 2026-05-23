@@ -1,0 +1,61 @@
+coverage:
+  breadth_score: 0.6
+  convergent_discoveries: []
+  coverage_type: partial
+  depth_score: 0.8
+  fstar_dimensions_covered:
+  - actor_complexity
+  - information_asymmetry
+  fstar_refinements:
+  - semantic_boundary_conditions
+  novel_concepts:
+  - Language Games
+  - Family Resemblance
+  - Forms of Life
+description: The idea that the meaning of words is defined by their use within a specific context or "game".
+distortion_profile:
+  actor_autonomy: 1.0
+  actor_count_regime: medium
+  actor_intentionality: communicative
+  boundary_domains:
+  - Philosophy
+  - Linguistics
+  emergent_problems:
+  - Semantic drift
+  incentive_legibility: 0.3
+  intersection_type: communicative
+  physical_constraints:
+  - context dependency
+  resource_dynamics: semantic
+  resource_type: meaning
+  thermodynamic_regime: low
+domain: Philosophy
+f_star_coordinates:
+  actor_complexity: 0.9
+  boundary_permeability: 0.8
+  coupling_tightness: 0.3
+  information_asymmetry: 0.9
+  resource_pressure: 0.1
+  time_pressure: 0.3
+falsifiability_note: Predicts that a word moved from one "form of life" to another without translation will lose its intended meaning or cause systemic confusion.
+id: wittgenstein_language_games
+key_refs:
+- 'Wittgenstein, L. (1953). Philosophical Investigations.'
+known_failure_modes:
+- Context collapse
+- Semantic mismatch
+- Rule-following paradox
+name: Language Games
+scale_level: social
+structural_tags:
+- network
+- modular
+structural_topology:
+  directionality: Contextual/Local
+  feedback_loops: Social verification
+  roles:
+  - Player
+  - Word/Sign
+  - Rule/Context
+  scale: Social
+  time_horizon: Continuous
