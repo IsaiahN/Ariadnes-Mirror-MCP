@@ -6,16 +6,11 @@
 
 **Most hard problems remain hard because their solutions may already exist in another field, under a different name, invisible to keyword search.**
 
-The space of all problems has recurring deep structures: trade-offs,
-bottlenecks, incentive traps, search landscapes. Human fields have
-independently discovered heuristics for those structures, but language and
-jargon hide the commonality. Ariadne's Mirror maps the abstract skeleton of
-your problem to skeletons in other domains, ignoring surface details.
+Problems share deep structures: trade-offs, bottlenecks, incentive traps, search landscapes. Different fields have found heuristics for them, but jargon hides the commonality. Ariadne's Mirror maps your problem's skeleton to skeletons in other domains.
 
-It doesn't give you an answer. It gives you an analogical bridge. You still
-have to walk it.
+It doesn't give you the answer, but it does provide an analogical bridge that you can walk and validate.
 
-Where a researcher brings one career of cross-domain reading, this brings a
+Where a researcher brings only one career of cross-domain reading, this brings a
 mapped library of 48 theories across physics, biology, economics, computer
 science, and philosophy, searched by structural similarity rather than keywords.
 
