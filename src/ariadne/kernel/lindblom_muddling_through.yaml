@@ -1,6 +1,18 @@
 coverage:
   breadth_score: 0.7
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: partisan_mutual_adjustment
+    found_in: hayek_price_system
+    local_name: price_coordination_without_central_direction
+  - concept: incremental_bounded_search
+    found_in: kauffman_nk_landscapes
+    local_name: adaptive_walk_as_local_search
+  - concept: satisficing_over_optimizing
+    found_in: ouroboros
+    local_name: pioneer_stage_exploration_stopping_at_good_enough
+  - concept: disjointed_incrementalism
+    found_in: ostrom_polycentric_governance
+    local_name: incremental_rule_revision_in_collective_choice_arenas
   coverage_type: framework
   depth_score: 0.75
   fstar_dimensions_covered:

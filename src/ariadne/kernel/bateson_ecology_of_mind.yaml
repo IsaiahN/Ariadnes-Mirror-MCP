@@ -1,6 +1,24 @@
 coverage:
   breadth_score: 0.95
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: difference_that_makes_a_difference
+    found_in: ouroboros
+    local_name: salience_detection_q1
+  - concept: deuterolearning
+    found_in: ouroboros
+    local_name: q4_cross_context_rule_extraction
+  - concept: schismogenesis
+    found_in: models
+    local_name: d3_domain_intersection_emergent_problems
+  - concept: double_bind
+    found_in: wittgenstein_language_games
+    local_name: rule_following_paradox
+  - concept: logical_levels_of_learning
+    found_in: ostrom_polycentric_governance
+    local_name: operational_collective_choice_constitutional_rule_levels
+  - concept: pattern_which_connects
+    found_in: ouroboros
+    local_name: f_star_invariant_structure
   coverage_type: blueprint
   depth_score: 0.8
   fstar_dimensions_covered:
@@ -8,6 +26,8 @@ coverage:
   - actor_complexity
   fstar_refinements:
   - double_bind_dynamics
+  - logical_type_confusion_as_coordination_failure
+  - recursive_self_reference_in_rule_systems
   novel_concepts:
   - Difference that makes a difference
   - Double bind

@@ -1,6 +1,21 @@
 coverage:
   breadth_score: 0.75
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: shadow_of_the_future
+    found_in: ostrom_polycentric_governance
+    local_name: long_time_horizon_as_commons_governance_prerequisite
+  - concept: shadow_of_the_future
+    found_in: ouroboros
+    local_name: credibility_accumulation_requiring_iterated_interaction
+  - concept: conditional_cooperation_without_central_authority
+    found_in: ostrom_polycentric_governance
+    local_name: self_governance_without_state_or_market
+  - concept: tit_for_tat_robustness
+    found_in: adaptive_immune_system
+    local_name: memory_cell_recognition_and_response_scaling
+  - concept: reciprocity_as_stable_strategy
+    found_in: ess_evolutionary_stable_strategy
+    local_name: reciprocal_altruism_as_ess
   coverage_type: framework
   depth_score: 0.95
   fstar_dimensions_covered:

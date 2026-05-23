@@ -1,55 +1,73 @@
-description: A strategy which, if adopted by a population in a given environment,
-  cannot be invaded by any alternative strategy that is initially rare.
-domain: Biology / Game Theory
-falsifiability_note: Predicts the convergence of behavioral traits in a population
-  toward a Nash equilibrium that is also evolutionarily stable.
+coverage:
+  breadth_score: 0.8
+  convergent_discoveries:
+  - concept: evolutionary_stability
+    found_in: ostrom_polycentric_governance
+    local_name: design_principles_as_stable_commons_equilibria
+  - concept: frequency_dependent_selection
+    found_in: ouroboros
+    local_name: role_balance_pioneer_optimizer_generalist
+  - concept: invasion_resistance
+    found_in: axelrod_cooperation
+    local_name: tit_for_tat_uninvadable_by_defectors
+  - concept: nash_equilibrium_as_attractor
+    found_in: raft_consensus
+    local_name: consensus_state_as_stable_configuration
+  coverage_type: partial
+  depth_score: 0.8
+  fstar_dimensions_covered:
+  - adversarial_alignment
+  - resource_pressure
+  fstar_refinements:
+  - frequency_dependent_stability
+  novel_concepts:
+  - Evolutionary Stable Strategy
+  - Hawks vs Doves
+description: A strategy which, if adopted by a population in a given environment, is such that can't be invaded by any alternative strategy that is initially rare.
+distortion_profile:
+  actor_autonomy: 0.2
+  actor_count_regime: massive
+  actor_intentionality: reflexive
+  boundary_domains:
+  - Economics
+  - Political Science
+  emergent_problems:
+  - Suboptimal equilibria
+  incentive_legibility: 0.8
+  intersection_type: evolutionary
+  physical_constraints:
+  - resource scarcity
+  resource_dynamics: competitive
+  resource_type: fitness
+  thermodynamic_regime: medium/biological
+domain: Evolutionary Biology
+f_star_coordinates:
+  actor_complexity: 0.2
+  boundary_permeability: 0.5
+  coupling_tightness: 0.4
+  information_asymmetry: 0.1
+  resource_pressure: 0.9
+  time_pressure: 0.8
+falsifiability_note: Predicts that a population will converge toward and remain in an ESS once it is established, resisting invasion by mutant strategies.
 id: ess_evolutionary_stable_strategy
 key_refs:
-- Maynard Smith, J. (1982). Evolution and the Theory of Games.
+- 'Smith, J. M. (1982). Evolution and the Theory of Games.'
 known_failure_modes:
-- Small population drift
-- Changing environments
-- Non-transitive interactions
+- Small population (genetic drift)
+- Environmental flux
+- Non-additive payoffs
 name: Evolutionary Stable Strategy (ESS)
-scale_level: universal
-f_star_coordinates:
-  resource_pressure: 0.8
-  actor_complexity: 0.5
-  information_asymmetry: 0.6
-  coupling_tightness: 0.7
-  time_pressure: 0.4
-  boundary_permeability: 0.8
-distortion_profile:
-  resource_type: fitness payoffs
-  resource_dynamics: frequency-dependent
-  thermodynamic_regime: slow
-  physical_constraints: [reproduction rate, inheritance fidelity]
-  actor_intentionality: reflexive
-  actor_count_regime: massive
-  actor_autonomy: 0.6
-  incentive_legibility: 0.1
-  boundary_domains: [game_theory, biology]
-  emergent_problems: [suboptimal equilibrium, invasion]
-  intersection_type: competitive
-coverage:
-  coverage_type: framework
-  fstar_dimensions_covered: [resource_pressure, actor_complexity]
-  breadth_score: 0.6
-  depth_score: 0.9
-  novel_concepts: [evolutionary_stability, frequency_dependence]
-  convergent_discoveries: []
-  fstar_refinements: [stability_conditions_for_decentralized_strategies]
+scale_level: organism
 structural_tags:
 - evolutionary
 - adversarial
-- regulatory
-- modular
+- cooperative
 structural_topology:
-  directionality: Selection pressure
+  directionality: Competitive/Equilibrium-seeking
   feedback_loops: Frequency-dependent selection
   roles:
   - Strategy
   - Population
-  - Mutant
-  scale: Global (population-level)
-  time_horizon: Multi-generational
+  - Payoff
+  scale: Social (population-level)
+  time_horizon: Evolutionary

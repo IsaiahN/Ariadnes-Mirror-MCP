@@ -1,6 +1,21 @@
 coverage:
   breadth_score: 0.6
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: tacit_knowledge_irreducible_to_explicit_rules
+    found_in: ostrom_polycentric_governance
+    local_name: local_knowledge_embedded_in_rules_in_use
+  - concept: tacit_knowledge_irreducible_to_explicit_rules
+    found_in: wittgenstein_language_games
+    local_name: rule_following_requires_background_form_of_life
+  - concept: tacit_knowledge_irreducible_to_explicit_rules
+    found_in: ouroboros
+    local_name: valence_grounding_as_embodied_semantic_knowledge
+  - concept: spontaneous_coordination_of_independent_actors
+    found_in: hayek_price_system
+    local_name: distributed_price_knowledge_coordination
+  - concept: spontaneous_coordination_of_independent_actors
+    found_in: ostrom_polycentric_governance
+    local_name: polycentric_self_governance
   coverage_type: framework
   depth_score: 0.8
   fstar_dimensions_covered:

@@ -1,6 +1,18 @@
 coverage:
   breadth_score: 0.85
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: action_arena_as_unit_of_analysis
+    found_in: ouroboros
+    local_name: game_environment_as_action_situation
+  - concept: rules_in_use_vs_rules_in_form
+    found_in: wittgenstein_language_games
+    local_name: rule_following_practice_vs_stated_rule
+  - concept: nested_rule_levels
+    found_in: simon_near_decomposability
+    local_name: hierarchical_decomposition_of_decisions
+  - concept: biophysical_conditions_as_d1
+    found_in: models
+    local_name: d1_environmental_substrate_distortion
   coverage_type: framework
   depth_score: 0.9
   fstar_dimensions_covered:

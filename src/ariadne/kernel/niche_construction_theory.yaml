@@ -1,6 +1,18 @@
 coverage:
   breadth_score: 0.8
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: ecological_inheritance
+    found_in: ouroboros
+    local_name: database_as_constructed_knowledge_niche_inherited_by_agents
+  - concept: organism_modifying_selection_pressures
+    found_in: ostrom_polycentric_governance
+    local_name: institutional_rules_modifying_incentive_landscape
+  - concept: bidirectional_organism_environment_coupling
+    found_in: kauffman_nk_landscapes
+    local_name: shaper_firms_modifying_fitness_landscape
+  - concept: ecological_inheritance
+    found_in: panarchy
+    local_name: legacy_effects_in_reorganization_phase
   coverage_type: framework
   depth_score: 0.8
   fstar_dimensions_covered:

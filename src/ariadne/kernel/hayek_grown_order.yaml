@@ -1,6 +1,18 @@
 coverage:
   breadth_score: 0.6
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: spontaneous_order_vs_designed_order
+    found_in: ostrom_polycentric_governance
+    local_name: emergent_institutional_rules_vs_externally_imposed_rules
+  - concept: cosmos_vs_taxis
+    found_in: autopoiesis
+    local_name: self_produced_organization_vs_designed_structure
+  - concept: grown_rules_outperforming_designed_rules
+    found_in: ess_evolutionary_stable_strategy
+    local_name: evolutionarily_stable_strategies_outcompeting_designed_ones
+  - concept: tacit_knowledge_embedded_in_grown_rules
+    found_in: polanyi_tacit_knowledge
+    local_name: tacit_knowledge_irreducible_to_explicit_specification
   coverage_type: framework
   depth_score: 0.8
   fstar_dimensions_covered:

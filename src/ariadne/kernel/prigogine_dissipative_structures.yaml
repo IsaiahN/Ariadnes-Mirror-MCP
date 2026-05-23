@@ -1,67 +1,90 @@
-coverage:
-  breadth_score: 0.85
-  convergent_discoveries:
-  - concept: Autocatalysis
-    found_in: biochemistry
-    local_name: Metabolic Cycles
-  coverage_type: blueprint
-  depth_score: 0.9
-  fstar_dimensions_covered:
-  - resource_pressure
-  - coupling_tightness
-  - time_pressure
-  fstar_refinements:
-  - far_from_equilibrium_dynamics
-  novel_concepts:
-  - Dissipative Structures
-  - Non-equilibrium thermodynamics
-  - Self-organization
-description: Open systems far from equilibrium that maintain order by dissipating energy/entropy.
-distortion_profile:
-  actor_autonomy: 0.0
-  actor_count_regime: massive
-  actor_intentionality: emergent
-  boundary_domains:
-  - Physics
-  - Chemistry
-  emergent_problems:
-  - Symmetry breaking
-  incentive_legibility: 0.0
-  intersection_type: physical
-  physical_constraints:
-  - energy gradients
-  - entropy export
-  resource_dynamics: continuous flow
-  resource_type: energy/matter
-  thermodynamic_regime: high/non-equilibrium
-domain: Physics/Complexity
-f_star_coordinates:
-  actor_complexity: 0.1
-  boundary_permeability: 1.0
-  coupling_tightness: 0.9
-  information_asymmetry: 0.2
-  resource_pressure: 0.9
-  time_pressure: 0.7
-falsifiability_note: Predicts that order will collapse if the energy gradient (resource pressure) falls below a critical threshold.
 id: prigogine_dissipative_structures
-key_refs:
-- 'Prigogine, I. (1980). From Being to Becoming.'
-known_failure_modes:
-- Gradient depletion
-- Perturbation beyond stability limit
-- Scale-up collapse
 name: Dissipative Structures
+domain: Thermodynamics / Complexity Science
+description: Systems far from thermodynamic equilibrium can spontaneously organize into stable, ordered structures by continuously dissipating energy into their environment. Order emerges from and is maintained by throughput, not despite it.
 scale_level: universal
+f_star_coordinates:
+  resource_pressure: 0.85
+  actor_complexity: 0.1
+  information_asymmetry: 0.3
+  coupling_tightness: 0.7
+  time_pressure: 0.4
+  boundary_permeability: 0.95
+distortion_profile:
+  resource_type: free energy / negentropy
+  resource_dynamics: continuous throughput required
+  thermodynamic_regime: far_from_equilibrium
+  physical_constraints:
+    - entropy production minimum
+    - energy gradient requirement
+  actor_intentionality: none
+  actor_count_regime: massive
+  actor_autonomy: 0.0
+  incentive_legibility: 1.0
+  boundary_domains:
+    - biology
+    - chemistry
+    - social_systems
+  emergent_problems:
+    - structure_collapse_on_energy_cutoff
+    - bifurcation_unpredictability
+  intersection_type: thermodynamic
+coverage:
+  coverage_type: blueprint
+  breadth_score: 0.85
+  depth_score: 0.90
+  fstar_dimensions_covered:
+    - resource_pressure
+    - boundary_permeability
+    - coupling_tightness
+    - actor_complexity
+  novel_concepts:
+    - far_from_equilibrium_order
+    - dissipative_structure
+    - bifurcation_point
+    - symmetry_breaking
+    - order_through_fluctuation
+  convergent_discoveries:
+    - concept: far_from_equilibrium_order
+      found_in: ostrom_polycentric_governance
+      local_name: institutional_commons_as_energy_dissipating_social_order
+    - concept: order_through_throughput
+      found_in: ouroboros
+      local_name: continuous_credibility_updating_maintaining_knowledge_structure
+    - concept: bifurcation_point
+      found_in: panarchy
+      local_name: omega_release_phase_transition
+    - concept: symmetry_breaking
+      found_in: punctuated_equilibrium
+      local_name: rapid_speciation_event
+    - concept: far_from_equilibrium_stability
+      found_in: autopoiesis
+      local_name: metabolic_throughput_maintaining_cellular_structure
+    - concept: structure_requiring_energy_gradient
+      found_in: second_law_thermodynamics
+      local_name: local_entropy_decrease_requiring_environment_increase
+  fstar_refinements:
+    - order_maintained_by_dissipation_not_despite_it
+    - structure_stability_requires_open_system_throughput
+    - bifurcation_unpredictability_at_critical_points
+key_refs:
+  - "Prigogine, I. & Nicolis, G. (1977). Self-Organization in Non-Equilibrium Systems."
+  - "Prigogine, I. (1977). Nobel Prize Lecture: Time, Structure and Fluctuations."
+known_failure_modes:
+  - structure_collapse_when_energy_gradient_removed
+  - unpredictable_bifurcation_direction
+  - metastable_states_appearing_stable_before_collapse
+falsifiability_note: Predicts that removing the energy gradient from a dissipative structure will cause it to degrade toward equilibrium, and that near bifurcation points small fluctuations will determine which branch the system takes.
 structural_tags:
-- cyclic
-- evolutionary
-- network
+  - cyclic
+  - regulatory
+  - evolutionary
 structural_topology:
-  directionality: Gradient -> Dissipation
-  feedback_loops: Positive (reinforcing) and Negative (stabilizing)
+  directionality: Open system throughput
+  feedback_loops: Autocatalytic self-reinforcement
   roles:
-  - Energy Source
-  - Entropy Sink
-  - Dissipative Flow
+    - Energy Source
+    - Structure
+    - Dissipation Sink
   scale: Universal
-  time_horizon: Transient to Stable
+  time_horizon: Sustained while gradient exists

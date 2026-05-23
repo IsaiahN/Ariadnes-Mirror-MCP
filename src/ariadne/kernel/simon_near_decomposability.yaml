@@ -1,6 +1,24 @@
 coverage:
   breadth_score: 0.8
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: near_decomposability
+    found_in: ostrom_polycentric_governance
+    local_name: nested_enterprise_design_principle
+  - concept: near_decomposability
+    found_in: ouroboros
+    local_name: role_based_stage_specialization_with_weak_coupling
+  - concept: hierarchical_modularity
+    found_in: autopoiesis
+    local_name: membrane_boundary_enabling_internal_autonomy
+  - concept: near_decomposability
+    found_in: luhmann_social_systems
+    local_name: functionally_differentiated_subsystems_with_loose_coupling
+  - concept: faster_evolution_through_modularity
+    found_in: panarchy
+    local_name: nested_adaptive_cycles_at_different_scales
+  - concept: separation_of_timescales
+    found_in: raft_consensus
+    local_name: heartbeat_vs_log_replication_timing_separation
   coverage_type: framework
   depth_score: 0.8
   fstar_dimensions_covered:

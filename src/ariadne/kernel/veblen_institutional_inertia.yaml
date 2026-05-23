@@ -1,6 +1,18 @@
 coverage:
   breadth_score: 0.65
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: ceremonial_encapsulation
+    found_in: panarchy
+    local_name: k_phase_rigidity_and_lock_in
+  - concept: institutional_persistence_despite_inefficiency
+    found_in: minsky_instability
+    local_name: stability_breeding_fragility_through_complacency
+  - concept: path_dependence
+    found_in: kauffman_nk_landscapes
+    local_name: local_optima_trapping_adaptive_walk
+  - concept: technical_vs_ceremonial_rules
+    found_in: ostrom_polycentric_governance
+    local_name: rules_in_use_vs_rules_in_form
   coverage_type: framework
   depth_score: 0.85
   fstar_dimensions_covered:

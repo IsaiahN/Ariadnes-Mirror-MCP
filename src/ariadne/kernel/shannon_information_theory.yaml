@@ -1,6 +1,21 @@
 coverage:
   breadth_score: 0.7
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: channel_capacity_as_hard_limit
+    found_in: ashby_requisite_variety
+    local_name: requisite_variety_as_information_channel_constraint
+  - concept: entropy_as_uncertainty_measure
+    found_in: second_law_thermodynamics
+    local_name: thermodynamic_entropy
+  - concept: noise_as_coordination_degrader
+    found_in: axelrod_cooperation
+    local_name: signal_noise_causing_accidental_defection
+  - concept: channel_capacity_limit
+    found_in: dunbars_number
+    local_name: cognitive_channel_capacity_for_relationships
+  - concept: information_compression
+    found_in: ouroboros
+    local_name: stage5_abstraction_extraction_compression
   coverage_type: framework
   depth_score: 0.9
   fstar_dimensions_covered:

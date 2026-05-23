@@ -1,6 +1,21 @@
 coverage:
   breadth_score: 0.6
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: meaning_constituted_by_practice
+    found_in: polanyi_tacit_knowledge
+    local_name: tacit_knowledge_as_embodied_practice
+  - concept: rule_following_requires_background_form_of_life
+    found_in: ostrom_polycentric_governance
+    local_name: rules_in_use_vs_rules_in_form
+  - concept: limits_of_explicit_rule_specification
+    found_in: halting_problem
+    local_name: programs_cannot_determine_own_termination
+  - concept: context_dependence_of_meaning
+    found_in: bateson_ecology_of_mind
+    local_name: double_bind_as_context_level_contradiction
+  - concept: meaning_through_use
+    found_in: ouroboros
+    local_name: valence_grounding_through_agent_specific_experience
   coverage_type: partial
   depth_score: 0.8
   fstar_dimensions_covered:

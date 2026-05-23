@@ -1,6 +1,18 @@
 coverage:
   breadth_score: 0.7
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: enactment
+    found_in: niche_construction_theory
+    local_name: organism_constructing_own_selection_environment
+  - concept: retrospective_meaning_construction
+    found_in: ouroboros
+    local_name: q4_hypothesis_extracted_from_past_evidence
+  - concept: sensemaking_under_ambiguity
+    found_in: bateson_ecology_of_mind
+    local_name: deuterolearning_across_contexts
+  - concept: enacted_environment
+    found_in: kauffman_nk_landscapes
+    local_name: shaper_firms_modifying_fitness_landscape
   coverage_type: framework
   depth_score: 0.8
   fstar_dimensions_covered:

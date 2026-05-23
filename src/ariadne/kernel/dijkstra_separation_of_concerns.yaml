@@ -1,6 +1,18 @@
 coverage:
   breadth_score: 0.4
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: module_boundary_enforcement
+    found_in: autopoiesis
+    local_name: membrane_as_operational_boundary
+  - concept: separation_of_concerns
+    found_in: ostrom_polycentric_governance
+    local_name: operational_collective_choice_constitutional_rule_separation
+  - concept: interface_as_protocol
+    found_in: luhmann_social_systems
+    local_name: structural_coupling_protocol_between_closed_systems
+  - concept: hiding_internal_complexity
+    found_in: simon_near_decomposability
+    local_name: near_decomposability_aggregating_internal_detail
   coverage_type: partial
   depth_score: 1.0
   fstar_dimensions_covered:

@@ -1,9 +1,21 @@
 coverage:
   breadth_score: 0.8
   convergent_discoveries:
-  - concept: Self-referentiality
-    found_in: social_systems
-    local_name: Luhmann Autopoiesis
+  - concept: self_referentiality
+    found_in: luhmann_social_systems
+    local_name: operational_closure_of_communication_systems
+  - concept: boundary_constituted_by_system_operations
+    found_in: ostrom_polycentric_governance
+    local_name: clearly_defined_boundaries_design_principle
+  - concept: operational_closure
+    found_in: ouroboros
+    local_name: credibility_system_self_maintenance
+  - concept: structural_coupling
+    found_in: axelrod_cooperation
+    local_name: iterated_interaction_producing_stable_cooperation
+  - concept: self_production_of_identity
+    found_in: raft_consensus
+    local_name: cluster_membership_and_leader_identity_maintenance
   coverage_type: blueprint
   depth_score: 0.85
   fstar_dimensions_covered:

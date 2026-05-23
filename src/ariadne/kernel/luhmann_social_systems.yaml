@@ -1,9 +1,21 @@
 coverage:
   breadth_score: 0.8
   convergent_discoveries:
-  - concept: Meaning-making
-    found_in: bateson_ecology_of_mind
-    local_name: Contextual Patterns
+  - concept: operational_closure_of_subsystems
+    found_in: autopoiesis
+    local_name: autopoietic_self_production
+  - concept: structural_coupling_between_closed_systems
+    found_in: axelrod_cooperation
+    local_name: iterated_interaction_without_merger
+  - concept: functional_differentiation
+    found_in: ouroboros
+    local_name: role_specialization_by_reasoning_stage
+  - concept: binary_code_of_subsystems
+    found_in: hayek_price_system
+    local_name: price_signal_as_economic_subsystem_binary_code
+  - concept: meaning_as_system_operation
+    found_in: wittgenstein_language_games
+    local_name: meaning_constituted_by_form_of_life
   coverage_type: framework
   depth_score: 0.8
   fstar_dimensions_covered:

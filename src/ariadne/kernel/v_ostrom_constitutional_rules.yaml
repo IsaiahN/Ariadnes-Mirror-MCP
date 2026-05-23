@@ -1,6 +1,15 @@
 coverage:
   breadth_score: 0.75
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: meta_rules_governing_rule_making
+    found_in: simon_near_decomposability
+    local_name: higher_level_hierarchy_governing_lower_level_interactions
+  - concept: constitutional_level_of_governance
+    found_in: luhmann_social_systems
+    local_name: constitutional_coding_of_political_subsystem
+  - concept: rules_about_rules
+    found_in: bateson_ecology_of_mind
+    local_name: logical_levels_of_learning_and_communication
   coverage_type: framework
   depth_score: 0.9
   fstar_dimensions_covered:

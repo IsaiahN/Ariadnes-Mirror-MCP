@@ -1,6 +1,15 @@
 coverage:
   breadth_score: 0.5
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: impossibility_of_aggregating_preferences_without_dictatorship
+    found_in: ostrom_polycentric_governance
+    local_name: avoiding_full_preference_aggregation_via_local_rule_making
+  - concept: collective_choice_paradox
+    found_in: luhmann_social_systems
+    local_name: political_subsystem_coding_constraints
+  - concept: provably_unsolvable_coordination_subproblem
+    found_in: halting_problem
+    local_name: undecidability_as_formal_impossibility
   coverage_type: partial
   depth_score: 1.0
   fstar_dimensions_covered:

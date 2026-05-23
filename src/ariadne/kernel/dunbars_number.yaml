@@ -1,6 +1,18 @@
 coverage:
   breadth_score: 0.5
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: cognitive_capacity_as_coordination_limit
+    found_in: ashby_requisite_variety
+    local_name: regulator_variety_bounded_by_channel_capacity
+  - concept: group_size_threshold_requiring_hierarchy
+    found_in: ostrom_polycentric_governance
+    local_name: nested_enterprise_arising_at_scale
+  - concept: cognitive_limit_producing_modularity
+    found_in: simon_near_decomposability
+    local_name: near_decomposability_as_cognitive_tractability_solution
+  - concept: relationship_tracking_as_scarce_resource
+    found_in: optimal_foraging_theory
+    local_name: attention_budget_allocation_across_patches
   coverage_type: partial
   depth_score: 0.9
   fstar_dimensions_covered:

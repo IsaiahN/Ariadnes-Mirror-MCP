@@ -1,6 +1,15 @@
 coverage:
   breadth_score: 0.4
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: proxy_substitution_under_strategic_actors
+    found_in: ouroboros
+    local_name: credibility_gaming_when_metric_becomes_target
+  - concept: measurement_corruption_by_optimization
+    found_in: ostrom_polycentric_governance
+    local_name: rule_gaming_when_monitors_are_captured
+  - concept: proxy_metric_failure
+    found_in: principal_agent_theory
+    local_name: agent_optimizing_measurable_proxy_over_principal_goal
   coverage_type: partial
   depth_score: 1.0
   fstar_dimensions_covered:

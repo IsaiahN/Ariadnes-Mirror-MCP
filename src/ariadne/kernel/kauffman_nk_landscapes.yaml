@@ -1,6 +1,21 @@
 coverage:
   breadth_score: 0.75
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: adjacent_possible
+    found_in: ouroboros
+    local_name: pariah_decay_keeping_exploration_space_open
+  - concept: adjacent_possible
+    found_in: ostrom_polycentric_governance
+    local_name: incremental_rule_revision_in_collective_choice
+  - concept: ruggedness_from_epistatic_coupling
+    found_in: simon_near_decomposability
+    local_name: coupling_between_modules_increasing_complexity
+  - concept: local_optima_traps
+    found_in: panarchy
+    local_name: k_conservation_phase_rigidity_trap
+  - concept: fitness_landscape_navigation
+    found_in: optimal_foraging_theory
+    local_name: patch_exploitation_vs_exploration_tradeoff
   coverage_type: framework
   depth_score: 0.85
   fstar_dimensions_covered:
@@ -13,6 +28,7 @@ coverage:
   - Epistasis (N)
   - Connectivity (K)
   - Rugged Landscape
+  - complexity_catastrophe
 description: A model for studying the relationship between system complexity (connectivity) and the "ruggedness" of its fitness landscape.
 distortion_profile:
   actor_autonomy: 0.1

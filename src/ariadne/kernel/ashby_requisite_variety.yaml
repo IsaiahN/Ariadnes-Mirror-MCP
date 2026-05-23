@@ -1,9 +1,21 @@
 coverage:
   breadth_score: 0.9
   convergent_discoveries:
-  - concept: Requisite Complexity
-    found_in: software_engineering
-    local_name: Cyclomatic Complexity
+  - concept: regulator_must_match_environment_variety
+    found_in: ostrom_polycentric_governance
+    local_name: congruence_of_rules_to_local_conditions
+  - concept: regulator_must_match_environment_variety
+    found_in: ouroboros
+    local_name: role_diversity_requirement
+  - concept: regulator_must_match_environment_variety
+    found_in: adaptive_immune_system
+    local_name: receptor_diversity_matching_antigen_variety
+  - concept: regulator_must_match_environment_variety
+    found_in: federated_learning
+    local_name: heterogeneous_client_model_diversity
+  - concept: variety_amplifiers_vs_attenuators
+    found_in: panarchy
+    local_name: adaptive_cycle_phase_switching
   coverage_type: blueprint
   depth_score: 1.0
   fstar_dimensions_covered:
@@ -12,9 +24,11 @@ coverage:
   - coupling_tightness
   fstar_refinements:
   - complexity_mapping
+  - good_regulator_theorem
   novel_concepts:
   - Variety
   - Regulator
+  - good_regulator_theorem
 description: A system's internal variety must match the variety of the disturbances it must regulate.
 distortion_profile:
   actor_autonomy: 0.5

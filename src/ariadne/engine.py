@@ -525,6 +525,8 @@ OUTPUT JSON list of objects for residue_components.
         """
         Full intersection analysis pipeline (Orchestration placeholder).
         """
+        import logging
+        logging.warning("analyze_intersection called: method is currently an orchestration placeholder.")
         from .models import InterfaceSpec
         return DomainIntersection(
             domain_a=domain_a.name,
