@@ -11,7 +11,7 @@ Problems share deep structures: trade-offs, bottlenecks, incentive traps, search
 It doesn't give you the answer, but it does provide an analogical bridge that you can walk and validate.
 
 Where a researcher brings only one career of cross-domain reading, this brings a
-mapped library of 48 theories across physics, biology, economics, computer
+mapped library of theories across physics, biology, economics, computer
 science, and philosophy, searched by structural similarity rather than keywords.
 
 ## Use Cases
@@ -108,8 +108,10 @@ pytest tests/
 
 ### The Kernel
 
-The protected seed set of ~48 theories spanning physics, biology, economics,
-computer science, sociology, and philosophy. Each theory has:
+The protected seed set of theories spanning physics, biology, economics,
+computer science, sociology, and philosophy. 
+
+Each theory has:
 
 - F* coordinates across 6 dimensions (resource_pressure, actor_complexity,
   information_asymmetry, coupling_tightness, time_pressure,
