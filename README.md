@@ -4,10 +4,7 @@
 
 ## What It Does
 
-**Most hard problems remain hard because the people working on them don't know
-that someone else already solved a structurally identical problem in a
-completely different field, under a different name, with different vocabulary,
-invisible to any keyword search.**
+**Most hard problems remain hard because their solutions may already exist in another field, under a different name, invisible to keyword search.**
 
 The space of all problems has recurring deep structures: trade-offs,
 bottlenecks, incentive traps, search landscapes. Human fields have
