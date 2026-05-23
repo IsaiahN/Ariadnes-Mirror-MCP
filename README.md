@@ -26,7 +26,7 @@ The outputs provide direction and shape. They point toward where answers might
 exist and what form they might take, giving you something concrete to follow up 
 with and validate.
 
-### Use Cases
+## Use Cases
 
 **Hypothesis generation**
 Given a problem domain, find which theories from unrelated fields are 
