@@ -138,10 +138,20 @@ pytest tests/
 
 ## Theoretical Basis
 
-The F* hypothesis: coordination problems across all domains share deep structural regularities that persist after domain-specific distortions are removed. The primary anecdote for this is convergent rediscovery where researchers in unrelated fields independently arrive at structurally similar frameworks without knowledge of each other's work.
+### The F* Hypothesis
 
-This is an empirical hypothesis, not a proven theorem. The tool's outputs 
-uncover potential shapes of a problem and structurally analogous solutions 
+Most hard problems stay hard because the people working on them don't know 
+that someone else already solved a structurally identical problem in a 
+completely different field under a different name, with different 
+vocabulary, invisible to any keyword search.
+
+The F* hypothesis is that coordination problems across all domains, how 
+bounded agents manage shared resources under uncertainty, share deep 
+structural regularities that persist after you strip away domain-specific 
+context. 
+
+The tool is the hypothesis put to the test. 
+The tool's outputs' uncover potential shapes of a problem and structurally analogous solutions 
 from other domains to present potential solutions but the validation work will still be required. 
 
 ### On the Kernel
@@ -152,7 +162,7 @@ without careful consideration has cascading effects on all downstream
 results (it is not recommended).
 
 For enrichment and extension for example, using AutoResearch to chart 
-additional regions of F* — new theories should be stored externally in 
+additional regions of F*, new theories should be stored externally in 
 thread libraries, not in the kernel itself. 
 
 This separation lets you compare core outputs against enriched outputs and revert cleanly if 
