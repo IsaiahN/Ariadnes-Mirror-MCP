@@ -7,7 +7,7 @@ import re
 import numpy as np
 from typing import List, Optional
 from importlib import resources
-from .models import Theory, DomainProfile, Hypothesis
+from .models import Theory, DomainProfile, Hypothesis, FailureMode
 from .persistence import TheoryStateManager
 from .config import settings
 from .ai import AIClient
@@ -247,6 +247,49 @@ OUTPUT JSON format:
             self._ai_client = AIClient()
         return self._ai_client
 
+    def stage4_failure_analysis(self, target_profile: DomainProfile, theory: Theory, hypothesis: Hypothesis) -> List[FailureMode]:
+        """
+        Stage 4: Emergent Failure Analysis.
+        Identifies risks that arise specifically from the mismatch between source and target.
+        """
+        prompt = f"""
+You are a systems safety analyst specializing in theory transfer failures.
+You have proposed that '{theory.name}' transfers structurally to '{target_profile.name}'.
+
+KNOWN failures of {theory.name} in its ORIGINAL context:
+{theory.known_failure_modes}
+
+DOMAIN DELTA (Differences between target and source context):
+{target_profile.delta.model_dump_json(indent=2) if target_profile.delta else "Not provided"}
+
+ISOMORPHISM MAP from Stage 3:
+{json.dumps(hypothesis.isomorphism_map, indent=2)}
+
+Your task: identify failure modes that are EMERGENT — meaning they:
+1. Do not appear in the known failure list above.
+2. Arise specifically because this theory is being applied OUTSIDE its original context.
+3. Are caused by structural properties the target domain has that the source theory does NOT model.
+
+For each emergent failure, output a JSON object with:
+- description: clear explanation of the failure
+- structural_cause: which mismatch or delta produces this
+- early_warning_signal: observable signal in the target domain
+- is_recoverable: boolean
+- failure_type: "emergent" (or "transfer" if it's a stretch failure)
+
+Output ONLY a JSON list of objects.
+"""
+        try:
+            response = self.ai_client.get_completion(prompt, system_prompt="You are a safety systems analyst.")
+            json_match = re.search(r'\[.*\]', response, re.DOTALL)
+            if json_match:
+                modes_data = json.loads(json_match.group())
+                return [FailureMode(**m) for m in modes_data]
+            return []
+        except Exception as e:
+            print(f"Error during Stage 4 failure analysis for {theory.name}: {e}")
+            return []
+
     def analyze(self, target_profile: DomainProfile) -> List[Hypothesis]:
         # Step 1: Coarse Filter
         candidates = self.stage1_filter(target_profile.structural_tags)
@@ -258,6 +301,10 @@ OUTPUT JSON format:
         hypotheses = []
         for theory in refined_candidates[:5]:
             hypo = self.stage3_llm_comparison(target_profile, theory)
+
+            # Step 4: Emergent Failure Analysis
+            hypo.failure_modes = self.stage4_failure_analysis(target_profile, theory, hypo)
+
             hypotheses.append(hypo)
 
         return hypotheses

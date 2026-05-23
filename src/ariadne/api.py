@@ -3,7 +3,29 @@ import re
 from typing import List, Dict
 from .engine import AriadneEngine
 from .extractor import QCycleExtractor
-from .models import DomainProfile, Hypothesis
+from .models import DomainProfile, Hypothesis, FailureMode
+
+def analyze_failures(
+    domain_name: str,
+    theory_id: str,
+    q7_answer: str
+) -> List[FailureMode]:
+    """
+    Generate emergent failure modes for a proposed transfer.
+    """
+    engine = AriadneEngine()
+    theory = next((t for t in engine.theories if t.id == theory_id), None)
+    if not theory:
+        raise KeyError(f"Theory with ID '{theory_id}' not found.")
+
+    # Create a minimal profile and hypothesis for context
+    extractor = QCycleExtractor()
+    profile = extractor.run_extraction_cycle(domain_name, "", {"Q7": q7_answer})
+
+    # We need a Stage 3 hypothesis for the isomorphism map context
+    temp_hypo = engine.stage3_llm_comparison(profile, theory)
+
+    return engine.stage4_failure_analysis(profile, theory, temp_hypo)
 
 def analyze_domain(
     domain: str,

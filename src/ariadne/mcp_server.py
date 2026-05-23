@@ -1,5 +1,5 @@
 from mcp.server.fastmcp import FastMCP
-from .api import analyze_domain, list_theories, record_feedback, analyze_from_brief
+from .api import analyze_domain, list_theories, record_feedback, analyze_from_brief, analyze_failures
 
 mcp = FastMCP("ariadnes-mirror")
 
@@ -32,6 +32,16 @@ def ariadne_list_theories() -> list[dict]:
     """List all theories in the Ariadne library with credibility scores."""
     return [{"id": t.id, "name": t.name, "domain": t.domain,
              "credibility": t.credibility_score} for t in list_theories()]
+
+@mcp.tool()
+def ariadne_analyze_failures(
+    domain: str,
+    theory_id: str,
+    q7_answer: str
+) -> list[dict]:
+    """Given a proposed theory transfer, generate emergent failure modes that arise from structural mismatches."""
+    failures = analyze_failures(domain, theory_id, q7_answer)
+    return [f.model_dump() for f in failures]
 
 @mcp.tool()
 def ariadne_feedback(theory_id: str, rating: int) -> str:

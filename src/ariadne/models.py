@@ -1,5 +1,18 @@
-from typing import List, Dict, Tuple, Optional
+from typing import List, Dict, Tuple, Optional, Literal
 from pydantic import BaseModel, Field
+
+class DomainDelta(BaseModel):
+    missing_mechanisms: List[str]
+    extra_mechanisms: List[str]
+    scale_differences: str
+    agent_differences: str
+
+class FailureMode(BaseModel):
+    description: str
+    structural_cause: str
+    early_warning_signal: str
+    is_recoverable: bool
+    failure_type: Literal["known", "transfer", "emergent"]
 
 class StructuralTopology(BaseModel):
     roles: List[str]
@@ -26,6 +39,7 @@ class DomainProfile(BaseModel):
     description: str
     q_cycle_mappings: Dict[str, str] = {}
     structural_tags: List[str] = []
+    delta: Optional[DomainDelta] = None
 
 class Hypothesis(BaseModel):
     source_theory_id: str
@@ -35,6 +49,7 @@ class Hypothesis(BaseModel):
     explanation: str
     testable_prediction: str
     failure_conditions: List[str]
+    failure_modes: List[FailureMode] = []
     falsification_path: str
     structural_similarity: float
     novelty_score: float
