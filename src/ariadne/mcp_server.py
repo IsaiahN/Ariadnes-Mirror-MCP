@@ -1,6 +1,10 @@
 from mcp.server.fastmcp import FastMCP
 from typing import Optional
-from .api import analyze_domain, list_theories, record_feedback, analyze_from_brief, analyze_failures, find_cross_scale_analog
+from .api import (
+    analyze_domain, list_theories, record_feedback,
+    analyze_from_brief, analyze_failures, find_cross_scale_analog,
+    run_subtractive_isolation, map_fstar_coverage
+)
 
 mcp = FastMCP("ariadnes-mirror")
 
@@ -53,6 +57,20 @@ def ariadne_find_cross_scale_analog(
     """Find solutions by searching for how the same F*-equivalent problem was solved at a different scale."""
     hypotheses = find_cross_scale_analog(domain, brief, target_scale)
     return [h.model_dump() for h in hypotheses]
+
+@mcp.tool()
+def ariadne_subtractive_isolation(
+    theory_id: str,
+    blueprint_id: str = "ostrom_polycentric_governance"
+) -> dict:
+    """Subtract blueprint F* structure from a theory to find unnamed nuances and refinements."""
+    result = run_subtractive_isolation(theory_id, blueprint_id)
+    return result.model_dump()
+
+@mcp.tool()
+def ariadne_map_fstar_coverage() -> dict:
+    """Return a map of F* space showing theory coverage and identifying gaps."""
+    return map_fstar_coverage()
 
 @mcp.tool()
 def ariadne_feedback(theory_id: str, rating: int) -> str:

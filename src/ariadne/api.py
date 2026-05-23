@@ -3,7 +3,7 @@ import re
 from typing import List, Dict, Optional
 from .engine import AriadneEngine
 from .extractor import QCycleExtractor
-from .models import DomainProfile, Hypothesis, FailureMode
+from .models import DomainProfile, Hypothesis, FailureMode, SubtractiveAnalysis, DomainIntersection
 from .ai import AIClient
 
 def analyze_failures(
@@ -107,6 +107,32 @@ def find_cross_scale_analog(
         return filtered
 
     return hypotheses
+
+def run_subtractive_isolation(theory_id: str, blueprint_id: str = "ostrom_polycentric_governance") -> SubtractiveAnalysis:
+    engine = AriadneEngine()
+    theory = next((t for t in engine.theories if t.id == theory_id), None)
+    blueprint = next((t for t in engine.theories if t.id == blueprint_id), None)
+    if not theory:
+        raise KeyError(f"Theory '{theory_id}' not found.")
+    if not blueprint:
+        raise KeyError(f"Blueprint '{blueprint_id}' not found.")
+    return engine.subtractive_isolation(theory, blueprint)
+
+def map_fstar_coverage() -> Dict[str, Any]:
+    engine = AriadneEngine()
+    # Simple coverage map for now
+    theories = engine.theories
+    coverage = {
+        "well_covered": [],
+        "partially_covered": [],
+        "gaps": []
+    }
+    for t in theories:
+        if t.coverage and t.coverage.coverage_type == "blueprint":
+            coverage["well_covered"].append(t.id)
+        elif t.coverage:
+            coverage["partially_covered"].append(t.id)
+    return coverage
 
 def record_feedback(theory_id: str, rating: int) -> bool:
     engine = AriadneEngine()

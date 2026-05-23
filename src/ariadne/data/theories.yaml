@@ -33,6 +33,14 @@ theories:
       boundary_domains: [network_partitions, hardware_failure]
       emergent_problems: [livelock, split-brain]
       intersection_type: competitive
+    coverage:
+      coverage_type: framework
+      fstar_dimensions_covered: [information_asymmetry, coupling_tightness, time_pressure]
+      breadth_score: 0.3
+      depth_score: 0.95
+      novel_concepts: [term_expiration, randomized_election_timeouts]
+      convergent_discoveries: []
+      fstar_refinements: [leader_election_under_unreliable_networks]
 
   - id: hayek_price_system
     name: Hayek's Price System
@@ -68,6 +76,14 @@ theories:
       boundary_domains: [legal_systems, physical_infrastructure]
       emergent_problems: [inflation, speculative bubbles]
       intersection_type: cooperative
+    coverage:
+      coverage_type: blueprint
+      fstar_dimensions_covered: [information_asymmetry, resource_pressure, boundary_permeability]
+      breadth_score: 0.7
+      depth_score: 0.75
+      novel_concepts: [local_knowledge_utilization, price_signals_as_information]
+      convergent_discoveries: []
+      fstar_refinements: [emergent_coordination_without_central_intent]
 
   - id: adaptive_immune_system
     name: Adaptive Immune System
@@ -103,6 +119,109 @@ theories:
       boundary_domains: [microbiome, respiratory_system]
       emergent_problems: [autoimmunity, exhaustion]
       intersection_type: symbiotic
+    coverage:
+      coverage_type: blueprint
+      fstar_dimensions_covered: [adversarial_alignment, resource_pressure, boundary_permeability, information_asymmetry]
+      breadth_score: 0.8
+      depth_score: 0.7
+      novel_concepts: [clonal_selection, memory_retention, tolerance_induction]
+      convergent_discoveries:
+        - concept: tolerance_induction
+          found_in: ostrom_polycentric_governance
+          local_name: graduated_sanctions
+      fstar_refinements: [adversarial_recognition_under_incomplete_information]
+
+  - id: ostrom_polycentric_governance
+    name: Ostrom's Polycentric Governance
+    domain: Institutional Economics
+    description: A framework for managing common-pool resources through multiple centers of decision-making that are formally independent but functionally interdependent.
+    structural_tags: [hierarchical, distributed, regulatory, market]
+    structural_topology:
+      roles: [Appropriator, Monitor, Arbiter]
+      directionality: Multi-level
+      feedback_loops: Graduated sanctions and collective choice
+      scale: Institutional
+      time_horizon: Multigenerational
+    falsifiability_note: Predicts that CPR regimes with high congruence between rules and local conditions will be more stable than top-down regimes.
+    key_refs: ["Ostrom, E. (1990). Governing the Commons."]
+    known_failure_modes: [Scale-up difficulty, External shock vulnerability, Rigidity traps]
+    scale_level: institutional
+    f_star_coordinates:
+      resource_pressure: 0.85
+      actor_complexity: 0.9
+      information_asymmetry: 0.6
+      coupling_tightness: 0.7
+      time_pressure: 0.3
+      boundary_permeability: 0.5
+    distortion_profile:
+      resource_type: common-pool resources (water, land)
+      resource_dynamics: subtractable/finite
+      thermodynamic_regime: slow
+      physical_constraints: [ecological limits, geographic boundaries]
+      actor_intentionality: strategic
+      actor_count_regime: massive
+      actor_autonomy: 0.8
+      incentive_legibility: 0.4
+      boundary_domains: [legal_regimes, local_ecology]
+      emergent_problems: [tragedy_of_the_commons, free_riding]
+      intersection_type: cooperative
+    coverage:
+      coverage_type: blueprint
+      fstar_dimensions_covered: [resource_pressure, actor_complexity, coupling_tightness]
+      breadth_score: 0.85
+      depth_score: 0.80
+      novel_concepts: [graduated_sanctions, polycentric_oversight, congruence_of_rules_to_local_conditions, nested_enterprise]
+      convergent_discoveries:
+        - concept: graduated_sanctions
+          found_in: adaptive_immune_system
+          local_name: clonal_deletion_tolerance_induction
+        - concept: nested_enterprise
+          found_in: panarchy
+          local_name: cross_scale_adaptive_cycle
+      fstar_refinements: [multi_level_alignment_in_open_systems]
+
+  - id: halting_problem
+    name: The Halting Problem
+    domain: Computer Science / Formal Logic
+    description: The problem of determining, from a description of an arbitrary computer program and an input, whether the program will finish running or continue to run forever.
+    structural_tags: [modular, regulatory]
+    structural_topology:
+      roles: [Program, Input, Decider]
+      directionality: Computational
+      feedback_loops: Self-reference
+      scale: Universal
+      time_horizon: Infinite
+    falsifiability_note: Predicts that no general algorithm exists that solves the halting problem for all possible program-input pairs.
+    key_refs: ["Turing, A. M. (1937). On Computable Numbers."]
+    known_failure_modes: [Subset solvability]
+    scale_level: subatomic
+    f_star_coordinates:
+      resource_pressure: 0.1
+      actor_complexity: 0.05
+      information_asymmetry: 1.0
+      coupling_tightness: 0.8
+      time_pressure: 0.1
+      boundary_permeability: 0.1
+    distortion_profile:
+      resource_type: computational cycles
+      resource_dynamics: finite/non-renewable
+      thermodynamic_regime: fast
+      physical_constraints: [logic limits, recursion depth]
+      actor_intentionality: none
+      actor_count_regime: few
+      actor_autonomy: 0.0
+      incentive_legibility: 1.0
+      boundary_domains: [logic, formal_methods]
+      emergent_problems: [unsolvability, infinite loops]
+      intersection_type: competitive
+    coverage:
+      coverage_type: partial
+      breadth_score: 0.05
+      depth_score: 0.99
+      fstar_dimensions_covered: [information_asymmetry]
+      novel_concepts: []
+      convergent_discoveries: []
+      fstar_refinements: [some_coordination_subproblems_are_provably_unsolvable]
 
   - id: principal_agent_theory
     name: Principal-Agent Theory

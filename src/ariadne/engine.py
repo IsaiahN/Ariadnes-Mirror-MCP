@@ -7,7 +7,7 @@ import re
 import numpy as np
 from typing import List, Optional, Dict
 from importlib import resources
-from .models import Theory, DomainProfile, Hypothesis, FailureMode, DistortionProfile
+from .models import Theory, DomainProfile, Hypothesis, FailureMode, DistortionProfile, SubtractiveAnalysis, DomainIntersection
 from .persistence import TheoryStateManager
 from .config import settings
 from .ai import AIClient
@@ -368,24 +368,146 @@ OUTPUT JSON format:
 
     def stage1_fstar_filter(self, target_profile: DomainProfile, top_k: int = 20) -> List[Theory]:
         """
-        Find theories close to target on F* rather than close in surface appearance.
-        Enables cross-scale transfer.
+        Primary filter using F* coordinates.
+        Blueprints are prioritized primary matchers.
+        Partials are held as refiners.
         """
         if not target_profile.f_star_coordinates:
             return self.stage1_filter(target_profile.structural_tags, top_k)
 
-        scored_theories = []
-        for theory in self.theories:
-            if theory.f_star_coordinates:
-                dist = self._fstar_distance(target_profile.f_star_coordinates, theory.f_star_coordinates)
-                score = 1.0 - dist
-                scored_theories.append((score, theory))
-            else:
-                tag_sim = self.calculate_jaccard_similarity(target_profile.structural_tags, theory.structural_tags)
-                scored_theories.append((tag_sim * 0.5, theory))
+        blueprints = []
+        frameworks = []
+        partials = []
 
-        scored_theories.sort(key=lambda x: x[0], reverse=True)
-        return [t for s, t in scored_theories[:top_k]]
+        for theory in self.theories:
+            dist = self._fstar_distance(target_profile.f_star_coordinates, theory.f_star_coordinates or {})
+            score = 1.0 - dist
+
+            coverage_type = theory.coverage.coverage_type if theory.coverage else "framework"
+
+            if coverage_type == "blueprint":
+                blueprints.append((score, theory))
+            elif coverage_type == "framework":
+                frameworks.append((score, theory))
+            else:
+                partials.append((score, theory))
+
+        blueprints.sort(key=lambda x: x[0], reverse=True)
+        frameworks.sort(key=lambda x: x[0], reverse=True)
+        partials.sort(key=lambda x: x[0], reverse=True)
+
+        # Save top partials as current refiners for Stage 4
+        self._current_refiners = [t for s, t in partials[:10]]
+
+        # Return prioritized mix
+        primary = ([t for s, t in blueprints[:3]] +
+                   [t for s, t in frameworks[:top_k-3]])
+        return primary[:top_k]
+
+    def stage5_refine_with_partials(self, hypothesis: Hypothesis, target_profile: DomainProfile) -> Hypothesis:
+        """
+        Stage 5: Sharpen the hypothesis using relevant Partial theories as precision instruments.
+        """
+        relevant_partials = [
+            t for t in getattr(self, '_current_refiners', [])
+            if any(dim in (t.f_star_coordinates or {}) for dim in hypothesis.active_fstar_dimensions)
+        ]
+
+        if not relevant_partials:
+            return hypothesis
+
+        partials_text = "\n".join([
+            f"- {t.name}: {t.description} [refines: {t.coverage.fstar_refinements if t.coverage else []}]"
+            for t in relevant_partials
+        ])
+
+        prompt = f"""
+A blueprint/framework hypothesis has been generated for '{target_profile.name}' based on {hypothesis.source_theory_id}.
+
+STRATEGY: {hypothesis.strategy}
+PREDICTION: {hypothesis.testable_prediction}
+
+The following partial theories are precision instruments that sharpen specific mechanisms within this hypothesis.
+Use them to add constraints, boundary conditions, or known unsolvable subproblems:
+
+{partials_text}
+
+OUTPUT JSON format:
+{{
+  "sharpened_prediction": "More precise prediction",
+  "added_constraints": ["..."],
+  "known_unsolvable_subproblems": ["..."]
+}}
+"""
+        try:
+            response = self.ai_client.get_completion(prompt, system_prompt="You are a theoretical systems engineer.")
+            json_match = re.search(r'\{.*\}', response, re.DOTALL)
+            if json_match:
+                data = json.loads(json_match.group())
+                hypothesis.testable_prediction = data.get("sharpened_prediction", hypothesis.testable_prediction)
+                hypothesis.added_constraints = data.get("added_constraints", [])
+                hypothesis.known_unsolvable_subproblems = data.get("known_unsolvable_subproblems", [])
+        except Exception as e:
+            print(f"Error during Stage 5 refinement: {e}")
+
+        return hypothesis
+
+    def subtractive_isolation(self, theory: Theory, blueprint: Theory) -> SubtractiveAnalysis:
+        """
+        Subtract blueprint F* structure from a theory to find unnamed refinements.
+        """
+        prompt = f"""
+You are performing subtractive analysis to find unnamed theoretical concepts.
+
+THEORY BEING ANALYZED: {theory.name}
+Description: {theory.description}
+Mechanisms: {theory.structural_topology.model_dump_json()}
+Novel concepts: {theory.coverage.novel_concepts if theory.coverage else []}
+
+BLUEPRINT BEING SUBTRACTED: {blueprint.name}
+Core F* principles it covers: {blueprint.coverage.novel_concepts if blueprint.coverage else []}
+
+Step 1: List every mechanism, principle, and concept in {theory.name}.
+Step 2: Mark each as:
+- COVERED: directly explained by {blueprint.name}
+- REFINEMENT: extends or sharpens something in {blueprint.name}
+- RESIDUE: not explained by {blueprint.name} at all
+
+Step 3: For each RESIDUE/REFINEMENT component:
+- Describe it in domain-agnostic terms
+- Is it a candidate for a new Partial theory?
+- What would you name it?
+
+OUTPUT JSON list of objects for residue_components.
+"""
+        try:
+            response = self.ai_client.get_completion(prompt, system_prompt="You are a theoretical scientist.")
+            json_match = re.search(r'\[.*\]', response, re.DOTALL)
+            if json_match:
+                components_data = json.loads(json_match.group())
+                # Minimal mapping to ResidueComponent model
+                components = []
+                for c in components_data:
+                    components.append(ResidueComponent(
+                        description=c.get("description", ""),
+                        appears_in_other_theories=[], # to be populated by cross-referencing
+                        domain_of_origin=theory.domain,
+                        has_formal_theory=False,
+                        closest_formal_theory=blueprint.id,
+                        candidate_theory_name=c.get("name"),
+                        candidate_theory_description=c.get("description"),
+                        potential_applications=[],
+                        fstar_coordinates=None
+                    ))
+                return SubtractiveAnalysis(
+                    theory_id=theory.id,
+                    blueprint_used=blueprint.id,
+                    residue_components=components
+                )
+        except Exception as e:
+            print(f"Error during subtractive isolation: {e}")
+
+        return SubtractiveAnalysis(theory_id=theory.id, blueprint_used=blueprint.id, residue_components=[])
 
     def analyze(self, target_profile: DomainProfile) -> List[Hypothesis]:
         # Step 0: Distortion Analysis (Find F* coords)
@@ -404,6 +526,9 @@ OUTPUT JSON format:
 
             # Step 4: Emergent Failure Analysis
             hypo.failure_modes = self.stage4_failure_analysis(target_profile, theory, hypo)
+
+            # Step 5: Partial Refinement
+            hypo = self.stage5_refine_with_partials(hypo, target_profile)
 
             hypotheses.append(hypo)
 
