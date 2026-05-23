@@ -26,19 +26,19 @@ The outputs provide direction and shape. They point toward where answers might
 exist and what form they might take, giving you something concrete to follow up 
 with and validate.
 
-## Use Cases
+## Ariadne's Use Cases
 
-| Use Case | Description |
-|---|---|
-| **Hypothesis generation** | Given a problem domain, find which theories from unrelated fields are structurally closest and generate transfer hypotheses with testable predictions and falsification paths. |
-| **Emergent failure analysis** | Identify failure modes that arise specifically from applying a theory outside its original context. These are distinct from the theory's known failure modes and are often the ones that matter most in practice. |
-| **Scale traversal** | Find how the same structural problem was solved at a different scale. A logistics problem at the institutional scale may have a well-tested solution at the cellular or ecological scale once distortions are stripped away. |
-| **Domain intersection analysis** | When two domains collide and produce emergent problems that exist in neither domain alone, find a third domain where the same structural tension was already resolved, then derive interface specifications for each side separately. The combination problem often becomes two tractable boundary problems. |
-| **Subtractive isolation** | Subtract a Blueprint-level theory from any other theory to find the residue: concepts that exist in the coordination space but have no formal theory yet. These unnamed concepts are candidates for new Partial theories and often contain the most transferable insights. |
-| **Gap mapping** | Identify regions of F* space where no theory exists. These are not failures of the search. They are the map telling you where humanity faces recurring coordination problems it has never formally theorized. |
-| **Theory classification** | Given a new theory or framework, classify it as Blueprint, Framework, or Partial, place it in F* space, and identify its convergent rediscoveries in the existing library. |
-| **Convergent rediscovery detection** | Check whether a concept appears independently across multiple theories in different domains. High convergence is evidence the concept is a real feature of the underlying coordination structure rather than a domain artifact. |
-| **Expert matching (experimental)** | A sufficiently rich F* map identifies not just analogous theories but analogous thinkers: researchers whose career expertise sits at a structurally similar position to your problem, making cross-domain collaboration targeted rather than accidental. |
+| Use Case | Category | Description |
+|---|---|---|
+| **Hypothesis generation** | Analysis | Given a problem domain, find which theories from unrelated fields are structurally closest and generate transfer hypotheses with testable predictions and falsification paths. |
+| **Emergent failure analysis** | Analysis | Identify failure modes that arise specifically from applying a theory outside its original context. These are distinct from the theory's known failure modes and are often the ones that matter most in practice. |
+| **Domain intersection analysis** | Research | When two domains collide and produce emergent problems that exist in neither domain alone, find a third domain where the same structural tension was already resolved, then derive interface specifications for each side separately. The combination problem often becomes two tractable boundary problems. |
+| **Scale traversal** | Research | Find how the same structural problem was solved at a different scale. A logistics problem at the institutional scale may have a well-tested solution at the cellular or ecological scale once distortions are stripped away. |
+| **Subtractive isolation** | Research | Subtract a Blueprint-level theory from any other theory to find the residue: concepts that exist in the coordination space but have no formal theory yet. These unnamed concepts are candidates for new Partial theories and often contain the most transferable insights. |
+| **Gap mapping** | Research | Identify regions of F* space where no theory exists. These are not failures of the search. They are the map telling you where humanity faces recurring coordination problems it has never formally theorized. |
+| **Theory classification** | Curation | Given a new theory or framework, classify it as Blueprint, Framework, or Partial, place it in F* space, and identify its convergent rediscoveries in the existing library. |
+| **Convergent rediscovery detection** | Curation | Check whether a concept appears independently across multiple theories in different domains. High convergence is evidence the concept is a real feature of the underlying coordination structure rather than a domain artifact. |
+| **Expert matching** | Collaboration | A sufficiently rich F* map identifies not just analogous theories but analogous thinkers: researchers whose career expertise sits at a structurally similar position to your problem, making cross-domain collaboration targeted rather than accidental. |
 
 ## Installation
 
