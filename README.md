@@ -1,33 +1,28 @@
 # Ariadne's Mirror MCP
 
-A cross-domain structural mapping tool that helps find deep structural 
-similarities between a problem domain and a curated library of theories, 
-generating transferable hypotheses and identifying analogous solutions from 
-unrelated fields.
-
-***In other words: Ariadne leads you out of your field's labyrinth by finding threads in others.***
+*Ariadne leads you out of your field's labyrinth by finding threads in others.*
 
 ## What It Does
 
-Most hard problems stay hard because the people working on them don't know 
-that someone else already solved a structurally identical problem in a 
-completely different field, under a different name, with different vocabulary, 
+Most hard problems stay hard because the people working on them don't know
+that someone else already solved a structurally identical problem in a
+completely different field, under a different name, with different vocabulary,
 invisible to any keyword search.
 
-Ariadne's Mirror is a cross-domain structural mapping tool. Given a problem 
-domain, it characterizes the underlying structure, searches a curated theory 
-library for structurally similar theories regardless of surface domain, and 
-generates transferable hypotheses with testable predictions.
+The space of all problems has recurring deep structures: trade-offs,
+bottlenecks, incentive traps, search landscapes. Human fields have
+independently discovered heuristics for those structures, but language and
+jargon hide the commonality. Ariadne's Mirror maps the abstract skeleton of
+your problem to skeletons in other domains, ignoring surface details.
 
-Where a researcher brings one career of cross-domain reading, this brings a 
-mapped library of 48 theories across physics, biology, economics, computer 
+It doesn't give you an answer. It gives you an analogical bridge. You still
+have to walk it.
+
+Where a researcher brings one career of cross-domain reading, this brings a
+mapped library of 48 theories across physics, biology, economics, computer
 science, and philosophy, searched by structural similarity rather than keywords.
 
-The outputs provide direction and shape. They point toward where answers might 
-exist and what form they might take, giving you something concrete to follow up 
-with and validate.
-
-## Ariadne's Use Cases
+## Use Cases
 
 | Use Case | Category | Description |
 |---|---|---|
@@ -36,7 +31,7 @@ with and validate.
 | **Domain intersection analysis** | Research | When two domains collide and produce emergent problems that exist in neither domain alone, find a third domain where the same structural tension was already resolved, then derive interface specifications for each side separately. The combination problem often becomes two tractable boundary problems. |
 | **Scale traversal** | Research | Find how the same structural problem was solved at a different scale. A logistics problem at the institutional scale may have a well-tested solution at the cellular or ecological scale once distortions are stripped away. |
 | **Subtractive isolation** | Research | Subtract a Blueprint-level theory from any other theory to find the residue: concepts that exist in the coordination space but have no formal theory yet. These unnamed concepts are candidates for new Partial theories and often contain the most transferable insights. |
-| **Gap mapping** | Research | Identify regions of F* space where no theory exists. These are not failures of the search. They are the map telling you where humanity faces recurring coordination problems it has never formally theorized. |
+| **Gap mapping** | Research | Identify regions of F* space where no theory exists. These are not failures of the search. They are the map telling you where recurring coordination problems have never been formally theorized. |
 | **Theory classification** | Curation | Given a new theory or framework, classify it as Blueprint, Framework, or Partial, place it in F* space, and identify its convergent rediscoveries in the existing library. |
 | **Convergent rediscovery detection** | Curation | Check whether a concept appears independently across multiple theories in different domains. High convergence is evidence the concept is a real feature of the underlying coordination structure rather than a domain artifact. |
 | **Expert matching** | Collaboration | A sufficiently rich F* map identifies not just analogous theories but analogous thinkers: researchers whose career expertise sits at a structurally similar position to your problem, making cross-domain collaboration targeted rather than accidental. |
@@ -99,14 +94,16 @@ mcp_servers:
 ```
 
 Available tools:
-- `ariadne_analyze_brief` — full analysis from a research brief
-- `ariadne_analyze_failures` — emergent failure mode analysis
-- `ariadne_find_cross_scale_analog` — find solutions at different scales
-- `ariadne_subtractive_isolation` — find unnamed theoretical residues
-- `ariadne_map_fstar_coverage` — F* coverage gaps in the library
-- `ariadne_get_blueprint_search_prompt` — structured prompt for finding 
-  new kernel candidates
-- `ariadne_list_kernel_theories` — inspect the protected seed set
+
+| Tool | Description |
+|---|---|
+| `ariadne_analyze_brief` | Full analysis from a research brief |
+| `ariadne_analyze_failures` | Emergent failure mode analysis |
+| `ariadne_find_cross_scale_analog` | Find solutions at different scales |
+| `ariadne_subtractive_isolation` | Find unnamed theoretical residues |
+| `ariadne_map_fstar_coverage` | F* coverage gaps in the library |
+| `ariadne_get_blueprint_search_prompt` | Structured prompt for finding new kernel candidates |
+| `ariadne_list_kernel_theories` | Inspect the protected seed set |
 
 ## Tests
 
@@ -119,23 +116,23 @@ pytest tests/
 
 ### The Kernel
 
-The protected seed set of ~48 theories spanning physics, biology, economics, 
+The protected seed set of ~48 theories spanning physics, biology, economics,
 computer science, sociology, and philosophy. Each theory has:
 
-- F* coordinates across 6 dimensions (resource_pressure, actor_complexity, 
-  information_asymmetry, coupling_tightness, time_pressure, 
+- F* coordinates across 6 dimensions (resource_pressure, actor_complexity,
+  information_asymmetry, coupling_tightness, time_pressure,
   boundary_permeability)
 - Coverage classification (Blueprint / Framework / Partial)
-- Convergent discovery records linking structurally equivalent concepts 
+- Convergent discovery records linking structurally equivalent concepts
   across domains
 - Distortion profile describing how domain-specific factors shape the theory
 
-The kernel is read-only at runtime and hash-verified on load. It is the 
-system's closest approximation of F* — the domain-agnostic coordination 
+The kernel is read-only at runtime and hash-verified on load. It is the
+system's closest approximation of F*, the domain-agnostic coordination
 structure underlying all bounded-resource coordination problems.
 
-Blueprints in the kernel: Ostrom's Polycentric Governance, Ouroboros/Q-Cycle 
-(Nwukor 2024), Panarchy, Ashby's Law of Requisite Variety, Prigogine's 
+Current Blueprints: Ostrom's Polycentric Governance, Ouroboros/Q-Cycle
+(Nwukor 2024), Panarchy, Ashby's Law of Requisite Variety, Prigogine's
 Dissipative Structures, Autopoiesis, Bateson's Ecology of Mind.
 
 ### The Pipeline
@@ -149,47 +146,59 @@ Dissipative Structures, Autopoiesis, Bateson's Ecology of Mind.
 | 4 | Failure Analysis | Emergent failure modes from transfer mismatches |
 | 5 | Partial Refinement | Sharpen predictions with precision partial theories |
 
+### Thread System
+
+User-added theories and session data are stored in isolated threads, separate
+from the kernel. Thread theories have a credibility ceiling of 0.7. Kernel
+theories start at 0.8 and are not modified by usage feedback.
+
 ## Theoretical Basis
 
 ### The F* Hypothesis
 
-The F* hypothesis is that coordination problems across all domains, how 
-bounded agents manage shared resources under uncertainty, share deep 
-structural regularities that persist after you strip away domain-specific 
-context. 
+The F* hypothesis is that coordination problems across all domains share deep
+structural regularities that persist after domain-specific context is stripped
+away. The primary evidence is convergent rediscovery: independent researchers
+in unrelated fields independently arriving at structurally equivalent
+frameworks without knowledge of each other's work.
 
-The tool is the hypothesis put to the test. 
-The tool's outputs uncover potential shapes of a problem and structurally analogous solutions 
-from other domains to present potential solutions but the validation work will still be required. 
+This is an empirical hypothesis, not a proven theorem. The outputs uncover
+potential shapes of a problem and structurally analogous solutions from other
+domains. Validation remains the user's work.
 
 ### How F* Mappings Work
-Each theory in the kernel or added to thread libraries are categorized as one of these three:
 
-- **Blueprints** are full-coverage frameworks that describe an entire coordination space at all levels, independently derived and empirically validated across domains, and the strongest signal that a theory is measuring something real about F* rather than its origin domain.
-- **Frameworks** explain a coherent subsystem with defined scope and internal logic, useful for concretizing hypotheses within a bounded problem space.
-- **Partials** are high-precision instruments that describe one mechanism exactly, used to sharpen predictions and identify known unsolvable subproblems within a hypothesis.
+Each theory in the kernel or added to thread libraries is categorized as one
+of these three:
 
-### Thread System
-
-User-added theories and session data are stored in isolated threads, 
-separate from the kernel (core theories). Thread theories have a credibility ceiling of 0.7 
-(kernel theories start at 0.8 and are not modified by usage feedback).
+- **Blueprints** are full-coverage frameworks that describe an entire
+  coordination space at all levels, independently derived and empirically
+  validated across domains, and the strongest signal that a theory is
+  measuring something real about F* rather than its origin domain.
+- **Frameworks** explain a coherent subsystem with defined scope and internal
+  logic, useful for concretizing hypotheses within a bounded problem space.
+- **Partials** are high-precision instruments that describe one mechanism
+  exactly, used to sharpen predictions and identify known unsolvable
+  subproblems within a hypothesis.
 
 ### On the Kernel
 
-The kernel is the system's approximation of F*. Its quality directly 
-determines the quality of every output the tool produces. Modifying it 
-without careful consideration has cascading effects on all downstream 
-results (it is not recommended).
+The kernel's quality directly determines the quality of every output the tool
+produces. Modifying it without careful consideration has cascading effects on
+all downstream results and is not recommended.
 
-For enrichment and extension for example, using AutoResearch to chart 
-additional regions of F*, new theories should be stored externally in 
-thread libraries, not in the kernel itself. 
+For enrichment, using AutoResearch to chart additional regions of F* for
+example, new theories should be stored in thread libraries rather than the
+kernel itself. This lets you compare core outputs against enriched outputs and
+revert cleanly if enrichment degrades results.
 
-This separation lets you compare core outputs against enriched outputs and revert cleanly if 
-enrichment degrades results.
+## Related Work
+
+Nwukor, I. (2024). Role-Based Multi-Agent Reasoning Framework.
+Ostrom, E. (1990). Governing the Commons.
+Ashby, W.R. (1956). An Introduction to Cybernetics.
+Prigogine, I. (1977). Self-Organization in Non-Equilibrium Systems.
 
 ## License
 
 MIT
-```
