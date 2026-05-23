@@ -5,7 +5,7 @@ similarities between a problem domain and a curated library of theories,
 generating transferable hypotheses and identifying analogous solutions from 
 unrelated fields.
 
-In other words: Ariadne leads you out of your field's labyrinth by finding threads in others.
+***In other words: Ariadne leads you out of your field's labyrinth by finding threads in others.***
 
 ## What It Does
 
