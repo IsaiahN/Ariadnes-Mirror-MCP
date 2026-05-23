@@ -1,6 +1,7 @@
 import click
 import json
 import os
+import datetime
 from .engine import AriadneEngine
 from .extractor import QCycleExtractor
 from .models import DomainProfile
@@ -15,6 +16,13 @@ def main():
 @click.option('--description', required=True, help='Brief description')
 def analyze(domain, description):
     """Analyze a domain and generate hypotheses."""
+    try:
+        from .config import settings
+        settings.validate()
+    except ValueError as e:
+        click.echo(f"Error: {e}")
+        return
+
     extractor = QCycleExtractor()
     click.echo(f"Starting Q-Cycle extraction for: {domain}")
 
@@ -25,13 +33,22 @@ def analyze(domain, description):
         answers[q_id] = answer
 
     profile = extractor.run_extraction_cycle(domain, description, answers)
+    engine = AriadneEngine()
 
-    # Locate theories.yaml
-    theories_path = os.path.join(os.path.dirname(__file__), '../../data/theories.yaml')
-    engine = AriadneEngine(theories_path)
+    # Save domain profile
+    domain_path = os.path.join(engine.storage_dir, f"domains/{domain.replace(' ', '_').lower()}.json")
+    os.makedirs(os.path.dirname(domain_path), exist_ok=True)
+    with open(domain_path, 'w') as f:
+        f.write(profile.model_dump_json(indent=2))
 
     click.echo("Generating hypotheses...")
     hypotheses = engine.analyze(profile)
+
+    # Save session
+    session_id = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    session_path = os.path.join(engine.storage_dir, f"sessions/session_{session_id}.json")
+    with open(session_path, 'w') as f:
+        json.dump([h.model_dump() for h in hypotheses], f, indent=2)
 
     for i, hypo in enumerate(hypotheses):
         click.echo(f"\n--- Hypothesis {i+1}: {hypo.source_theory_id} ---")
@@ -47,8 +64,7 @@ def library():
 @library.command(name='list')
 def list_library():
     """List all theories in the library."""
-    theories_path = os.path.join(os.path.dirname(__file__), '../../data/theories.yaml')
-    engine = AriadneEngine(theories_path)
+    engine = AriadneEngine()
     for theory in engine.theories:
         click.echo(f"- {theory.name} ({theory.id}) [{theory.domain}] - Credibility: {theory.credibility_score:.2f}")
 
@@ -57,10 +73,12 @@ def list_library():
 @click.option('--rating', required=True, type=int, help='Rating (1-5)')
 def feedback(theory, rating):
     """Provide feedback on a theory to update its credibility."""
-    theories_path = os.path.join(os.path.dirname(__file__), '../../data/theories.yaml')
-    engine = AriadneEngine(theories_path)
-    engine.update_credibility(theory, rating)
-    click.echo(f"Feedback recorded for {theory}.")
+    engine = AriadneEngine()
+    try:
+        engine.update_credibility(theory, rating)
+        click.echo(f"Feedback recorded for {theory}.")
+    except ValueError as e:
+        click.echo(f"Error: {e}")
 
 if __name__ == '__main__':
     main()

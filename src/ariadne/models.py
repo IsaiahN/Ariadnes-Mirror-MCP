@@ -24,7 +24,6 @@ class Theory(BaseModel):
 class DomainProfile(BaseModel):
     name: str
     description: str
-    meta_components: Dict[str, str] = {}
     q_cycle_mappings: Dict[str, str] = {}
     structural_tags: List[str] = []
 

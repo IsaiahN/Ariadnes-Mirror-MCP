@@ -3,4 +3,8 @@ openai
 numpy
 click
 pydantic
-scikit-learn
+pydantic-settings
+python-dotenv
+
+[test]
+pytest

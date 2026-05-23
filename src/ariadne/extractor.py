@@ -1,5 +1,8 @@
+import json
+import re
 from typing import Dict, List
 from .models import DomainProfile
+from .ai import AIClient
 
 class QCycleExtractor:
     QUESTIONS = {
@@ -13,18 +16,39 @@ class QCycleExtractor:
     }
 
     def __init__(self):
-        pass
+        self.ai_client = AIClient()
 
     def run_extraction_cycle(self, domain_name: str, description: str, answers: Dict[str, str]) -> DomainProfile:
         """
         Populates a DomainProfile based on the Q-Cycle answers.
-        In a real app, an LLM would interpret these answers to generate structural tags.
+        Uses an LLM to interpret these answers and generate structural tags.
         """
         profile = DomainProfile(
             name=domain_name,
             description=description,
             q_cycle_mappings=answers
         )
-        # Mocking structural tag extraction from answers
-        profile.structural_tags = ["distributed", "peer-to-peer"]
+
+        prompt = f"""
+Based on the following Q-Cycle answers for the domain '{domain_name}', extract a list of 5-8 relevant structural tags.
+Description: {description}
+Answers: {json.dumps(answers, indent=2)}
+
+Vocabulary to choose from:
+hierarchical, peer-to-peer, hub-spoke, cyclic, evolutionary, adversarial, cooperative, market, stigmergic, predictive, regulatory, layered, modular, network
+
+Output ONLY a JSON list of strings.
+"""
+        try:
+            response = self.ai_client.get_completion(prompt, system_prompt="You are a system analyst.")
+            # Basic JSON extraction
+            json_match = re.search(r'\[.*\]', response, re.DOTALL)
+            if json_match:
+                profile.structural_tags = json.loads(json_match.group())
+            else:
+                profile.structural_tags = ["distributed"] # Fallback
+        except Exception as e:
+            print(f"Error during tag extraction: {e}")
+            profile.structural_tags = ["distributed"] # Fallback
+
         return profile
