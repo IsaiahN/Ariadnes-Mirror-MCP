@@ -138,16 +138,25 @@ pytest tests/
 
 ## Theoretical Basis
 
-The F* hypothesis: coordination problems across all domains share deep 
-structural regularities that persist after domain-specific distortions are 
-removed. The convergent rediscovery signal independent researchers in 
-unrelated fields arriving at structurally similar frameworks is basis for this concept.
+The F* hypothesis: coordination problems across all domains share deep structural regularities that persist after domain-specific distortions are removed. The primary anecdote for this is convergent rediscovery where researchers in unrelated fields independently arrive at structurally similar frameworks without knowledge of each other's work.
 
 This is an empirical hypothesis, not a proven theorem. The tool's outputs 
-are hypotheses to be tested, uncovering potential unknown shapes to the problem, not the answers themselves.
+uncover potential shapes of a problem and structurally analogous solutions 
+from other domains to present potential solutions but the validation work will still be required. 
 
-The kernel represents the current best approximation of F*, curated manually and subject to revision as 
-evidence accumulates. Autoresearch could be used for example to further chart F*, but changes to the "kernel" if not carefully considered will have cascading downstream effects on all of the outputs of the tool (so altering it is not recommended).
+### On the Kernel
+
+The kernel is the system's approximation of F*. Its quality directly 
+determines the quality of every output the tool produces. Modifying it 
+without careful consideration has cascading effects on all downstream 
+results (it is not recommended).
+
+For enrichment and extension for example, using AutoResearch to chart 
+additional regions of F* — new theories should be stored externally in 
+thread libraries, not in the kernel itself. 
+
+This separation lets you compare core outputs against enriched outputs and revert cleanly if 
+enrichment degrades results.
 
 ## License
 
