@@ -5,9 +5,9 @@ import os
 import pickle
 import re
 import numpy as np
-from typing import List, Optional
+from typing import List, Optional, Dict
 from importlib import resources
-from .models import Theory, DomainProfile, Hypothesis, FailureMode
+from .models import Theory, DomainProfile, Hypothesis, FailureMode, DistortionProfile
 from .persistence import TheoryStateManager
 from .config import settings
 from .ai import AIClient
@@ -290,9 +290,109 @@ Output ONLY a JSON list of objects.
             print(f"Error during Stage 4 failure analysis for {theory.name}: {e}")
             return []
 
+    def stage0_distortion_analysis(self, target_profile: DomainProfile) -> DomainProfile:
+        """
+        Stage 0: Strip domain-specific distortions to find F* coordinates.
+        Allows comparison across domains that share deep structure but look different.
+        """
+        prompt = f"""
+You are analyzing a domain to find its position on the underlying domain-agnostic coordination framework F*.
+
+F* is the perfect isomorph of all coordination problems:
+any system of bounded agents managing shared resources under uncertainty is a distorted expression of F*.
+
+DOMAIN: {target_profile.name}
+DESCRIPTION: {target_profile.description}
+Q-CYCLE ANSWERS: {json.dumps(target_profile.q_cycle_mappings, indent=2)}
+
+Three forces distort F* into domain-specific expressions:
+D1 (Environmental Substrate): What physical/informational constraints shape this domain? What is fundamentally scarce?
+D2 (Actor Configuration): What is the intentionality level of actors? (pure reflex → strategic) How many? How autonomous?
+D3 (Domain Intersections): What other domains does this touch? What emergent problems arise?
+
+Identify these distortions and then strip them away to find the pure coordination problem underneath.
+Express this as F* coordinates (0.0 to 1.0):
+- resource_pressure: 0 (abundant) to 1 (existential scarcity)
+- actor_complexity: 0 (pure reflex) to 1 (full strategic intentionality)
+- information_asymmetry: 0 (perfect information) to 1 (complete opacity)
+- coupling_tightness: 0 (loosely coupled) to 1 (tightly coupled)
+- time_pressure: 0 (geological) to 1 (real-time)
+- boundary_permeability: 0 (closed system) to 1 (fully open)
+
+OUTPUT JSON format:
+{{
+  "distortion_profile": {{
+    "resource_type": "...",
+    "resource_dynamics": "...",
+    "thermodynamic_regime": "...",
+    "physical_constraints": ["..."],
+    "actor_intentionality": "...",
+    "actor_count_regime": "...",
+    "actor_autonomy": 0.8,
+    "incentive_legibility": 0.5,
+    "boundary_domains": ["..."],
+    "emergent_problems": ["..."],
+    "intersection_type": "..."
+  }},
+  "f_star_coordinates": {{
+    "resource_pressure": 0.7,
+    "actor_complexity": 0.1,
+    "information_asymmetry": 0.8,
+    "coupling_tightness": 0.9,
+    "time_pressure": 0.8,
+    "boundary_permeability": 0.2
+  }},
+  "scale_level": "organism"
+}}
+"""
+        try:
+            response = self.ai_client.get_completion(prompt, system_prompt="You are a systems theoretical scientist.")
+            json_match = re.search(r'\{.*\}', response, re.DOTALL)
+            if json_match:
+                data = json.loads(json_match.group())
+                target_profile.distortion_profile = DistortionProfile(**data["distortion_profile"])
+                target_profile.f_star_coordinates = data["f_star_coordinates"]
+                target_profile.scale_level = data.get("scale_level", "")
+        except Exception as e:
+            print(f"Error during Stage 0 distortion analysis: {e}")
+
+        return target_profile
+
+    def _fstar_distance(self, coords1: Dict[str, float], coords2: Dict[str, float]) -> float:
+        dims = ['resource_pressure', 'actor_complexity',
+                'information_asymmetry', 'coupling_tightness',
+                'time_pressure', 'boundary_permeability']
+        diffs = [(coords1.get(d, 0.5) - coords2.get(d, 0.5))**2
+                 for d in dims]
+        return (sum(diffs) / len(dims)) ** 0.5
+
+    def stage1_fstar_filter(self, target_profile: DomainProfile, top_k: int = 20) -> List[Theory]:
+        """
+        Find theories close to target on F* rather than close in surface appearance.
+        Enables cross-scale transfer.
+        """
+        if not target_profile.f_star_coordinates:
+            return self.stage1_filter(target_profile.structural_tags, top_k)
+
+        scored_theories = []
+        for theory in self.theories:
+            if theory.f_star_coordinates:
+                dist = self._fstar_distance(target_profile.f_star_coordinates, theory.f_star_coordinates)
+                score = 1.0 - dist
+                scored_theories.append((score, theory))
+            else:
+                tag_sim = self.calculate_jaccard_similarity(target_profile.structural_tags, theory.structural_tags)
+                scored_theories.append((tag_sim * 0.5, theory))
+
+        scored_theories.sort(key=lambda x: x[0], reverse=True)
+        return [t for s, t in scored_theories[:top_k]]
+
     def analyze(self, target_profile: DomainProfile) -> List[Hypothesis]:
-        # Step 1: Coarse Filter
-        candidates = self.stage1_filter(target_profile.structural_tags)
+        # Step 0: Distortion Analysis (Find F* coords)
+        target_profile = self.stage0_distortion_analysis(target_profile)
+
+        # Step 1: F* Filter (Search by underlying structure, not surface)
+        candidates = self.stage1_fstar_filter(target_profile)
 
         # Step 2: Embedding Similarity
         refined_candidates = self.stage2_embedding_similarity(target_profile, candidates)

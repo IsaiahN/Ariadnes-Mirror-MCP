@@ -1,5 +1,6 @@
 from mcp.server.fastmcp import FastMCP
-from .api import analyze_domain, list_theories, record_feedback, analyze_from_brief, analyze_failures
+from typing import Optional
+from .api import analyze_domain, list_theories, record_feedback, analyze_from_brief, analyze_failures, find_cross_scale_analog
 
 mcp = FastMCP("ariadnes-mirror")
 
@@ -42,6 +43,16 @@ def ariadne_analyze_failures(
     """Given a proposed theory transfer, generate emergent failure modes that arise from structural mismatches."""
     failures = analyze_failures(domain, theory_id, q7_answer)
     return [f.model_dump() for f in failures]
+
+@mcp.tool()
+def ariadne_find_cross_scale_analog(
+    domain: str,
+    brief: str,
+    target_scale: Optional[str] = None
+) -> list[dict]:
+    """Find solutions by searching for how the same F*-equivalent problem was solved at a different scale."""
+    hypotheses = find_cross_scale_analog(domain, brief, target_scale)
+    return [h.model_dump() for h in hypotheses]
 
 @mcp.tool()
 def ariadne_feedback(theory_id: str, rating: int) -> str:

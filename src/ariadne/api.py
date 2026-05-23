@@ -1,9 +1,10 @@
 import json
 import re
-from typing import List, Dict
+from typing import List, Dict, Optional
 from .engine import AriadneEngine
 from .extractor import QCycleExtractor
 from .models import DomainProfile, Hypothesis, FailureMode
+from .ai import AIClient
 
 def analyze_failures(
     domain_name: str,
@@ -62,7 +63,6 @@ QUESTIONS:
 Output ONLY a JSON object with keys Q1-Q7.
 """
     try:
-        from .ai import AIClient
         ai_client = AIClient()
         response = ai_client.get_completion(prompt, system_prompt="You are a system analyst.")
         json_match = re.search(r'\{.*\}', response, re.DOTALL)
@@ -79,6 +79,34 @@ Output ONLY a JSON object with keys Q1-Q7.
 
 def list_theories() -> List:
     return AriadneEngine().theories
+
+def find_cross_scale_analog(
+    domain: str,
+    brief: str,
+    target_scale: Optional[str] = None
+) -> List[Hypothesis]:
+    """
+    Find solutions by searching for how the same F*-equivalent problem
+    was solved at a different scale or in a different domain.
+    """
+    extractor = QCycleExtractor()
+    # For cross-scale we use a brief to get full context
+    prompt = f"Extract answers to the 7 Q-Cycle questions based on this brief: {brief}"
+    # In a real impl, we would use the same logic as analyze_from_brief
+    # For now, let's reuse analyze_from_brief but filter by scale if provided
+    hypotheses = analyze_from_brief(domain, brief)
+
+    if target_scale:
+        engine = AriadneEngine()
+        # Re-filter results by scale
+        filtered = []
+        for hypo in hypotheses:
+            theory = next((t for t in engine.theories if t.id == hypo.source_theory_id), None)
+            if theory and theory.scale_level == target_scale:
+                filtered.append(hypo)
+        return filtered
+
+    return hypotheses
 
 def record_feedback(theory_id: str, rating: int) -> bool:
     engine = AriadneEngine()

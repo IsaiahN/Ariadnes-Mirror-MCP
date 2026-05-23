@@ -13,6 +13,26 @@ theories:
     falsifiability_note: Predicts that a cluster cannot reach consensus if more than (N-1)/2 nodes are unavailable or partitioned.
     key_refs: ["Ongaro, D., & Ousterhout, J. (2014). In Search of an Understandable Consensus Algorithm."]
     known_failure_modes: [Livelock during election cycles, Performance degradation under high network latency]
+    scale_level: institution
+    f_star_coordinates:
+      resource_pressure: 0.7
+      actor_complexity: 0.1
+      information_asymmetry: 0.8
+      coupling_tightness: 0.9
+      time_pressure: 0.8
+      boundary_permeability: 0.2
+    distortion_profile:
+      resource_type: consensus / consistent state
+      resource_dynamics: terminal on failure
+      thermodynamic_regime: fast/digital
+      physical_constraints: [network latency, partition existence]
+      actor_intentionality: reflexive
+      actor_count_regime: few
+      actor_autonomy: 0.2
+      incentive_legibility: 1.0
+      boundary_domains: [network_partitions, hardware_failure]
+      emergent_problems: [livelock, split-brain]
+      intersection_type: competitive
 
   - id: hayek_price_system
     name: Hayek's Price System
@@ -28,6 +48,26 @@ theories:
     falsifiability_note: Predicts that central planning will always result in less efficient resource allocation than a functioning price system for non-trivial economies.
     key_refs: ["Hayek, F. A. (1945). The Use of Knowledge in Society."]
     known_failure_modes: [Price stickiness, Information asymmetry, Market power / Monopolies]
+    scale_level: civilization
+    f_star_coordinates:
+      resource_pressure: 0.6
+      actor_complexity: 0.9
+      information_asymmetry: 0.9
+      coupling_tightness: 0.4
+      time_pressure: 0.5
+      boundary_permeability: 0.9
+    distortion_profile:
+      resource_type: multi-modal capital
+      resource_dynamics: renewable/growth
+      thermodynamic_regime: slow/institutional
+      physical_constraints: [logistics, information delay]
+      actor_intentionality: strategic
+      actor_count_regime: massive
+      actor_autonomy: 0.8
+      incentive_legibility: 0.5
+      boundary_domains: [legal_systems, physical_infrastructure]
+      emergent_problems: [inflation, speculative bubbles]
+      intersection_type: cooperative
 
   - id: adaptive_immune_system
     name: Adaptive Immune System
@@ -43,6 +83,26 @@ theories:
     falsifiability_note: Predicts that a secondary exposure to the same pathogen will result in a faster and stronger response than the primary exposure.
     key_refs: ["Janeway, C. A. (2001). Immunobiology: The Immune System in Health and Disease."]
     known_failure_modes: [Autoimmunity (self-recognition), Pathogen mimicry, Cytokine storm]
+    scale_level: organism
+    f_star_coordinates:
+      resource_pressure: 0.6
+      actor_complexity: 0.3
+      information_asymmetry: 0.7
+      coupling_tightness: 0.5
+      time_pressure: 0.6
+      boundary_permeability: 0.8
+    distortion_profile:
+      resource_type: metabolic energy
+      resource_dynamics: renewable/cyclic
+      thermodynamic_regime: medium/biological
+      physical_constraints: [fluid dynamics, chemical gradients]
+      actor_intentionality: reflexive
+      actor_count_regime: massive
+      actor_autonomy: 0.4
+      incentive_legibility: 0.7
+      boundary_domains: [microbiome, respiratory_system]
+      emergent_problems: [autoimmunity, exhaustion]
+      intersection_type: symbiotic
 
   - id: principal_agent_theory
     name: Principal-Agent Theory
@@ -58,6 +118,26 @@ theories:
     falsifiability_note: Predicts that agents will prioritize their own interests over the principal's when monitoring costs are high and incentives are misaligned.
     key_refs: ["Ross, S. A. (1973). The Economic Theory of Agency: The Principal's Problem."]
     known_failure_modes: [Excessive monitoring costs, Misalignment of multi-tasking agents]
+    scale_level: institution
+    f_star_coordinates:
+      resource_pressure: 0.5
+      actor_complexity: 0.9
+      information_asymmetry: 0.9
+      coupling_tightness: 0.6
+      time_pressure: 0.4
+      boundary_permeability: 0.5
+    distortion_profile:
+      resource_type: authority/utility
+      resource_dynamics: renewable
+      thermodynamic_regime: slow
+      physical_constraints: [legal jurisdiction, cognitive limits]
+      actor_intentionality: strategic
+      actor_count_regime: few
+      actor_autonomy: 0.9
+      incentive_legibility: 0.3
+      boundary_domains: [labor_markets, corporate_law]
+      emergent_problems: [moral hazard, adverse selection]
+      intersection_type: competitive
 
   - id: punctuated_equilibrium
     name: Punctuated Equilibrium
@@ -73,6 +153,26 @@ theories:
     falsifiability_note: Predicts the absence of transitional fossils for many lineages in the fossil record due to the speed of speciation events.
     key_refs: ["Gould, S. J., & Eldredge, N. (1972). Punctuated equilibria: an alternative to phyletic gradualism."]
     known_failure_modes: [Small population drift, Rapid environmental shifts without speciation]
+    scale_level: civilization
+    f_star_coordinates:
+      resource_pressure: 0.8
+      actor_complexity: 0.4
+      information_asymmetry: 0.5
+      coupling_tightness: 0.3
+      time_pressure: 0.1
+      boundary_permeability: 0.6
+    distortion_profile:
+      resource_type: reproductive niches
+      resource_dynamics: shock-driven
+      thermodynamic_regime: very_slow
+      physical_constraints: [geologic time, fossilization bias]
+      actor_intentionality: reflexive
+      actor_count_regime: massive
+      actor_autonomy: 0.5
+      incentive_legibility: 0.2
+      boundary_domains: [paleoclimatology, genetics]
+      emergent_problems: [stasis, rapid radiation]
+      intersection_type: competitive
 
   - id: small_world_network
     name: Small-World Network
@@ -88,6 +188,26 @@ theories:
     falsifiability_note: Predicts a low average path length that scales logarithmically with the number of nodes.
     key_refs: ["Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of 'small-world' networks."]
     known_failure_modes: [Fragility to targeted hub attacks, Congestion in central hubs]
+    scale_level: institution
+    f_star_coordinates:
+      resource_pressure: 0.4
+      actor_complexity: 0.5
+      information_asymmetry: 0.3
+      coupling_tightness: 0.7
+      time_pressure: 0.5
+      boundary_permeability: 0.7
+    distortion_profile:
+      resource_type: connectivity/information
+      resource_dynamics: renewable
+      thermodynamic_regime: medium
+      physical_constraints: [link capacity, node degree limits]
+      actor_intentionality: reflexive
+      actor_count_regime: massive
+      actor_autonomy: 0.6
+      incentive_legibility: 0.8
+      boundary_domains: [graph_theory, sociology]
+      emergent_problems: [cascading failure, echo chambers]
+      intersection_type: cooperative
 
   - id: self_organized_criticality
     name: Self-Organized Criticality (SOC)
@@ -268,6 +388,26 @@ theories:
     falsifiability_note: Predicts a sharp threshold (percolation threshold) below which global connectivity is impossible.
     key_refs: ["Broadbent, S. R., & Hammersley, J. M. (1957). Percolation processes."]
     known_failure_modes: [Non-random networks, Finite-size effects]
+    scale_level: institution
+    f_star_coordinates:
+      resource_pressure: 0.6
+      actor_complexity: 0.2
+      information_asymmetry: 0.4
+      coupling_tightness: 0.8
+      time_pressure: 0.9
+      boundary_permeability: 0.5
+    distortion_profile:
+      resource_type: connectivity
+      resource_dynamics: threshold-based
+      thermodynamic_regime: fast
+      physical_constraints: [topology, dimension limits]
+      actor_intentionality: none
+      actor_count_regime: massive
+      actor_autonomy: 0.0
+      incentive_legibility: 1.0
+      boundary_domains: [material_science, epidemiology]
+      emergent_problems: [phase transition, sudden disconnect]
+      intersection_type: symbiotic
 
   - id: optimal_foraging_theory
     name: Ecology / Behavioral Economics
@@ -283,6 +423,26 @@ theories:
     falsifiability_note: Predicts that foragers will leave a patch when the rate of intake drops to the average rate for the environment (Marginal Value Theorem).
     key_refs: ["Charnov, E. L. (1976). Optimal foraging, the marginal value theorem."]
     known_failure_modes: [Predation risk, Imperfect information, Bounded rationality]
+    scale_level: organism
+    f_star_coordinates:
+      resource_pressure: 0.9
+      actor_complexity: 0.6
+      information_asymmetry: 0.5
+      coupling_tightness: 0.4
+      time_pressure: 0.7
+      boundary_permeability: 0.3
+    distortion_profile:
+      resource_type: nutrients/energy
+      resource_dynamics: renewable but local
+      thermodynamic_regime: medium
+      physical_constraints: [locomotion cost, stomach capacity]
+      actor_intentionality: deliberate
+      actor_count_regime: few
+      actor_autonomy: 0.9
+      incentive_legibility: 0.8
+      boundary_domains: [botany, ethology]
+      emergent_problems: [starvation, patch depletion]
+      intersection_type: competitive
 
   - id: minsky_instability
     name: Minsky Instability Hypothesis

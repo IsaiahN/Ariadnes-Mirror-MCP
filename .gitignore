@@ -21,6 +21,7 @@ wheels/
 *.egg
 .uho/
 .ariadne/
+mcp.log
 .env
 .venv
 venv/
