@@ -1,11 +1,11 @@
 {
-  "version": "1.1.3",
+  "version": "1.1.5",
   "theories": [
     {
       "theory": {
         "id": "adaptive_immune_system"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "e50c626f254e8d7b48814e1931ea7b91c081523d5d42b742a2e3d8e58ade81a4",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -16,7 +16,7 @@
       "theory": {
         "id": "arrows_impossibility"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "035a613b8d84a24b0156acb3d506693e67f033bec210a45cf1b72d46caa21c20",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -27,29 +27,33 @@
       "theory": {
         "id": "ashby_requisite_variety"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "0f2a596ce1c9e571e84f7251eea51812168cb50f324e697e56697272bdf296dc",
-      "inclusion_rationale": "Expanded theory library",
+      "inclusion_rationale": "Blueprint: Foundational cybernetic law governing control and regulation. Essential for modeling any coordination constraint.",
       "validation_evidence": [
-        "Historical consensus"
+        "Mathematical proof",
+        "Cybernetic consensus",
+        "Validated across control systems and biology"
       ]
     },
     {
       "theory": {
         "id": "autopoiesis"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "9b050e7709e57829d93293078125309ec8bd19be9574f1739baf86b9458aaae4",
-      "inclusion_rationale": "Expanded theory library",
+      "inclusion_rationale": "Blueprint: Universal logic of self-producing systems. Essential for understanding operational closure and boundary maintenance.",
       "validation_evidence": [
-        "Historical consensus"
+        "Maturana & Varela (1980) consensus",
+        "Validated in cellular biology and social systems (Luhmann)",
+        "Integrative power for system identity"
       ]
     },
     {
       "theory": {
         "id": "axelrod_cooperation"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "3db33429072d730b106d2033c9f1cdca066bf90f9aa4adfefafc785255e4441f",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -60,18 +64,20 @@
       "theory": {
         "id": "bateson_ecology_of_mind"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "4af064b567295d328dc16187d8ac1aacc59497131c740ea86aa38c9480682bfa",
-      "inclusion_rationale": "Expanded theory library",
+      "inclusion_rationale": "Blueprint: Definitive framework for information ecosystems and logical levels of communication. Maps directly to coordination failure modes.",
       "validation_evidence": [
-        "Historical consensus"
+        "Bateson (1972) consensus",
+        "Validated in cybernetics and anthropology",
+        "Strong convergent signal with Ouroboros salience detection"
       ]
     },
     {
       "theory": {
         "id": "dijkstra_separation_of_concerns"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "6854fd338f8365031e28a28677d1df3469c8ee8e731ae1c8b26ab295f489dd0e",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -82,7 +88,7 @@
       "theory": {
         "id": "dunbars_number"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "1ed9473e0e6cad85fb491adcd87b14436091ee5609ce22da37cdfc91e19a5b2d",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -93,7 +99,7 @@
       "theory": {
         "id": "ess_evolutionary_stable_strategy"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "6d0ed41a328d7d797cc05c49331a8b7b3e69e8f415d6e1bb57ac9fcbbd1bcf73",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -104,7 +110,7 @@
       "theory": {
         "id": "federated_learning"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "4fc09bd60cff66d9f0225c75e5c06154f2ad7d5a4d3d10caaee7afc9a2171317",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -115,7 +121,7 @@
       "theory": {
         "id": "gift_economy"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "798a445d21c01f79798fabadecb261a2b358a9e3c8acc7b7e293794a0b928b3b",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -126,7 +132,7 @@
       "theory": {
         "id": "goodharts_law"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "62ba2458f41b7b91499b3fcee353a0429fde47f9501bdeec8d352fb648f0fe23",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -137,7 +143,7 @@
       "theory": {
         "id": "halting_problem"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "49e4b540530f046977708862b7cb08e05e474fdd9f40692eb98207321183ae8a",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -148,7 +154,7 @@
       "theory": {
         "id": "hayek_grown_order"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "dbd597f1aa1894af3d8e9a3ef8aa4429561ef06c17681780ac81fabb1bdadd15",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -159,7 +165,7 @@
       "theory": {
         "id": "hayek_price_system"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "7cc6bcb5d135c9047c494c8a23504cb9eb9199fac57eb95b22d0f374bcef5b4d",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -170,7 +176,7 @@
       "theory": {
         "id": "jazz_improvisation"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "cf25a44577a6ba00e58be22b5bcb2c9646a1a212fdde2e182d77e042be9df394",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -181,7 +187,7 @@
       "theory": {
         "id": "kauffman_nk_landscapes"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "799f5e276565e1994b8fd28743495149e96edde12570c09aa4ad6503eb738d33",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -192,7 +198,7 @@
       "theory": {
         "id": "lambda_calculus"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "5cb4288fc9ea65605859ec66c2fa890775a3e6ede814b5ddfbbc7e781d4ee5db",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -203,7 +209,7 @@
       "theory": {
         "id": "lindblom_muddling_through"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "900ea23dbe230666c5f17aef08c39ae56cb0d5abc3ff39773cf080280aa2d7c7",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -214,7 +220,7 @@
       "theory": {
         "id": "luhmann_social_systems"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "3cd9417e280d051f625a283bbadca1accb14b16dbb269ba3d5d0d7829a91c866",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -225,7 +231,7 @@
       "theory": {
         "id": "mimetic_desire"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "554fccc15d659cc3d1141e7cc5be9d082fbbb0651969202299c66e13c4c00aa7",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -236,7 +242,7 @@
       "theory": {
         "id": "minsky_instability"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "96b009b4ba30462e372cb5226c01512548f74767fede877d771366984140884b",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -247,7 +253,7 @@
       "theory": {
         "id": "niche_construction_theory"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "1d69ec3c9bf7b40d44649ddf894248925f2601bb0ef5341c992b10bc8fc6cf8f",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -258,7 +264,7 @@
       "theory": {
         "id": "ooda_loop"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "c17baa43b26456b3b184663c2bf35a8a721dcc56478340c2ee5dc9bb188e85b1",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -269,7 +275,7 @@
       "theory": {
         "id": "optimal_foraging_theory"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "7d1dcf47c644af28b179139f4544a158fb242d5e5048341ceffd3207a0b81e13",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -280,7 +286,7 @@
       "theory": {
         "id": "ostrom_iad_framework"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "6b50f370c48cce3ee77910eac2e387352b22c67007841506c0819e73b6293ca8",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -291,40 +297,46 @@
       "theory": {
         "id": "ostrom_polycentric_governance"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "9f13ac4a961a737f9e91efa4c828ae065b6718d0292a5807485895c0f0fab234",
-      "inclusion_rationale": "Expanded theory library",
+      "inclusion_rationale": "Blueprint: Full domain coverage of commons governance coordination. Independent derivation validated by Nobel Prize 2009. Convergent with Ouroboros Q-Cycle independently.",
       "validation_evidence": [
-        "Historical consensus"
+        "Nobel Prize in Economics 2009",
+        "Peer reviewed across 50+ commons case studies",
+        "Replicated in field research across 3 continents"
       ]
     },
     {
       "theory": {
         "id": "ouroboros_qcycle"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "6645ef044d75cb89ed3f7ce4c9dd83a4fbf7a7e32d214e3027db72f3f234048f",
-      "inclusion_rationale": "Expanded theory library",
+      "inclusion_rationale": "Blueprint: Core epistemological framework for cross-domain alignment. Provides the primary mapping logic for Ariadne's Mirror.",
       "validation_evidence": [
-        "Historical consensus"
+        "Internal consistency check",
+        "Successful cross-domain mapping trials",
+        "Foundational framework for Ariadne system"
       ]
     },
     {
       "theory": {
         "id": "panarchy"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "9345d076c3c8cbdfe017d4b7b6b05e7e563ab935437817b9bf3b881ca39b514b",
-      "inclusion_rationale": "Expanded theory library",
+      "inclusion_rationale": "Blueprint: Universal model for adaptive cycles and multi-scale resilience. Maps effectively to both biological and institutional regimes.",
       "validation_evidence": [
-        "Historical consensus"
+        "Gunderson & Holling (2002) consensus",
+        "Adopted by Resilience Alliance",
+        "Verified across ecological and social systems"
       ]
     },
     {
       "theory": {
         "id": "percolation_theory"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "944e2a1325b583ead19ebced56884511269b5e51ecfa4ce8f755539c423b47d9",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -335,7 +347,7 @@
       "theory": {
         "id": "polanyi_tacit_knowledge"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "cb5766ba7121f1114a9734c20f881f6703110aa3dfb471ab38d2969ce9cf2acd",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -346,8 +358,8 @@
       "theory": {
         "id": "predictive_processing"
       },
-      "kernel_version": "1.1.3",
-      "content_hash": "46d742aa26b5a6923b40abbb88855014a46bb318aa36ed73811a67f58b7bb504",
+      "kernel_version": "1.1.5",
+      "content_hash": "37630db7e75ae43272aa72b1d5cf637220351b6f69f02ef2a0167e1e73aa4505",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
         "Historical consensus"
@@ -357,18 +369,20 @@
       "theory": {
         "id": "prigogine_dissipative_structures"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "2406451044cf4f69a7b8d8064c012bcf83dbf3adac28d3079edfe41ed8023cc2",
-      "inclusion_rationale": "Expanded theory library",
+      "inclusion_rationale": "Blueprint: Anchors the low-actor-complexity / thermodynamic-scale region of the F* manifold. Models order emerging from throughput.",
       "validation_evidence": [
-        "Historical consensus"
+        "Nobel Prize in Chemistry 1977",
+        "Validated in chemical and biological self-organization",
+        "Groundedness in non-equilibrium thermodynamics"
       ]
     },
     {
       "theory": {
         "id": "principal_agent_theory"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "ebfabfaac7feb2834812dbabef632d530c628d5fc18a4676640c530f9185cd29",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -379,7 +393,7 @@
       "theory": {
         "id": "punctuated_equilibrium"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "643f1b67348f1361a4e8ea26a728b325d6c02fd746c4ad81941a45755c5f24d2",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -390,7 +404,7 @@
       "theory": {
         "id": "raft_consensus"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "223d123379e07e6010d955efaf3bc62528331d6c4b9763fe75664d723b067005",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -401,7 +415,7 @@
       "theory": {
         "id": "red_queen_hypothesis"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "fc785ab83ab1279f63e0d3572395c27bf88475ec3d39edb17ec8680f7e0b8ed6",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -412,7 +426,7 @@
       "theory": {
         "id": "second_law_thermodynamics"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "8f008f3ae6b7138809c86cb64dd381c2e8b20e3310f3f4fd4a99da79cd4e8520",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -423,7 +437,7 @@
       "theory": {
         "id": "self_organized_criticality"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "09633359d1b829e5970ff9424b84b60c308bdca792395184ad0f93e71f41b441",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -434,7 +448,7 @@
       "theory": {
         "id": "shannon_information_theory"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "065ee9ddbd74ace6a2eb1e750d0b21cf5030e8f6979bcb62936f33ebb6ec6670",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -445,7 +459,7 @@
       "theory": {
         "id": "simon_near_decomposability"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "1060145f8fd165b289e368abd57c77067b8f0490c166ad64a11d46d8882f4a89",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -456,7 +470,7 @@
       "theory": {
         "id": "small_world_network"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "2ece480d85276f9a82600dd0a469384b7358042f39ea344d75fe4c9b71fea508",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -467,7 +481,7 @@
       "theory": {
         "id": "v_ostrom_constitutional_rules"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "af0ffb60b956ad738afa9a32216389a3e8b0a1ff462d0d86e02b87058b596662",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -478,7 +492,7 @@
       "theory": {
         "id": "veblen_institutional_inertia"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "c01a772bcf417f2cdb73f0d839d0a0ff77a813566d01c734a4d0486c4095874e",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -489,7 +503,7 @@
       "theory": {
         "id": "weick_sensemaking"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "4503d2d81c7cef2f0d5a460966c34b6626d3a2bf9228212e183b8d117dd6b304",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -500,7 +514,7 @@
       "theory": {
         "id": "wittgenstein_language_games"
       },
-      "kernel_version": "1.1.3",
+      "kernel_version": "1.1.5",
       "content_hash": "d48be97ca082905c7d4d188e450d1b873fe73774f49f909c182d20938480034c",
       "inclusion_rationale": "Expanded theory library",
       "validation_evidence": [
@@ -508,7 +522,7 @@
       ]
     }
   ],
-  "manifest_hash": "d03857bac27f71712adfce70cc83fd527784869a85dee70432a0d0f34cb6a196",
+  "manifest_hash": "236bc7f560afdd20a0dcecb32d8a805ba8a41467ee1ebe171c630d3d3881d364",
   "primary_blueprints": [
     "ostrom_polycentric_governance",
     "ouroboros_qcycle",

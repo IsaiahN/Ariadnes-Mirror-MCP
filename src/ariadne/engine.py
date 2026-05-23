@@ -411,9 +411,9 @@ OUTPUT JSON format:
         # Save top partials as current refiners for Stage 4
         self._current_refiners = [t for s, t in partials[:10]]
 
-        # Return prioritized mix
-        primary = ([t for s, t in blueprints[:3]] +
-                   [t for s, t in frameworks[:top_k-3]])
+        # Return prioritized mix (include all blueprints up to top_k)
+        primary = ([t for s, t in blueprints[:top_k]] +
+                   [t for s, t in frameworks[:max(0, top_k - len(blueprints))]])
         return primary[:top_k]
 
     def stage5_refine_with_partials(self, hypothesis: Hypothesis, target_profile: DomainProfile) -> Hypothesis:

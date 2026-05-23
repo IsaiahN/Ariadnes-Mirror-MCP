@@ -1,55 +1,77 @@
-description: The brain is a sophisticated hypothesis-testing mechanism, which is constantly
-  generating models of the world and using them to predict sensory input.
-domain: Cognitive Science / Neuroscience
-falsifiability_note: Predicts that sensory input matching the internal model will
-  trigger less neural activity than unexpected input.
+coverage:
+  breadth_score: 0.6
+  convergent_discoveries:
+  - concept: active_inference
+    found_in: ouroboros
+    local_name: q3_causal_testing_as_active_inference
+  - concept: precision_weighting
+    found_in: ashby_requisite_variety
+    local_name: variety_matching_via_precision_control
+  - concept: hierarchical_predictive_coding
+    found_in: simon_near_decomposability
+    local_name: hierarchical_decomposition_of_uncertainty
+  coverage_type: framework
+  depth_score: 0.9
+  fstar_dimensions_covered:
+  - actor_complexity
+  - coupling_tightness
+  - time_pressure
+  fstar_refinements:
+  - hierarchical_coordination_via_error_minimization
+  novel_concepts:
+  - active_inference
+  - precision_weighting
+  - error_minimization
+description: A theory suggesting that the brain is a multi-layered hypothesis-testing
+  mechanism that minimizes the difference between predicted and actual sensory input.
+distortion_profile:
+  actor_autonomy: 1.0
+  actor_count_regime: individual
+  actor_intentionality: predictive
+  boundary_domains:
+  - Neuroscience
+  - Psychology
+  - AI
+  emergent_problems:
+  - Hallucination
+  - Overfitting
+  incentive_legibility: 0.5
+  intersection_type: cognitive
+  physical_constraints:
+  - neural bandwidth
+  resource_dynamics: informational
+  resource_type: metabolic energy
+  thermodynamic_regime: medium/biological
+domain: Cognitive Science
+f_star_coordinates:
+  actor_complexity: 0.9
+  boundary_permeability: 0.6
+  coupling_tightness: 0.8
+  information_asymmetry: 0.8
+  resource_pressure: 0.4
+  time_pressure: 0.6
+falsifiability_note: Predicts that neural activity will reflect error signals when
+  sensory input deviates from predicted patterns.
 id: predictive_processing
 key_refs:
-- Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future
-  of cognitive science.
+- 'Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future
+  of cognitive science.'
 known_failure_modes:
-- Schizophrenia/Hallucinations (over-weighting priors)
-- Sensory deprivation
+- Prediction error saturation
+- Precision misweighting (hallucination)
+- Chronic high arousal
 name: Predictive Processing
 scale_level: organism
-f_star_coordinates:
-  resource_pressure: 0.5
-  actor_complexity: 0.9
-  information_asymmetry: 0.3
-  coupling_tightness: 0.9
-  time_pressure: 0.95
-  boundary_permeability: 0.75
-distortion_profile:
-  resource_type: evidence/prediction-error
-  resource_dynamics: continuous stream
-  thermodynamic_regime: fast
-  physical_constraints: [metabolic cost of inference, neural bandwidth]
-  actor_intentionality: deliberate
-  actor_count_regime: massive (neuronal)
-  actor_autonomy: 0.3
-  incentive_legibility: 0.9
-  boundary_domains: [neuroscience, philosophy of mind]
-  emergent_problems: [precision-weighting failure, hallucination]
-  intersection_type: cooperative
-coverage:
-  coverage_type: framework
-  fstar_dimensions_covered: [actor_complexity, coupling_tightness, time_pressure]
-  breadth_score: 0.6
-  depth_score: 0.9
-  novel_concepts: [active_inference, precision_weighting, error_minimization]
-  convergent_discoveries: []
-  fstar_refinements: [hierarchical_coordination_via_error_minimization]
 structural_tags:
 - predictive
 - layered
 - hierarchical
-- regulatory
 structural_topology:
-  directionality: Top-down (predictions) and Bottom-up (errors)
-  feedback_loops: Error minimization loop
+  directionality: Top-down (prediction) vs Bottom-up (error)
+  feedback_loops: Recursive error minimization
   roles:
-  - Generative Model
-  - Prediction Error
-  - Sensory Input
-  scale: Local (neuronal) / Global (behavioral)
+  - Predictor
+  - Sensory Interface
+  - Error Comparator
+  scale: Global (organism-level)
   time_horizon: Real-time
