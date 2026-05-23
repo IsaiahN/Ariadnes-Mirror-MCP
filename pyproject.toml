@@ -15,7 +15,8 @@ dependencies = [
     "click",
     "pydantic",
     "pydantic-settings",
-    "python-dotenv"
+    "python-dotenv",
+    "mcp[server]"
 ]
 
 [project.optional-dependencies]

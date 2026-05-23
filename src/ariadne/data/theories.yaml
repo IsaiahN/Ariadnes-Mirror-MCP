@@ -228,7 +228,7 @@ theories:
     name: Lambda Calculus
     domain: Formal Systems / Mathematics
     description: A formal system in mathematical logic for expressing computation based on function abstraction and application using variable binding and substitution.
-    structural_tags: [modular, hierarchical, modular, layered]
+    structural_tags: [modular, hierarchical, layered]
     structural_topology:
       roles: [Variable, Abstraction, Application]
       directionality: Reduction (computation)

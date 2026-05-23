@@ -67,7 +67,8 @@ class AriadneEngine:
         return [t for s, t in scored_theories[:top_k]]
 
     def _get_theory_embeddings(self, theories: List[Theory]) -> np.ndarray:
-        cache_path = os.path.join(self.storage_dir, "embeddings.pkl")
+        model_name = settings.openrouter_embedding_model.replace("/", "_")
+        cache_path = os.path.join(self.storage_dir, f"embeddings_{model_name}.pkl")
         cache = {}
         if os.path.exists(cache_path):
             with open(cache_path, 'rb') as f:

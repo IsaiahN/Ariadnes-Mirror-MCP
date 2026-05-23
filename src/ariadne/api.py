@@ -1,7 +1,9 @@
+import json
+import re
+from typing import List, Dict
 from .engine import AriadneEngine
 from .extractor import QCycleExtractor
 from .models import DomainProfile, Hypothesis
-from typing import List, Dict
 
 def analyze_domain(
     domain: str,
@@ -33,14 +35,12 @@ RESEARCH BRIEF:
 {brief}
 
 QUESTIONS:
-{json_dumps_questions(extractor.QUESTIONS)}
+{json.dumps(extractor.QUESTIONS, indent=2)}
 
 Output ONLY a JSON object with keys Q1-Q7.
 """
     try:
         from .ai import AIClient
-        import json
-        import re
         ai_client = AIClient()
         response = ai_client.get_completion(prompt, system_prompt="You are a system analyst.")
         json_match = re.search(r'\{.*\}', response, re.DOTALL)
@@ -54,10 +54,6 @@ Output ONLY a JSON object with keys Q1-Q7.
         answers = {f"Q{i}": "N/A" for i in range(1, 8)}
 
     return analyze_domain(domain, brief, answers)
-
-def json_dumps_questions(questions: Dict[str, str]) -> str:
-    import json
-    return json.dumps(questions, indent=2)
 
 def list_theories() -> List:
     return AriadneEngine().theories
