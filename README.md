@@ -1,10 +1,11 @@
-
 # Ariadne's Mirror MCP
 
 A cross-domain structural mapping tool that helps find deep structural 
 similarities between a problem domain and a curated library of theories, 
 generating transferable hypotheses and identifying analogous solutions from 
 unrelated fields.
+
+In other words: Ariadne leads you out of your field's labyrinth by finding threads in others.
 
 ## What It Does
 
@@ -139,21 +140,14 @@ Dissipative Structures, Autopoiesis, Bateson's Ecology of Mind.
 
 ### The Pipeline
 
-```
-Stage 0: Distortion Analysis    — Find F* coordinates for the target domain
-Stage 1: F* Filter              — Match by structural distance, not surface similarity
-Stage 2: Embedding Similarity   — Semantic refinement of candidates
-Stage 3: LLM Comparison         — Structural isomorphism scoring and hypothesis generation
-Stage 4: Failure Analysis       — Emergent failure modes from transfer mismatches
-Stage 5: Partial Refinement     — Sharpen predictions with precision partial theories
-```
-
-### Thread System
-
-User-added theories and session data are stored in isolated threads, 
-separate from the kernel. Thread theories have a credibility ceiling of 0.7 
-(kernel theories start at 0.8 and are not modified by usage feedback).
-
+| Stage | Name | Description |
+|---|---|---|
+| 0 | Distortion Analysis | Find F* coordinates for the target domain |
+| 1 | F* Filter | Match by structural distance, not surface similarity |
+| 2 | Embedding Similarity | Semantic refinement of candidates |
+| 3 | LLM Comparison | Structural isomorphism scoring and hypothesis generation |
+| 4 | Failure Analysis | Emergent failure modes from transfer mismatches |
+| 5 | Partial Refinement | Sharpen predictions with precision partial theories |
 
 ## Theoretical Basis
 
@@ -179,7 +173,13 @@ Each theory in the kernel or added to thread libraries are categorized as one of
 - **Blueprints** are full-coverage frameworks that describe an entire coordination space at all levels, independently derived and empirically validated across domains, and the strongest signal that a theory is measuring something real about F* rather than its origin domain.
 - **Frameworks** explain a coherent subsystem with defined scope and internal logic, useful for concretizing hypotheses within a bounded problem space.
 - **Partials** are high-precision instruments that describe one mechanism exactly, used to sharpen predictions and identify known unsolvable subproblems within a hypothesis.
-- 
+
+### Thread System
+
+User-added theories and session data are stored in isolated threads, 
+separate from the kernel (core theories). Thread theories have a credibility ceiling of 0.7 
+(kernel theories start at 0.8 and are not modified by usage feedback).
+
 ### On the Kernel
 
 The kernel is the system's approximation of F*. Its quality directly 
