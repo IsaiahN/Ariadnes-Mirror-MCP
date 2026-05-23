@@ -1,0 +1,26 @@
+description: Systems that naturally evolve toward a critical point where a minor event
+  can trigger an avalanche of any size (e.g., sandpiles, earthquakes).
+domain: Physics
+falsifiability_note: Predicts that the size and frequency of events follow a power-law
+  distribution.
+id: self_organized_criticality
+key_refs:
+- 'Bak, P., Tang, C., & Wiesenfeld, K. (1987). Self-organized criticality: An explanation
+  of the 1/f noise.'
+known_failure_modes:
+- Over-damping
+- Non-conservative dynamics
+name: Self-Organized Criticality (SOC)
+structural_tags:
+- evolutionary
+- cyclic
+- stigmergic
+structural_topology:
+  directionality: Cascading
+  feedback_loops: Stress accumulation vs. Dissipation
+  roles:
+  - Component
+  - Threshold
+  - Avalanche
+  scale: Global (emergent)
+  time_horizon: Power-law distributed

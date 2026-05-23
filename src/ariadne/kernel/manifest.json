@@ -1,0 +1,278 @@
+{
+  "version": "1.0.0",
+  "theories": [
+    {
+      "theory": {
+        "id": "adaptive_immune_system"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "e50c626f254e8d7b48814e1931ea7b91c081523d5d42b742a2e3d8e58ade81a4",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "ess_evolutionary_stable_strategy"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "c5fff361eab8c9fd887c26a4302adb1b8dd7a9c413dfa1669b634091645737ad",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "federated_learning"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "b38c4bcba26659afa723e4bb6a5327b6dc4f57b4a2c902c9b19e5512e2189f69",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "gift_economy"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "f8d659620a41b73e48748a2905c4b054524b04c2d4d245d5a15765d73144f29e",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "halting_problem"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "49e4b540530f046977708862b7cb08e05e474fdd9f40692eb98207321183ae8a",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "hayek_price_system"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "7cc6bcb5d135c9047c494c8a23504cb9eb9199fac57eb95b22d0f374bcef5b4d",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "jazz_improvisation"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "4a289c16650c6ad562c2b26ce27b4895a1524b445c8944864a897991f3f82a05",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "lambda_calculus"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "afe4683fd0a651865e1be8cae9ff7012f0fb45042a4816f71adf888d53480cb8",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "mimetic_desire"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "da0769666eacc9eb11da33d648ccfe310e52bcfa1804d60e072ae279eab3aae8",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "minsky_instability"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "717d3d31f75f5d843ac85a2c5bf73d99c06d0a67bf275dc3f7a2088dd5fa777c",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "ooda_loop"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "2bbc8fa976c2b90339274e8626104fc40af8dd07814d5620258cc7e78878b58d",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "optimal_foraging_theory"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "7d1dcf47c644af28b179139f4544a158fb242d5e5048341ceffd3207a0b81e13",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "ostrom_polycentric_governance"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "6bff18b4e35700a76854be1c05e8c0218b7a93159c2f9fe91445ce2ced73834f",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "ouroboros_qcycle"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "6645ef044d75cb89ed3f7ce4c9dd83a4fbf7a7e32d214e3027db72f3f234048f",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "panarchy"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "b0d97d282da9a3822326caf7b039fd60fa5fa5311139a3bc9a8e6667dbe0e28a",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "percolation_theory"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "944e2a1325b583ead19ebced56884511269b5e51ecfa4ce8f755539c423b47d9",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "predictive_processing"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "e416a18aa8eba2c26a66ffa5cb60e4d00a2d520e8fa4685c7045e5480eb3d7a7",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "principal_agent_theory"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "ebfabfaac7feb2834812dbabef632d530c628d5fc18a4676640c530f9185cd29",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "punctuated_equilibrium"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "643f1b67348f1361a4e8ea26a728b325d6c02fd746c4ad81941a45755c5f24d2",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "raft_consensus"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "223d123379e07e6010d955efaf3bc62528331d6c4b9763fe75664d723b067005",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "red_queen_hypothesis"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "57cfb01c9bdc6d7e407a322acb1173918dc1fa46a3ed153d34f94b7f0e8a2d94",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "second_law_thermodynamics"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "9278cd221c8758537c81fbde2d27959095b9b6a711ab7599ceefba0d10314338",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "self_organized_criticality"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "eef8e391568dd930e7edcf0d7e76bbceec6c4eb1e3eb120e4b402ba9404bfc65",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    },
+    {
+      "theory": {
+        "id": "small_world_network"
+      },
+      "kernel_version": "1.0.0",
+      "content_hash": "2ece480d85276f9a82600dd0a469384b7358042f39ea344d75fe4c9b71fea508",
+      "inclusion_rationale": "Base theory set",
+      "validation_evidence": [
+        "Historical consensus"
+      ]
+    }
+  ],
+  "manifest_hash": "8669050265ac86ab3a290aa98ee5121cdfd036ed393a6112c920865e0e726ddd",
+  "primary_blueprints": [
+    "ouroboros_qcycle"
+  ],
+  "known_fstar_gaps": [
+    "interstellar_logistics_scale",
+    "high_opacity_adversarial"
+  ],
+  "curator_notes": "Initial Ariadne Kernel"
+}

@@ -5,6 +5,7 @@ from .api import (
     analyze_from_brief, analyze_failures, find_cross_scale_analog,
     run_subtractive_isolation, map_fstar_coverage
 )
+from .research_tasks import BLUEPRINT_SEARCH_PROMPT, VALIDATION_PROTOCOL
 
 mcp = FastMCP("ariadnes-mirror")
 
@@ -71,6 +72,34 @@ def ariadne_subtractive_isolation(
 def ariadne_map_fstar_coverage() -> dict:
     """Return a map of F* space showing theory coverage and identifying gaps."""
     return map_fstar_coverage()
+
+@mcp.tool()
+def ariadne_get_blueprint_search_prompt() -> str:
+    """Returns the structured research prompt for searching for Blueprint-level theories."""
+    return BLUEPRINT_SEARCH_PROMPT
+
+@mcp.tool()
+def ariadne_get_validation_protocol() -> str:
+    """Returns the validation protocol for evaluating Blueprint candidates."""
+    return VALIDATION_PROTOCOL
+
+@mcp.tool()
+def ariadne_list_kernel_theories() -> list[dict]:
+    """List all theories in the protected kernel seed set."""
+    from .engine import AriadneEngine
+    engine = AriadneEngine()
+    return [
+        {
+            "id": t.id,
+            "name": t.name,
+            "domain": t.domain,
+            "coverage_type": t.coverage.coverage_type if t.coverage else "unknown",
+            "f_star_coordinates": t.f_star_coordinates,
+            "novel_concepts": t.coverage.novel_concepts if t.coverage else [],
+            "kernel_status": "protected"
+        }
+        for t in engine.kernel_theories
+    ]
 
 @mcp.tool()
 def ariadne_feedback(theory_id: str, rating: int) -> str:

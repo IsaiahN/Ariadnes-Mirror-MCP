@@ -8,9 +8,10 @@ import numpy as np
 from typing import List, Optional, Dict
 from importlib import resources
 from .models import Theory, DomainProfile, Hypothesis, FailureMode, DistortionProfile, SubtractiveAnalysis, DomainIntersection
-from .persistence import TheoryStateManager
+from .persistence import TheoryStateManager, ThreadStateManager
 from .config import settings
 from .ai import AIClient
+from .kernel import KernelManager
 
 def cosine_similarity(a, b):
     a = np.array(a)
@@ -26,29 +27,30 @@ def cosine_similarity(a, b):
     return np.dot(a, b.T) / (norm_a * norm_b.T)
 
 class AriadneEngine:
-    def __init__(self, theories_path: Optional[str] = None):
-        if theories_path is None:
-            with resources.path("ariadne.data", "theories.yaml") as p:
-                theories_path = str(p)
-
+    def __init__(self, thread_id: str = "default"):
+        kernel_dir = os.path.join(os.path.dirname(__file__), 'kernel')
+        self.kernel = KernelManager(kernel_dir)
+        self.thread_manager = ThreadStateManager(thread_id)
         self.state_manager = TheoryStateManager()
         self._ai_client = None
-        self.theories = self._load_theories(theories_path)
+
+        # Load all
+        self.kernel_theories = self._enrich_theories(self.kernel.theories)
+        self.thread_theories = self._enrich_theories(self.thread_manager.load_theories())
+
         self.storage_dir = settings.resolved_storage_dir
         os.makedirs(self.storage_dir, exist_ok=True)
 
-    def _load_theories(self, path: str) -> List[Theory]:
-        with open(path, 'r') as f:
-            data = yaml.safe_load(f)
-            theories = []
-            for t_data in data['theories']:
-                theory = Theory(**t_data)
-                # Load persisted state
-                state = self.state_manager.get_theory_state(theory.id)
-                theory.credibility_score = state["credibility_score"]
-                theory.n_uses = state["n_uses"]
-                theories.append(theory)
-            return theories
+    def _enrich_theories(self, theories: List[Theory]) -> List[Theory]:
+        for theory in theories:
+            state = self.state_manager.get_theory_state(theory.id)
+            theory.credibility_score = state["credibility_score"]
+            theory.n_uses = state["n_uses"]
+        return theories
+
+    @property
+    def theories(self) -> List[Theory]:
+        return self.kernel_theories + self.thread_theories
 
     def calculate_jaccard_similarity(self, tags1: List[str], tags2: List[str]) -> float:
         set1, set2 = set(tags1), set(tags2)
@@ -117,12 +119,17 @@ class AriadneEngine:
     def update_credibility(self, theory_id: str, rating: float):
         """
         Bayesian update for theory credibility.
-        rating is 1-5, normalized to 0-1.
+        Kernel theories are immutable. Thread theories capped at 0.7.
         """
         if not (1 <= rating <= 5):
             raise ValueError("Rating must be between 1 and 5.")
 
-        theory = next((t for t in self.theories if t.id == theory_id), None)
+        # Check if kernel
+        if any(t.id == theory_id for t in self.kernel_theories):
+            self._save_usage_log(theory_id, rating)
+            return
+
+        theory = next((t for t in self.thread_theories if t.id == theory_id), None)
         if not theory:
             raise KeyError(f"Theory with ID '{theory_id}' not found.")
 
@@ -130,13 +137,11 @@ class AriadneEngine:
         n = theory.n_uses
         current_score = theory.credibility_score
 
-        # Simple Bayesian update: (prior * n + evidence) / (n + 1)
-        new_score = (current_score * n + normalized_rating) / (n + 1)
+        new_score = min(0.7, (current_score * n + normalized_rating) / (n + 1))
 
         theory.credibility_score = new_score
         theory.n_uses += 1
 
-        # Persist state
         self.state_manager.update_theory_state(theory_id, new_score, theory.n_uses)
         self._save_usage_log(theory_id, rating)
 
@@ -209,6 +214,14 @@ OUTPUT JSON format:
             # final_score = (structural_similarity * 0.5 + novelty_score * 0.25 + falsifiability_score * 0.25) * theory.credibility_score
             final_score = (structural_similarity * 0.5 + novelty_score * 0.25 + falsifiability_score * 0.25) * theory.credibility_score
 
+            active_dims = [dim for dim, score in [
+                ("resource_pressure", data.get("resource_score", 0)),
+                ("actor_complexity", data.get("actor_score", 0)),
+                ("information_asymmetry", data.get("memory_score", 0)),
+                ("coupling_tightness", data.get("feedback_score", 0)),
+                ("time_pressure", data.get("transition_score", 0))
+            ] if score > 7]
+
             return Hypothesis(
                 source_theory_id=theory.id,
                 target_domain_name=target_profile.name,
@@ -218,6 +231,7 @@ OUTPUT JSON format:
                 testable_prediction=data["testable_prediction"],
                 failure_conditions=data["failure_conditions"],
                 falsification_path=data["falsification_path"],
+                active_fstar_dimensions=active_dims,
                 structural_similarity=structural_similarity,
                 novelty_score=novelty_score,
                 falsifiability_score=falsifiability_score,
@@ -508,6 +522,26 @@ OUTPUT JSON list of objects for residue_components.
             print(f"Error during subtractive isolation: {e}")
 
         return SubtractiveAnalysis(theory_id=theory.id, blueprint_used=blueprint.id, residue_components=[])
+
+    def analyze_intersection(self, domain_a: DomainProfile, domain_b: DomainProfile, emergent_problem: str) -> DomainIntersection:
+        """
+        Full intersection analysis pipeline (Orchestration placeholder).
+        """
+        return DomainIntersection(
+            domain_a=domain_a.name,
+            domain_b=domain_b.name,
+            domain_a_contributions=[],
+            domain_b_contributions=[],
+            domain_a_solved_problems=[],
+            domain_b_solved_problems=[],
+            core_tension=emergent_problem,
+            tension_fstar_coordinates={},
+            subsidiary_tensions=[],
+            analog_domains=[],
+            interface_a_side={"domain": domain_a.name, "interface_requirements": [], "must_expose": [], "must_accept": [], "must_encapsulate": [], "exchange_protocol": "", "failure_modes": []},
+            interface_b_side={"domain": domain_b.name, "interface_requirements": [], "must_expose": [], "must_accept": [], "must_encapsulate": [], "exchange_protocol": "", "failure_modes": []},
+            invariant_transferrables=[]
+        )
 
     def analyze(self, target_profile: DomainProfile) -> List[Hypothesis]:
         # Step 0: Distortion Analysis (Find F* coords)

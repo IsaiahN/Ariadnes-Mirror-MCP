@@ -1,0 +1,27 @@
+description: Human desire is not autonomous but is borrowed from models; we want what
+  others want because they want it.
+domain: Sociology / Philosophy
+falsifiability_note: Predicts that conflict will increase between individuals as they
+  become more similar in their desires and social status.
+id: mimetic_desire
+key_refs:
+- Girard, R. (1961). Deceit, Desire and the Novel.
+known_failure_modes:
+- Non-rivalrous goods
+- Strong individualistic values
+- External mediation
+name: Mimetic Desire
+structural_tags:
+- adversarial
+- network
+- peer-to-peer
+- cyclic
+structural_topology:
+  directionality: Triadic
+  feedback_loops: Mimetic rivalry and Scapegoating
+  roles:
+  - Subject
+  - Model/Mediator
+  - Object
+  scale: Global (Societal)
+  time_horizon: Dynamic

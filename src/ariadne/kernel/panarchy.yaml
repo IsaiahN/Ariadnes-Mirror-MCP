@@ -1,0 +1,26 @@
+description: A framework for understanding the cycle of growth, accumulation, restructuring,
+  and renewal in complex social-ecological systems.
+domain: Systems Ecology / Resilience
+falsifiability_note: Predicts that systems that successfully manage the adaptive cycle
+  are more resilient than those that optimize for a single state.
+id: panarchy
+key_refs:
+- 'Gunderson, L. H., & Holling, C. S. (2002). Panarchy: Understanding Transformations
+  in Human and Natural Systems.'
+known_failure_modes:
+- Rigidity traps
+- Poverty traps
+name: Panarchy
+structural_tags:
+- cyclic
+- hierarchical
+- evolutionary
+- layered
+structural_topology:
+  directionality: Bottom-up (revolt) and Top-down (remember)
+  feedback_loops: Adaptive cycle (r, K, Omega, Alpha)
+  roles:
+  - Fast/Small levels
+  - Slow/Large levels
+  scale: Multi-scale
+  time_horizon: Multi-temporal

@@ -1,0 +1,52 @@
+description: Proposes that most species show little evolutionary change for most of
+  their history (stasis), punctuated by rare, rapid events of branching speciation.
+distortion_profile:
+  actor_autonomy: 0.5
+  actor_count_regime: massive
+  actor_intentionality: reflexive
+  boundary_domains:
+  - paleoclimatology
+  - genetics
+  emergent_problems:
+  - stasis
+  - rapid radiation
+  incentive_legibility: 0.2
+  intersection_type: competitive
+  physical_constraints:
+  - geologic time
+  - fossilization bias
+  resource_dynamics: shock-driven
+  resource_type: reproductive niches
+  thermodynamic_regime: very_slow
+domain: Paleontology / Evolutionary Biology
+f_star_coordinates:
+  actor_complexity: 0.4
+  boundary_permeability: 0.6
+  coupling_tightness: 0.3
+  information_asymmetry: 0.5
+  resource_pressure: 0.8
+  time_pressure: 0.1
+falsifiability_note: Predicts the absence of transitional fossils for many lineages
+  in the fossil record due to the speed of speciation events.
+id: punctuated_equilibrium
+key_refs:
+- 'Gould, S. J., & Eldredge, N. (1972). Punctuated equilibria: an alternative to phyletic
+  gradualism.'
+known_failure_modes:
+- Small population drift
+- Rapid environmental shifts without speciation
+name: Punctuated Equilibrium
+scale_level: civilization
+structural_tags:
+- evolutionary
+- cyclic
+- layered
+structural_topology:
+  directionality: Evolutionary radiation
+  feedback_loops: Environmental pressure vs. Species stasis
+  roles:
+  - Species
+  - Environment
+  - Niche
+  scale: Global (macroevolutionary)
+  time_horizon: Geologic

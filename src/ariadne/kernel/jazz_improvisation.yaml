@@ -1,0 +1,28 @@
+description: A collaborative process where musicians create music in real-time, balancing
+  individual expression with group coordination via shared structures (e.g., chord
+  progressions).
+domain: Music / Arts
+falsifiability_note: Predicts that the quality of the ensemble output depends more
+  on the responsiveness of agents than on pre-defined planning.
+id: jazz_improvisation
+key_refs:
+- 'Berliner, P. F. (1994). Thinking in Jazz: The Infinite Art of Improvisation.'
+known_failure_modes:
+- Over-divergence (noise)
+- Lack of shared vocabulary
+- Domination by a single agent
+name: Jazz Improvisation
+structural_tags:
+- peer-to-peer
+- distributed
+- cooperative
+- evolutionary
+structural_topology:
+  directionality: Multi-directional signaling
+  feedback_loops: Listening and Response (call and response)
+  roles:
+  - Soloist
+  - Accompanist
+  - Time-keeper
+  scale: Local (ensemble)
+  time_horizon: Real-time

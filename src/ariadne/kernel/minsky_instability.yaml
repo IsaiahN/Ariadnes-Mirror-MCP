@@ -1,0 +1,25 @@
+description: Financial markets are inherently unstable; long periods of stability
+  lead to increased risk-taking, which eventually causes a crash.
+domain: Finance / Macroeconomics
+falsifiability_note: Predicts that financial crises are an endogenous outcome of stable
+  growth periods, not just exogenous shocks.
+id: minsky_instability
+key_refs:
+- Minsky, H. P. (1992). The Financial Instability Hypothesis.
+known_failure_modes:
+- Strong counter-cyclical regulation
+- Resource-constrained economies
+name: Minsky Instability Hypothesis
+structural_tags:
+- cyclic
+- evolutionary
+- regulatory
+structural_topology:
+  directionality: Increasing fragility
+  feedback_loops: Success breeds disregard for risk
+  roles:
+  - Hedge borrower
+  - Speculative borrower
+  - Ponzi borrower
+  scale: Global (Market)
+  time_horizon: Multi-year (Cycle)

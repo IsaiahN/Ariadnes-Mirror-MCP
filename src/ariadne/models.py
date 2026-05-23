@@ -132,6 +132,40 @@ class DomainProfile(BaseModel):
     scale_level: str = ""
     f_star_coordinates: Optional[Dict[str, float]] = None
 
+class KernelTheory(BaseModel):
+    theory: Theory
+    kernel_version: str
+    content_hash: str
+    inclusion_rationale: str
+    validation_evidence: List[str]
+    independent_derivation_record: Optional[str] = None
+
+class KernelManifest(BaseModel):
+    version: str
+    theories: List[KernelTheory]
+    manifest_hash: str
+    primary_blueprints: List[str]
+    known_fstar_gaps: List[str]
+    curator_notes: str
+
+class Thread(BaseModel):
+    id: str
+    name: str
+    description: str
+    domain_focus: Optional[str] = None
+    created_at: str
+    theories: List[Theory] = []
+    credibility_state: Dict[str, float] = {}
+    session_paths: List[str] = []
+    residues: List[ResidueComponent] = []
+    max_credibility: float = 0.7
+
+class UserLibrary(BaseModel):
+    threads: Dict[str, Thread]
+    active_thread_id: str
+    global_theories: List[Theory] = []
+    global_credibility: Dict[str, float] = {}
+
 class Hypothesis(BaseModel):
     source_theory_id: str
     target_domain_name: str

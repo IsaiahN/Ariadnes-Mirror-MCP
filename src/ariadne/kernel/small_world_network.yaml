@@ -1,0 +1,53 @@
+description: A type of mathematical graph in which most nodes are not neighbors of
+  one another, but the neighbors of any given node are likely to be neighbors of each
+  other and most nodes can be reached from every other node by a small number of hops.
+distortion_profile:
+  actor_autonomy: 0.6
+  actor_count_regime: massive
+  actor_intentionality: reflexive
+  boundary_domains:
+  - graph_theory
+  - sociology
+  emergent_problems:
+  - cascading failure
+  - echo chambers
+  incentive_legibility: 0.8
+  intersection_type: cooperative
+  physical_constraints:
+  - link capacity
+  - node degree limits
+  resource_dynamics: renewable
+  resource_type: connectivity/information
+  thermodynamic_regime: medium
+domain: Network Science
+f_star_coordinates:
+  actor_complexity: 0.5
+  boundary_permeability: 0.7
+  coupling_tightness: 0.7
+  information_asymmetry: 0.3
+  resource_pressure: 0.4
+  time_pressure: 0.5
+falsifiability_note: Predicts a low average path length that scales logarithmically
+  with the number of nodes.
+id: small_world_network
+key_refs:
+- Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of 'small-world' networks.
+known_failure_modes:
+- Fragility to targeted hub attacks
+- Congestion in central hubs
+name: Small-World Network
+scale_level: institution
+structural_tags:
+- network
+- hub-spoke
+- distributed
+structural_topology:
+  directionality: Multi-directional
+  feedback_loops: Preferential attachment (often associated)
+  roles:
+  - Node
+  - Link
+  - Hub
+  - Peripheral Node
+  scale: Global
+  time_horizon: Static (often) or Growing

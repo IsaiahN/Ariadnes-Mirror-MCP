@@ -1,0 +1,67 @@
+coverage:
+  breadth_score: 0.7
+  convergent_discoveries: []
+  coverage_type: framework
+  depth_score: 0.75
+  fstar_dimensions_covered:
+  - information_asymmetry
+  - resource_pressure
+  - boundary_permeability
+  fstar_refinements:
+  - emergent_coordination_without_central_intent
+  novel_concepts:
+  - local_knowledge_utilization
+  - price_signals_as_information
+description: Prices act as a communication mechanism to coordinate local knowledge
+  across a market without central planning.
+distortion_profile:
+  actor_autonomy: 0.8
+  actor_count_regime: massive
+  actor_intentionality: strategic
+  boundary_domains:
+  - legal_systems
+  - physical_infrastructure
+  emergent_problems:
+  - inflation
+  - speculative bubbles
+  incentive_legibility: 0.5
+  intersection_type: cooperative
+  physical_constraints:
+  - logistics
+  - information delay
+  resource_dynamics: renewable/growth
+  resource_type: multi-modal capital
+  thermodynamic_regime: slow/institutional
+domain: Economics
+f_star_coordinates:
+  actor_complexity: 0.9
+  boundary_permeability: 0.9
+  coupling_tightness: 0.4
+  information_asymmetry: 0.9
+  resource_pressure: 0.6
+  time_pressure: 0.5
+falsifiability_note: Predicts that central planning will always result in less efficient
+  resource allocation than a functioning price system for non-trivial economies.
+id: hayek_price_system
+key_refs:
+- Hayek, F. A. (1945). The Use of Knowledge in Society.
+known_failure_modes:
+- Price stickiness
+- Information asymmetry
+- Market power / Monopolies
+name: Hayek's Price System
+scale_level: civilization
+structural_tags:
+- market
+- stigmergic
+- distributed
+- predictive
+structural_topology:
+  directionality: Peer-to-peer signal propagation
+  feedback_loops: Price signals vs. Supply/Demand shifts
+  roles:
+  - Producer
+  - Consumer
+  - Arbitrageur
+  scale: Global (emergent from local actions)
+  time_horizon: Dynamic (continuous update)

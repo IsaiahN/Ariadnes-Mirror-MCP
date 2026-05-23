@@ -1,0 +1,52 @@
+description: A behavioral ecology model that helps predict how an animal behaves when
+  searching for food.
+distortion_profile:
+  actor_autonomy: 0.9
+  actor_count_regime: few
+  actor_intentionality: deliberate
+  boundary_domains:
+  - botany
+  - ethology
+  emergent_problems:
+  - starvation
+  - patch depletion
+  incentive_legibility: 0.8
+  intersection_type: competitive
+  physical_constraints:
+  - locomotion cost
+  - stomach capacity
+  resource_dynamics: renewable but local
+  resource_type: nutrients/energy
+  thermodynamic_regime: medium
+domain: Ecology
+f_star_coordinates:
+  actor_complexity: 0.6
+  boundary_permeability: 0.3
+  coupling_tightness: 0.4
+  information_asymmetry: 0.5
+  resource_pressure: 0.9
+  time_pressure: 0.7
+falsifiability_note: Predicts that foragers will leave a patch when the rate of intake
+  drops to the average rate for the environment (Marginal Value Theorem).
+id: optimal_foraging_theory
+key_refs:
+- Charnov, E. L. (1976). Optimal foraging, the marginal value theorem.
+known_failure_modes:
+- Predation risk
+- Imperfect information
+- Bounded rationality
+name: Optimal Foraging Theory
+scale_level: organism
+structural_tags:
+- predictive
+- market
+- evolutionary
+structural_topology:
+  directionality: Navigational
+  feedback_loops: Resource depletion vs. Search cost
+  roles:
+  - Forager
+  - Patch
+  - Prey
+  scale: Local
+  time_horizon: Short-term (Tactical)

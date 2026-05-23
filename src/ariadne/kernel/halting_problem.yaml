@@ -1,0 +1,60 @@
+coverage:
+  breadth_score: 0.05
+  convergent_discoveries: []
+  coverage_type: partial
+  depth_score: 0.99
+  fstar_dimensions_covered:
+  - information_asymmetry
+  fstar_refinements:
+  - some_coordination_subproblems_are_provably_unsolvable
+  novel_concepts: []
+description: The problem of determining, from a description of an arbitrary computer
+  program and an input, whether the program will finish running or continue to run
+  forever.
+distortion_profile:
+  actor_autonomy: 0.0
+  actor_count_regime: few
+  actor_intentionality: none
+  boundary_domains:
+  - logic
+  - formal_methods
+  emergent_problems:
+  - unsolvability
+  - infinite loops
+  incentive_legibility: 1.0
+  intersection_type: competitive
+  physical_constraints:
+  - logic limits
+  - recursion depth
+  resource_dynamics: finite/non-renewable
+  resource_type: computational cycles
+  thermodynamic_regime: fast
+domain: Computer Science / Formal Logic
+f_star_coordinates:
+  actor_complexity: 0.05
+  boundary_permeability: 0.1
+  coupling_tightness: 0.8
+  information_asymmetry: 1.0
+  resource_pressure: 0.1
+  time_pressure: 0.1
+falsifiability_note: Predicts that no general algorithm exists that solves the halting
+  problem for all possible program-input pairs.
+id: halting_problem
+key_refs:
+- Turing, A. M. (1937). On Computable Numbers.
+known_failure_modes:
+- Subset solvability
+name: The Halting Problem
+scale_level: subatomic
+structural_tags:
+- modular
+- regulatory
+structural_topology:
+  directionality: Computational
+  feedback_loops: Self-reference
+  roles:
+  - Program
+  - Input
+  - Decider
+  scale: Universal
+  time_horizon: Infinite

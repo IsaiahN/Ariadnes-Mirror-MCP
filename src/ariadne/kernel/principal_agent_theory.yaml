@@ -1,0 +1,52 @@
+description: Explores the challenges when one person (the agent) is able to make decisions
+  on behalf of another person (the principal), leading to moral hazard and information
+  asymmetry.
+distortion_profile:
+  actor_autonomy: 0.9
+  actor_count_regime: few
+  actor_intentionality: strategic
+  boundary_domains:
+  - labor_markets
+  - corporate_law
+  emergent_problems:
+  - moral hazard
+  - adverse selection
+  incentive_legibility: 0.3
+  intersection_type: competitive
+  physical_constraints:
+  - legal jurisdiction
+  - cognitive limits
+  resource_dynamics: renewable
+  resource_type: authority/utility
+  thermodynamic_regime: slow
+domain: Economics / Sociology
+f_star_coordinates:
+  actor_complexity: 0.9
+  boundary_permeability: 0.5
+  coupling_tightness: 0.6
+  information_asymmetry: 0.9
+  resource_pressure: 0.5
+  time_pressure: 0.4
+falsifiability_note: Predicts that agents will prioritize their own interests over
+  the principal's when monitoring costs are high and incentives are misaligned.
+id: principal_agent_theory
+key_refs:
+- 'Ross, S. A. (1973). The Economic Theory of Agency: The Principal''s Problem.'
+known_failure_modes:
+- Excessive monitoring costs
+- Misalignment of multi-tasking agents
+name: Principal-Agent Theory
+scale_level: institution
+structural_tags:
+- hierarchical
+- adversarial
+- cooperative
+- regulatory
+structural_topology:
+  directionality: Delegation and Reporting
+  feedback_loops: Incentive alignment and Monitoring
+  roles:
+  - Principal
+  - Agent
+  scale: Local (contract-level)
+  time_horizon: Strategic

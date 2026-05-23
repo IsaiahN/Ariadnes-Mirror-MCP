@@ -1,0 +1,27 @@
+description: A strategy which, if adopted by a population in a given environment,
+  cannot be invaded by any alternative strategy that is initially rare.
+domain: Biology / Game Theory
+falsifiability_note: Predicts the convergence of behavioral traits in a population
+  toward a Nash equilibrium that is also evolutionarily stable.
+id: ess_evolutionary_stable_strategy
+key_refs:
+- Maynard Smith, J. (1982). Evolution and the Theory of Games.
+known_failure_modes:
+- Small population drift
+- Changing environments
+- Non-transitive interactions
+name: Evolutionary Stable Strategy (ESS)
+structural_tags:
+- evolutionary
+- adversarial
+- regulatory
+- modular
+structural_topology:
+  directionality: Selection pressure
+  feedback_loops: Frequency-dependent selection
+  roles:
+  - Strategy
+  - Population
+  - Mutant
+  scale: Global (population-level)
+  time_horizon: Multi-generational

@@ -1,0 +1,48 @@
+id: ouroboros_qcycle
+name: Ouroboros / Q-Cycle Framework
+domain: Systems Theory / Cybernetics
+description: A recursive, role-based framework for coordination and knowledge synthesis. Uses a 7-question cycle to characterize and map disparate problem spaces.
+structural_tags: [evolutionary, cyclic, regulatory, modular, network]
+structural_topology:
+  roles: [Knowledge Weaver, Protocol Designer, State Observer]
+  directionality: Recursive / Multi-scale
+  feedback_loops: Q1-Q7 validation loop
+  scale: Universal
+  time_horizon: Adaptive
+falsifiability_note: Predicts that any coordination system ignoring one of the Q1-Q4 invariants will eventually collapse due to unmodeled distortion.
+key_refs: ["Nwukor, O. (2024). Ouroboros: A Recursive Framework for Cross-Domain Alignment."]
+known_failure_modes: [Infinite recursion without grounding, Role exhaustion]
+scale_level: universal
+f_star_coordinates:
+  resource_pressure: 0.5
+  actor_complexity: 0.5
+  information_asymmetry: 0.5
+  coupling_tightness: 0.5
+  time_pressure: 0.5
+  boundary_permeability: 0.5
+distortion_profile:
+  resource_type: meta-information
+  resource_dynamics: recursive
+  thermodynamic_regime: medium
+  physical_constraints: [compute, communication bandwidth]
+  actor_intentionality: deliberate
+  actor_count_regime: few
+  actor_autonomy: 1.0
+  incentive_legibility: 0.9
+  boundary_domains: [epistemology, cognitive_science]
+  emergent_problems: [semantic_drift, mapping_failure]
+  intersection_type: symbiotic
+coverage:
+  coverage_type: blueprint
+  fstar_dimensions_covered: [resource_pressure, actor_complexity, information_asymmetry, coupling_tightness, time_pressure, boundary_permeability]
+  breadth_score: 0.95
+  depth_score: 0.90
+  novel_concepts: [q_cycle, youth_bonus, pariah_patterns_with_decay, valence_grounding]
+  convergent_discoveries:
+    - concept: youth_bonus
+      found_in: adaptive_immune_system
+      local_name: naive_lymphocyte_priority
+    - concept: pariah_patterns
+      found_in: sociology
+      local_name: stigma_theory
+  fstar_refinements: [universal_characterization_of_coordination_invariants]

@@ -1,0 +1,27 @@
+description: A mode of exchange where valuables are not sold, but rather given without
+  an explicit agreement for immediate or future rewards.
+domain: Anthropology / Sociology
+falsifiability_note: Predicts that social cohesion and individual status are higher
+  in gift economies than in pure barter economies of the same scale.
+id: gift_economy
+key_refs:
+- Mauss, M. (1925). The Gift.
+known_failure_modes:
+- Free-riding at scale
+- Obligation traps
+- Commodification
+name: Gift Economy
+structural_tags:
+- peer-to-peer
+- cooperative
+- stigmergic
+- network
+structural_topology:
+  directionality: Circular/Networked
+  feedback_loops: Social prestige and reciprocity
+  roles:
+  - Giver
+  - Receiver
+  - Community
+  scale: Local/Global
+  time_horizon: Long-term

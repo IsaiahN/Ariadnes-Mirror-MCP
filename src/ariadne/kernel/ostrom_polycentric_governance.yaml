@@ -1,0 +1,75 @@
+coverage:
+  breadth_score: 0.85
+  convergent_discoveries:
+  - concept: graduated_sanctions
+    found_in: adaptive_immune_system
+    local_name: clonal_deletion_tolerance_induction
+  - concept: nested_enterprise
+    found_in: panarchy
+    local_name: cross_scale_adaptive_cycle
+  coverage_type: framework
+  depth_score: 0.8
+  fstar_dimensions_covered:
+  - resource_pressure
+  - actor_complexity
+  - coupling_tightness
+  fstar_refinements:
+  - multi_level_alignment_in_open_systems
+  novel_concepts:
+  - graduated_sanctions
+  - polycentric_oversight
+  - congruence_of_rules_to_local_conditions
+  - nested_enterprise
+description: A framework for managing common-pool resources through multiple centers
+  of decision-making that are formally independent but functionally interdependent.
+distortion_profile:
+  actor_autonomy: 0.8
+  actor_count_regime: massive
+  actor_intentionality: strategic
+  boundary_domains:
+  - legal_regimes
+  - local_ecology
+  emergent_problems:
+  - tragedy_of_the_commons
+  - free_riding
+  incentive_legibility: 0.4
+  intersection_type: cooperative
+  physical_constraints:
+  - ecological limits
+  - geographic boundaries
+  resource_dynamics: subtractable/finite
+  resource_type: common-pool resources (water, land)
+  thermodynamic_regime: slow
+domain: Institutional Economics
+f_star_coordinates:
+  actor_complexity: 0.9
+  boundary_permeability: 0.5
+  coupling_tightness: 0.7
+  information_asymmetry: 0.6
+  resource_pressure: 0.85
+  time_pressure: 0.3
+falsifiability_note: Predicts that CPR regimes with high congruence between rules
+  and local conditions will be more stable than top-down regimes.
+id: ostrom_polycentric_governance
+key_refs:
+- Ostrom, E. (1990). Governing the Commons.
+known_failure_modes:
+- Scale-up difficulty
+- External shock vulnerability
+- Rigidity traps
+name: Ostrom's Polycentric Governance
+scale_level: institutional
+structural_tags:
+- hierarchical
+- distributed
+- regulatory
+- market
+structural_topology:
+  directionality: Multi-level
+  feedback_loops: Graduated sanctions and collective choice
+  roles:
+  - Appropriator
+  - Monitor
+  - Arbiter
+  scale: Institutional
+  time_horizon: Multigenerational

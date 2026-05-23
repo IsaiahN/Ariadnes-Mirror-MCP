@@ -77,7 +77,7 @@ theories:
       emergent_problems: [inflation, speculative bubbles]
       intersection_type: cooperative
     coverage:
-      coverage_type: blueprint
+      coverage_type: framework
       fstar_dimensions_covered: [information_asymmetry, resource_pressure, boundary_permeability]
       breadth_score: 0.7
       depth_score: 0.75
@@ -120,7 +120,7 @@ theories:
       emergent_problems: [autoimmunity, exhaustion]
       intersection_type: symbiotic
     coverage:
-      coverage_type: blueprint
+      coverage_type: framework
       fstar_dimensions_covered: [adversarial_alignment, resource_pressure, boundary_permeability, information_asymmetry]
       breadth_score: 0.8
       depth_score: 0.7
@@ -166,7 +166,7 @@ theories:
       emergent_problems: [tragedy_of_the_commons, free_riding]
       intersection_type: cooperative
     coverage:
-      coverage_type: blueprint
+      coverage_type: framework
       fstar_dimensions_covered: [resource_pressure, actor_complexity, coupling_tightness]
       breadth_score: 0.85
       depth_score: 0.80
@@ -529,7 +529,7 @@ theories:
       intersection_type: symbiotic
 
   - id: optimal_foraging_theory
-    name: Ecology / Behavioral Economics
+    name: Optimal Foraging Theory
     domain: Ecology
     description: A behavioral ecology model that helps predict how an animal behaves when searching for food.
     structural_tags: [predictive, market, evolutionary]

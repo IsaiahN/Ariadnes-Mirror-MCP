@@ -1,0 +1,74 @@
+coverage:
+  breadth_score: 0.8
+  convergent_discoveries:
+  - concept: tolerance_induction
+    found_in: ostrom_polycentric_governance
+    local_name: graduated_sanctions
+  coverage_type: framework
+  depth_score: 0.7
+  fstar_dimensions_covered:
+  - adversarial_alignment
+  - resource_pressure
+  - boundary_permeability
+  - information_asymmetry
+  fstar_refinements:
+  - adversarial_recognition_under_incomplete_information
+  novel_concepts:
+  - clonal_selection
+  - memory_retention
+  - tolerance_induction
+description: A system that recognizes and remembers specific pathogens to provide
+  long-lasting protection.
+distortion_profile:
+  actor_autonomy: 0.4
+  actor_count_regime: massive
+  actor_intentionality: reflexive
+  boundary_domains:
+  - microbiome
+  - respiratory_system
+  emergent_problems:
+  - autoimmunity
+  - exhaustion
+  incentive_legibility: 0.7
+  intersection_type: symbiotic
+  physical_constraints:
+  - fluid dynamics
+  - chemical gradients
+  resource_dynamics: renewable/cyclic
+  resource_type: metabolic energy
+  thermodynamic_regime: medium/biological
+domain: Biology
+f_star_coordinates:
+  actor_complexity: 0.3
+  boundary_permeability: 0.8
+  coupling_tightness: 0.5
+  information_asymmetry: 0.7
+  resource_pressure: 0.6
+  time_pressure: 0.6
+falsifiability_note: Predicts that a secondary exposure to the same pathogen will
+  result in a faster and stronger response than the primary exposure.
+id: adaptive_immune_system
+key_refs:
+- 'Janeway, C. A. (2001). Immunobiology: The Immune System in Health and Disease.'
+known_failure_modes:
+- Autoimmunity (self-recognition)
+- Pathogen mimicry
+- Cytokine storm
+name: Adaptive Immune System
+scale_level: organism
+structural_tags:
+- evolutionary
+- adversarial
+- predictive
+- modular
+structural_topology:
+  directionality: Recognition-Response cycle
+  feedback_loops: Clonal selection and expansion
+  roles:
+  - Antigen
+  - Antibody
+  - B-Cell
+  - T-Cell
+  - Memory Cell
+  scale: Global (organism-level)
+  time_horizon: Long-term (memory retention)

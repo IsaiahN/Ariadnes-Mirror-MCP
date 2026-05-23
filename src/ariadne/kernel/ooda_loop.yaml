@@ -1,0 +1,27 @@
+description: Observe, Orient, Decide, Act. A four-step cycle for decision-making in
+  rapidly changing environments.
+domain: Military Strategy / Decision Science
+falsifiability_note: Predicts that the agent with a faster OODA loop will consistently
+  outmaneuver opponents regardless of raw resource advantage.
+id: ooda_loop
+key_refs:
+- Boyd, J. R. (1986). Patterns of Conflict.
+known_failure_modes:
+- Analysis paralysis
+- Mis-orientation due to bias
+- Feedback delay
+name: OODA Loop
+structural_tags:
+- cyclic
+- predictive
+- regulatory
+- adversarial
+structural_topology:
+  directionality: Cyclic
+  feedback_loops: Continuous re-observation after action
+  roles:
+  - Observer
+  - Decision Maker
+  - Actor
+  scale: Local/Global
+  time_horizon: Real-time/Reactive

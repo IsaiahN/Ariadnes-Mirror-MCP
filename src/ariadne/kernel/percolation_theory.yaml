@@ -1,0 +1,52 @@
+description: Describes the behavior of a network when nodes or links are added. As
+  the density of links increases, a large "giant component" suddenly forms.
+distortion_profile:
+  actor_autonomy: 0.0
+  actor_count_regime: massive
+  actor_intentionality: none
+  boundary_domains:
+  - material_science
+  - epidemiology
+  emergent_problems:
+  - phase transition
+  - sudden disconnect
+  incentive_legibility: 1.0
+  intersection_type: symbiotic
+  physical_constraints:
+  - topology
+  - dimension limits
+  resource_dynamics: threshold-based
+  resource_type: connectivity
+  thermodynamic_regime: fast
+domain: Physics / Mathematics
+f_star_coordinates:
+  actor_complexity: 0.2
+  boundary_permeability: 0.5
+  coupling_tightness: 0.8
+  information_asymmetry: 0.4
+  resource_pressure: 0.6
+  time_pressure: 0.9
+falsifiability_note: Predicts a sharp threshold (percolation threshold) below which
+  global connectivity is impossible.
+id: percolation_theory
+key_refs:
+- Broadbent, S. R., & Hammersley, J. M. (1957). Percolation processes.
+known_failure_modes:
+- Non-random networks
+- Finite-size effects
+name: Percolation Theory
+scale_level: institution
+structural_tags:
+- network
+- layered
+- distributed
+structural_topology:
+  directionality: Multi-directional
+  feedback_loops: Positive feedback in connectivity
+  roles:
+  - Node
+  - Link
+  - Cluster
+  - Giant Component
+  scale: Global (Phase transition)
+  time_horizon: Critical/Sudden

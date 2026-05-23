@@ -1,0 +1,25 @@
+description: A formal system in mathematical logic for expressing computation based
+  on function abstraction and application using variable binding and substitution.
+domain: Formal Systems / Mathematics
+falsifiability_note: Equivalent to Turing machines (Church-Turing Thesis); predicts
+  that any effectively calculable function can be expressed in lambda calculus.
+id: lambda_calculus
+key_refs:
+- Church, A. (1936). An unsolvable problem of elementary number theory.
+known_failure_modes:
+- Halting problem
+- Computational complexity limits
+name: Lambda Calculus
+structural_tags:
+- modular
+- hierarchical
+- layered
+structural_topology:
+  directionality: Reduction (computation)
+  feedback_loops: Recursion (Fixed-point combinators)
+  roles:
+  - Variable
+  - Abstraction
+  - Application
+  scale: Universal (Computational)
+  time_horizon: A-temporal

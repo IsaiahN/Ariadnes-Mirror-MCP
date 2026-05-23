@@ -1,0 +1,28 @@
+description: Organisms must constantly adapt, evolve, and proliferate not merely to
+  gain reproductive advantage, but also simply to survive while pitted against ever-evolving
+  opposing organisms in an ever-changing environment.
+domain: Evolutionary Biology
+falsifiability_note: Predicts that species that stop evolving will quickly go extinct
+  even if their physical environment remains static.
+id: red_queen_hypothesis
+key_refs:
+- Van Valen, L. (1973). A New Evolutionary Law.
+known_failure_modes:
+- Abiotic extinction drivers
+- Stable niches with low competition
+name: Red Queen Hypothesis
+structural_tags:
+- evolutionary
+- adversarial
+- cyclic
+- network
+structural_topology:
+  directionality: Co-evolutionary feedback
+  feedback_loops: Arms race (Adaptation-Counteradaptation)
+  roles:
+  - Host
+  - Parasite
+  - Predator
+  - Prey
+  scale: Global (Ecosystem)
+  time_horizon: Continuous

@@ -1,0 +1,31 @@
+description: A machine learning technique that trains an algorithm across multiple
+  decentralized edge devices or servers holding local data samples, without exchanging
+  them.
+domain: Machine Learning / Distributed Systems
+falsifiability_note: Predicts that global model performance will converge even when
+  data is non-IID (Independent and Identically Distributed) across clients, given
+  sufficient rounds.
+id: federated_learning
+key_refs:
+- McMahan, B., et al. (2017). Communication-Efficient Learning of Deep Networks from
+  Decentralized Data.
+known_failure_modes:
+- Poisoning attacks
+- Client dropouts
+- Communication bottlenecks
+name: Federated Learning
+structural_tags:
+- hub-spoke
+- peer-to-peer
+- distributed
+- regulatory
+structural_topology:
+  directionality: Bidirectional (Local updates to Server, Global model to Clients)
+  feedback_loops: Model aggregation and distribution
+  roles:
+  - Central Server
+  - Client Device
+  - Local Model
+  - Global Model
+  scale: Global
+  time_horizon: Iterative

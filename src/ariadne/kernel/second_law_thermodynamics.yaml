@@ -1,0 +1,26 @@
+description: The total entropy of an isolated system can never decrease over time;
+  it can only remain constant or increase.
+domain: Physics
+falsifiability_note: Predicts that perpetual motion machines of the second kind are
+  impossible.
+id: second_law_thermodynamics
+key_refs:
+- Clausius, R. (1850). On the Moving Force of Heat.
+known_failure_modes:
+- Small-scale fluctuations (Maxwell's Demon)
+- Non-isolated systems (Life)
+name: Second Law of Thermodynamics
+structural_tags:
+- evolutionary
+- cyclic
+- regulatory
+structural_topology:
+  directionality: Unidirectional (Time arrow)
+  feedback_loops: Dissipative processes
+  roles:
+  - System
+  - Surroundings
+  - Entropy
+  - Energy
+  scale: Global (Universal)
+  time_horizon: Terminal

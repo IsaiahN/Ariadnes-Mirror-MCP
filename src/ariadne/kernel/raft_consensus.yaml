@@ -1,0 +1,66 @@
+coverage:
+  breadth_score: 0.3
+  convergent_discoveries: []
+  coverage_type: framework
+  depth_score: 0.95
+  fstar_dimensions_covered:
+  - information_asymmetry
+  - coupling_tightness
+  - time_pressure
+  fstar_refinements:
+  - leader_election_under_unreliable_networks
+  novel_concepts:
+  - term_expiration
+  - randomized_election_timeouts
+description: A consensus algorithm designed as an alternative to Paxos. It achieves
+  consensus through leader election, log replication, and safety.
+distortion_profile:
+  actor_autonomy: 0.2
+  actor_count_regime: few
+  actor_intentionality: reflexive
+  boundary_domains:
+  - network_partitions
+  - hardware_failure
+  emergent_problems:
+  - livelock
+  - split-brain
+  incentive_legibility: 1.0
+  intersection_type: competitive
+  physical_constraints:
+  - network latency
+  - partition existence
+  resource_dynamics: terminal on failure
+  resource_type: consensus / consistent state
+  thermodynamic_regime: fast/digital
+domain: Computer Science / Distributed Systems
+f_star_coordinates:
+  actor_complexity: 0.1
+  boundary_permeability: 0.2
+  coupling_tightness: 0.9
+  information_asymmetry: 0.8
+  resource_pressure: 0.7
+  time_pressure: 0.8
+falsifiability_note: Predicts that a cluster cannot reach consensus if more than (N-1)/2
+  nodes are unavailable or partitioned.
+id: raft_consensus
+key_refs:
+- Ongaro, D., & Ousterhout, J. (2014). In Search of an Understandable Consensus Algorithm.
+known_failure_modes:
+- Livelock during election cycles
+- Performance degradation under high network latency
+name: Raft Consensus Algorithm
+scale_level: institution
+structural_tags:
+- hierarchical
+- peer-to-peer
+- regulatory
+- layered
+structural_topology:
+  directionality: Unidirectional (Leader to Followers)
+  feedback_loops: Heartbeats and AppendEntries responses
+  roles:
+  - Leader
+  - Follower
+  - Candidate
+  scale: Local (cluster-level)
+  time_horizon: Reactive (immediate consistency)

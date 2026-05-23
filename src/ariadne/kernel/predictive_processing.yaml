@@ -1,0 +1,27 @@
+description: The brain is a sophisticated hypothesis-testing mechanism, which is constantly
+  generating models of the world and using them to predict sensory input.
+domain: Cognitive Science / Neuroscience
+falsifiability_note: Predicts that sensory input matching the internal model will
+  trigger less neural activity than unexpected input.
+id: predictive_processing
+key_refs:
+- Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future
+  of cognitive science.
+known_failure_modes:
+- Schizophrenia/Hallucinations (over-weighting priors)
+- Sensory deprivation
+name: Predictive Processing
+structural_tags:
+- predictive
+- layered
+- hierarchical
+- regulatory
+structural_topology:
+  directionality: Top-down (predictions) and Bottom-up (errors)
+  feedback_loops: Error minimization loop
+  roles:
+  - Generative Model
+  - Prediction Error
+  - Sensory Input
+  scale: Local (neuronal) / Global (behavioral)
+  time_horizon: Real-time
