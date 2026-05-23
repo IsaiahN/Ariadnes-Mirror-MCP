@@ -1,45 +1,65 @@
-description: A collaborative process where musicians create music in real-time, balancing
-  individual expression with group coordination via shared structures (e.g., chord
-  progressions).
-domain: Music / Arts
-falsifiability_note: Predicts that the quality of the ensemble output depends more
-  on the responsiveness of agents than on pre-defined planning.
+coverage:
+  breadth_score: 0.6
+  convergent_discoveries:
+  - concept: real_time_distributed_coordination
+    found_in: federated_learning
+    local_name: local_state_sparse_global_sync
+  - concept: call_and_response_signaling
+    found_in: bateson_ecology_of_mind
+    local_name: pattern_which_connects
+  - concept: emergent_order_without_blueprint
+    found_in: hayek_price_system
+    local_name: spontaneous_order
+  coverage_type: framework
+  depth_score: 0.8
+  fstar_dimensions_covered:
+  - actor_complexity
+  - information_asymmetry
+  - time_pressure
+  fstar_refinements:
+  - real_time_peer_coordination_without_leader
+  novel_concepts:
+  - Distributed creation
+  - Call and response
+  - Shared vocabulary
+description: A model for distributed, real-time coordination among autonomous agents
+  with high local autonomy and sparse global synchronization.
+distortion_profile:
+  actor_autonomy: 1.0
+  actor_count_regime: medium
+  actor_intentionality: creative
+  boundary_domains:
+  - Music
+  - Organizational Learning
+  emergent_problems:
+  - Clashing
+  - Coordination drift
+  incentive_legibility: 0.4
+  intersection_type: communicative
+  physical_constraints:
+  - real-time latency
+  resource_dynamics: informational/harmonic
+  resource_type: musical space/time
+  thermodynamic_regime: low
+domain: Arts/Coordination
+f_star_coordinates:
+  actor_complexity: 0.9
+  boundary_permeability: 0.7
+  coupling_tightness: 0.4
+  information_asymmetry: 0.6
+  resource_pressure: 0.3
+  time_pressure: 0.9
+falsifiability_note: Predicts that agents with a shared vocabulary but no central leader
+  can produce coherent, complex patterns through local interaction and observation.
 id: jazz_improvisation
 key_refs:
-- 'Berliner, P. F. (1994). Thinking in Jazz: The Infinite Art of Improvisation.'
+- 'Barrett, F. J. (1998). Creativity and Improvisation in Jazz and Organizations.'
 known_failure_modes:
-- Over-divergence (noise)
-- Lack of shared vocabulary
-- Domination by a single agent
+- Vocabulary mismatch
+- Latency threshold breach
+- Dominant actor capture
 name: Jazz Improvisation
-scale_level: organism
-f_star_coordinates:
-  resource_pressure: 0.4
-  actor_complexity: 0.9
-  information_asymmetry: 0.2
-  coupling_tightness: 0.8
-  time_pressure: 0.9
-  boundary_permeability: 0.6
-distortion_profile:
-  resource_type: attention/sonic-space
-  resource_dynamics: real-time
-  thermodynamic_regime: fast
-  physical_constraints: [acoustic limits, reaction time]
-  actor_intentionality: strategic
-  actor_count_regime: few
-  actor_autonomy: 0.9
-  incentive_legibility: 0.9
-  boundary_domains: [musicology, cognitive_psychology]
-  emergent_problems: [clashing, rhythmic drift]
-  intersection_type: cooperative
-coverage:
-  coverage_type: framework
-  fstar_dimensions_covered: [actor_complexity, coupling_tightness, time_pressure]
-  breadth_score: 0.4
-  depth_score: 0.85
-  novel_concepts: [call_and_response, shared_vocabulary_divergence]
-  convergent_discoveries: []
-  fstar_refinements: [real_time_peer_coordination_without_leader]
+scale_level: social
 structural_tags:
 - peer-to-peer
 - distributed
@@ -51,6 +71,6 @@ structural_topology:
   roles:
   - Soloist
   - Accompanist
-  - Time-keeper
-  scale: Local (ensemble)
+  - Ensemble
+  scale: Social (small group)
   time_horizon: Real-time

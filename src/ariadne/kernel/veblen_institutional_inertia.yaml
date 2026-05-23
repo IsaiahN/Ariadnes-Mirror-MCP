@@ -25,7 +25,8 @@ coverage:
   - Trained Incapacity
   - Institutional Inertia
   - Cultural Lag
-description: The tendency of institutions to persist in their established patterns even when environment or technology changes.
+description: The tendency of institutions to persist in their established patterns
+  even when environment or technology changes.
 distortion_profile:
   actor_autonomy: 0.5
   actor_count_regime: medium to massive
@@ -50,7 +51,8 @@ f_star_coordinates:
   information_asymmetry: 0.6
   resource_pressure: 0.7
   time_pressure: 0.8
-falsifiability_note: Predicts a significant time lag between technical/environmental change and institutional adaptation.
+falsifiability_note: Predicts a significant time lag between technical/environmental
+  change and institutional adaptation.
 id: veblen_institutional_inertia
 key_refs:
 - 'Veblen, T. (1899). The Theory of the Leisure Class.'

@@ -385,6 +385,8 @@ OUTPUT JSON format:
         Partials are held as refiners.
         """
         if not target_profile.f_star_coordinates:
+            import logging
+            logging.warning("Stage 0 (Distortion Analysis) failed to produce F* coordinates. Degrading to Jaccard tag filtering.")
             return self.stage1_filter(target_profile.structural_tags, top_k)
 
         blueprints = []
@@ -411,9 +413,13 @@ OUTPUT JSON format:
         # Save top partials as current refiners for Stage 4
         self._current_refiners = [t for s, t in partials[:10]]
 
-        # Return prioritized mix (include all blueprints up to top_k)
-        primary = ([t for s, t in blueprints[:top_k]] +
-                   [t for s, t in frameworks[:max(0, top_k - len(blueprints))]])
+        # Return prioritized mix (include all close blueprints up to top_k)
+        # Use a distance-based threshold (0.45 corresponds to score > 0.55)
+        BLUEPRINT_THRESHOLD = 0.55
+        close_blueprints = [t for s, t in blueprints if s >= BLUEPRINT_THRESHOLD]
+
+        primary = (close_blueprints[:top_k] +
+                   [t for s, t in frameworks[:max(0, top_k - len(close_blueprints))]])
         return primary[:top_k]
 
     def stage5_refine_with_partials(self, hypothesis: Hypothesis, target_profile: DomainProfile) -> Hypothesis:

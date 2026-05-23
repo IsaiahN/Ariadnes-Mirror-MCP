@@ -1,6 +1,15 @@
 coverage:
   breadth_score: 0.7
-  convergent_discoveries: []
+  convergent_discoveries:
+  - concept: price_as_signal
+    found_in: luhmann_social_systems
+    local_name: economic_subsystem_coding
+  - concept: distributed_knowledge_aggregation
+    found_in: polanyi_tacit_knowledge
+    local_name: spontaneous_coordination
+  - concept: price_system_as_discovery_procedure
+    found_in: ouroboros
+    local_name: stage5_abstraction_refinement
   coverage_type: framework
   depth_score: 0.75
   fstar_dimensions_covered:
@@ -11,57 +20,55 @@ coverage:
   - emergent_coordination_without_central_intent
   novel_concepts:
   - local_knowledge_utilization
-  - price_signals_as_information
-description: Prices act as a communication mechanism to coordinate local knowledge
-  across a market without central planning.
+description: The use of prices to communicate information across a market, allowing
+  spontaneous coordination without central planning.
 distortion_profile:
-  actor_autonomy: 0.8
+  actor_autonomy: 1.0
   actor_count_regime: massive
-  actor_intentionality: strategic
+  actor_intentionality: local/strategic
   boundary_domains:
-  - legal_systems
-  - physical_infrastructure
+  - Economics
+  - Information Theory
   emergent_problems:
-  - inflation
-  - speculative bubbles
-  incentive_legibility: 0.5
-  intersection_type: cooperative
+  - Price manipulation
+  - Information lag
+  incentive_legibility: 0.9
+  intersection_type: market
   physical_constraints:
-  - logistics
-  - information delay
-  resource_dynamics: renewable/growth
-  resource_type: multi-modal capital
-  thermodynamic_regime: slow/institutional
+  - communication latency
+  resource_dynamics: competitive
+  resource_type: local information
+  thermodynamic_regime: low
 domain: Economics
 f_star_coordinates:
-  actor_complexity: 0.9
-  boundary_permeability: 0.9
-  coupling_tightness: 0.4
-  information_asymmetry: 0.9
+  actor_complexity: 0.8
+  boundary_permeability: 0.7
+  coupling_tightness: 0.3
+  information_asymmetry: 1.0
   resource_pressure: 0.6
   time_pressure: 0.5
-falsifiability_note: Predicts that central planning will always result in less efficient
-  resource allocation than a functioning price system for non-trivial economies.
+falsifiability_note: Predicts that central planning will systematically underperform
+  the price system in resource allocation efficiency under conditions of high information
+  asymmetry.
 id: hayek_price_system
 key_refs:
-- Hayek, F. A. (1945). The Use of Knowledge in Society.
+- 'Hayek, F. A. (1945). The Use of Knowledge in Society.'
 known_failure_modes:
-- Price stickiness
-- Information asymmetry
-- Market power / Monopolies
+- Monopoly (signal capture)
+- High-noise environments
+- Externalities (unpriced effects)
 name: Hayek's Price System
-scale_level: civilization
+scale_level: institutional
 structural_tags:
 - market
-- stigmergic
+- network
 - distributed
-- predictive
 structural_topology:
-  directionality: Peer-to-peer signal propagation
-  feedback_loops: Price signals vs. Supply/Demand shifts
+  directionality: Decentralized/Aggregate
+  feedback_loops: Price adjustment
   roles:
-  - Producer
-  - Consumer
-  - Arbitrageur
-  scale: Global (emergent from local actions)
-  time_horizon: Dynamic (continuous update)
+  - Buyer
+  - Seller
+  - Price Signal
+  scale: Institutional (global market)
+  time_horizon: Real-time/Continuous

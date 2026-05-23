@@ -1,44 +1,65 @@
-description: Human desire is not autonomous but is borrowed from models; we want what
-  others want because they want it.
-domain: Sociology / Philosophy
-falsifiability_note: Predicts that conflict will increase between individuals as they
-  become more similar in their desires and social status.
+coverage:
+  breadth_score: 0.6
+  convergent_discoveries:
+  - concept: mimetic_rivalry
+    found_in: axelrod_cooperation
+    local_name: defection_cascades
+  - concept: scapegoating_as_stabilization
+    found_in: ouroboros
+    local_name: pariah_patterns_as_system_cleanup
+  - concept: triadic_desire
+    found_in: bateson_ecology_of_mind
+    local_name: schismogenesis_patterns
+  coverage_type: framework
+  depth_score: 0.7
+  fstar_dimensions_covered:
+  - adversarial_alignment
+  - information_asymmetry
+  fstar_refinements:
+  - conflict_emergence_through_actor_convergence
+  novel_concepts:
+  - Mimetic Desire
+  - Scapegoating
+  - Mimetic Rivalry
+description: A theory suggesting that human desire is not autonomous but is borrowed
+  from others (models), leading to inevitable rivalry and social conflict.
+distortion_profile:
+  actor_autonomy: 0.3
+  actor_count_regime: massive
+  actor_intentionality: borrowed/mimetic
+  boundary_domains:
+  - Anthropology
+  - Psychology
+  - Economics
+  emergent_problems:
+  - Scapegoating
+  - Crisis of undifferentiation
+  incentive_legibility: 0.2
+  intersection_type: social
+  physical_constraints:
+  - proximity
+  resource_dynamics: mimetic
+  resource_type: status/desire
+  thermodynamic_regime: low
+domain: Anthropology
+f_star_coordinates:
+  actor_complexity: 0.7
+  boundary_permeability: 0.8
+  coupling_tightness: 0.9
+  information_asymmetry: 0.9
+  resource_pressure: 0.5
+  time_pressure: 0.4
+falsifiability_note: Predicts that social conflict will increase as actors become
+  more similar in their desires and status.
 id: mimetic_desire
 key_refs:
-- Girard, R. (1961). Deceit, Desire and the Novel.
+- 'Girard, R. (1972). Violence and the Sacred.'
 known_failure_modes:
-- Non-rivalrous goods
-- Strong individualistic values
-- External mediation
+- Scapegoat absence
+- Global undifferentiation
+- Mimetic crisis
 name: Mimetic Desire
-scale_level: civilizational
-f_star_coordinates:
-  resource_pressure: 0.75
-  actor_complexity: 0.85
-  information_asymmetry: 0.65
-  coupling_tightness: 0.8
-  time_pressure: 0.4
-  boundary_permeability: 0.95
-distortion_profile:
-  resource_type: social status/prestige
-  resource_dynamics: zero-sum/rivalrous
-  thermodynamic_regime: slow
-  physical_constraints: [social network topology, visibility]
-  actor_intentionality: strategic
-  actor_count_regime: massive
-  actor_autonomy: 0.7
-  incentive_legibility: 0.2
-  boundary_domains: [anthropology, literature]
-  emergent_problems: [mimetic rivalry, scapegoating]
-  intersection_type: competitive
-coverage:
-  coverage_type: framework
-  fstar_dimensions_covered: [actor_complexity, resource_pressure, boundary_permeability]
-  breadth_score: 0.45
-  depth_score: 0.7
-  novel_concepts: [triadic_desire, mimetic_rivalry, scapegoat_mechanism]
-  convergent_discoveries: []
-  fstar_refinements: [conflict_emergence_through_actor_convergence]
+scale_level: social
 structural_tags:
 - adversarial
 - network
@@ -49,7 +70,8 @@ structural_topology:
   feedback_loops: Mimetic rivalry and Scapegoating
   roles:
   - Subject
-  - Model/Mediator
+  - Model
   - Object
-  scale: Global (Societal)
-  time_horizon: Dynamic
+  - Scapegoat
+  scale: Social (group to global)
+  time_horizon: Short-term to Long-term

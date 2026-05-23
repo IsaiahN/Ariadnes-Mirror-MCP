@@ -27,7 +27,8 @@ coverage:
   - Tacit Knowledge
   - Personal Knowledge
   - Indwelling
-description: The idea that we know more than we can tell; knowledge that is difficult to transfer to another person by means of writing it down or verbalizing it.
+description: The idea that we know more than we can tell; knowledge that is difficult
+  to transfer to another person by means of writing it down or verbalizing it.
 distortion_profile:
   actor_autonomy: 1.0
   actor_count_regime: individual
@@ -52,7 +53,8 @@ f_star_coordinates:
   information_asymmetry: 1.0
   resource_pressure: 0.2
   time_pressure: 0.4
-falsifiability_note: Predicts that explicit rules alone will be insufficient for high-performance execution of complex tasks.
+falsifiability_note: Predicts that explicit rules alone will be insufficient for high-performance
+  execution of complex tasks.
 id: polanyi_tacit_knowledge
 key_refs:
 - 'Polanyi, M. (1958). Personal Knowledge.'

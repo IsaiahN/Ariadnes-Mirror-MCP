@@ -1,43 +1,63 @@
-description: Financial markets are inherently unstable; long periods of stability
-  lead to increased risk-taking, which eventually causes a crash.
-domain: Finance / Macroeconomics
-falsifiability_note: Predicts that financial crises are an endogenous outcome of stable
-  growth periods, not just exogenous shocks.
+coverage:
+  breadth_score: 0.65
+  convergent_discoveries:
+  - concept: stability_breeds_instability
+    found_in: panarchy
+    local_name: k_phase_fragility_emergence
+  - concept: endogenous_shock
+    found_in: self_organized_criticality
+    local_name: avalanche_dynamics
+  - concept: financial_fragility
+    found_in: ostrom_polycentric_governance
+    local_name: institutional_robustness_failure
+  coverage_type: framework
+  depth_score: 0.8
+  fstar_dimensions_covered:
+  - resource_pressure
+  - coupling_tightness
+  - time_pressure
+  fstar_refinements:
+  - endogenous_emergence_of_instability_from_stability
+  novel_concepts:
+  - Hedge/Speculative/Ponzi finance
+  - Financial Instability Hypothesis
+description: The idea that periods of economic stability lead to increased risk-taking,
+  eventually resulting in a financial crisis.
+distortion_profile:
+  actor_autonomy: 0.8
+  actor_count_regime: massive
+  actor_intentionality: speculative
+  boundary_domains:
+  - Economics
+  - Finance
+  emergent_problems:
+  - Minsky Moment (collapse)
+  incentive_legibility: 0.6
+  intersection_type: market/financial
+  physical_constraints:
+  - capital limits
+  resource_dynamics: credit-driven
+  resource_type: liquidity/capital
+  thermodynamic_regime: low
+domain: Macroeconomics
+f_star_coordinates:
+  actor_complexity: 0.7
+  boundary_permeability: 0.4
+  coupling_tightness: 0.8
+  information_asymmetry: 0.7
+  resource_pressure: 0.6
+  time_pressure: 0.7
+falsifiability_note: Predicts that the longer the period of stability, the more fragile
+  the system becomes due to debt accumulation.
 id: minsky_instability
 key_refs:
-- Minsky, H. P. (1992). The Financial Instability Hypothesis.
+- 'Minsky, H. P. (1986). Stabilizing an Unstable Economy.'
 known_failure_modes:
-- Strong counter-cyclical regulation
-- Resource-constrained economies
+- Minsky Moment (sudden deleveraging)
+- Regulatory capture
+- Liquidity trap
 name: Minsky Instability Hypothesis
 scale_level: institutional
-f_star_coordinates:
-  resource_pressure: 0.65
-  actor_complexity: 0.8
-  information_asymmetry: 0.5
-  coupling_tightness: 0.85
-  time_pressure: 0.55
-  boundary_permeability: 0.6
-distortion_profile:
-  resource_type: financial credit/liquidity
-  resource_dynamics: pro-cyclical expansion
-  thermodynamic_regime: medium
-  physical_constraints: [monetary policy, banking infrastructure]
-  actor_intentionality: strategic
-  actor_count_regime: many
-  actor_autonomy: 0.9
-  incentive_legibility: 0.4
-  boundary_domains: [macroeconomics, psychology]
-  emergent_problems: [ponzi finance, market crash]
-  intersection_type: competitive
-coverage:
-  coverage_type: framework
-  fstar_dimensions_covered: [coupling_tightness, resource_pressure, time_pressure]
-  breadth_score: 0.4
-  depth_score: 0.8
-  novel_concepts: [minsky_moment, financial_fragility_spectrum]
-  convergent_discoveries: []
-  fstar_refinements: [endogenous_emergence_of_instability_from_stability]
 structural_tags:
 - cyclic
 - evolutionary
@@ -49,5 +69,6 @@ structural_topology:
   - Hedge borrower
   - Speculative borrower
   - Ponzi borrower
-  scale: Global (Market)
-  time_horizon: Multi-year (Cycle)
+  - Lender
+  scale: Institutional (macroeconomic)
+  time_horizon: Long-term (cycle)

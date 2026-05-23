@@ -1,6 +1,15 @@
 coverage:
-  breadth_score: 0.3
-  convergent_discoveries: []
+  breadth_score: 0.8
+  convergent_discoveries:
+  - concept: leader_election_coordination
+    found_in: ostrom_polycentric_governance
+    local_name: choice_rules_for_collective_action
+  - concept: log_replication_as_shared_memory
+    found_in: autopoiesis
+    local_name: system_reproducing_own_components
+  - concept: consensus_state_maintenance
+    found_in: ouroboros
+    local_name: protocol_design_q4_synthesis
   coverage_type: framework
   depth_score: 0.95
   fstar_dimensions_covered:
@@ -10,57 +19,57 @@ coverage:
   fstar_refinements:
   - leader_election_under_unreliable_networks
   novel_concepts:
+  - Consensus algorithm
+  - Log replication
   - term_expiration
-  - randomized_election_timeouts
-description: A consensus algorithm designed as an alternative to Paxos. It achieves
-  consensus through leader election, log replication, and safety.
+description: A consensus algorithm designed as an alternative to Paxos, focused on
+  understandability and managing a replicated log.
 distortion_profile:
-  actor_autonomy: 0.2
-  actor_count_regime: few
-  actor_intentionality: reflexive
+  actor_autonomy: 0.0
+  actor_count_regime: low (cluster)
+  actor_intentionality: deterministic
   boundary_domains:
-  - network_partitions
-  - hardware_failure
+  - Distributed Systems
+  - Network Science
   emergent_problems:
-  - livelock
-  - split-brain
+  - Network partition
+  - Split brain
   incentive_legibility: 1.0
-  intersection_type: competitive
+  intersection_type: physical/network
   physical_constraints:
-  - network latency
-  - partition existence
-  resource_dynamics: terminal on failure
-  resource_type: consensus / consistent state
-  thermodynamic_regime: fast/digital
-domain: Computer Science / Distributed Systems
+  - message latency
+  resource_dynamics: state-consistent
+  resource_type: consensus log
+  thermodynamic_regime: low
+domain: Computer Science
 f_star_coordinates:
-  actor_complexity: 0.1
-  boundary_permeability: 0.2
+  actor_complexity: 0.5
+  boundary_permeability: 0.3
   coupling_tightness: 0.9
   information_asymmetry: 0.8
-  resource_pressure: 0.7
+  resource_pressure: 0.4
   time_pressure: 0.8
-falsifiability_note: Predicts that a cluster cannot reach consensus if more than (N-1)/2
-  nodes are unavailable or partitioned.
+falsifiability_note: Predicts that a cluster can reach consensus even with minor failures
+  as long as a majority of nodes are operational and can communicate.
 id: raft_consensus
 key_refs:
-- Ongaro, D., & Ousterhout, J. (2014). In Search of an Understandable Consensus Algorithm.
+- 'Ongaro, D., & Ousterhout, J. (2014). In Search of an Understandable Consensus Algorithm.'
 known_failure_modes:
-- Livelock during election cycles
-- Performance degradation under high network latency
-name: Raft Consensus Algorithm
-scale_level: institution
+- Majority failure
+- Clock skew
+- Sustained network partition
+name: Raft Consensus
+scale_level: institutional
 structural_tags:
-- hierarchical
-- peer-to-peer
 - regulatory
-- layered
+- hierarchical
+- network
 structural_topology:
-  directionality: Unidirectional (Leader to Followers)
-  feedback_loops: Heartbeats and AppendEntries responses
+  directionality: Leader-directed
+  feedback_loops: Heartbeat and AppendEntries
   roles:
   - Leader
   - Follower
   - Candidate
-  scale: Local (cluster-level)
-  time_horizon: Reactive (immediate consistency)
+  scale: Institutional (cluster)
+  time_horizon: Short-term/Real-time

@@ -1,44 +1,63 @@
-description: Organisms must constantly adapt, evolve, and proliferate not merely to
-  gain reproductive advantage, but also simply to survive while pitted against ever-evolving
-  opposing organisms in an ever-changing environment.
+coverage:
+  breadth_score: 0.7
+  convergent_discoveries:
+  - concept: co_evolutionary_arms_race
+    found_in: axelrod_cooperation
+    local_name: tit_for_tat_vs_nasty_strategies
+  - concept: continuous_adaptation_requirement
+    found_in: adaptive_immune_system
+    local_name: somatic_hypermutation_vs_pathogen_evolution
+  - concept: zero_sum_evolutionary_competition
+    found_in: ess_evolutionary_stable_strategy
+    local_name: invasion_resistance_dynamics
+  coverage_type: framework
+  depth_score: 0.75
+  fstar_dimensions_covered:
+  - adversarial_alignment
+  - resource_pressure
+  fstar_refinements:
+  - continuous_adaptation_requirement_in_adversarial_systems
+  novel_concepts:
+  - Co-evolution
+  - Evolutionary Arms Race
+description: The hypothesis that organisms must constantly adapt, evolve, and proliferate
+  simply to survive while pitted against ever-evolving opposing organisms.
+distortion_profile:
+  actor_autonomy: 0.2
+  actor_count_regime: massive
+  actor_intentionality: reflexive
+  boundary_domains:
+  - Biology
+  - Game Theory
+  - Military Strategy
+  emergent_problems:
+  - Stasis-induced extinction
+  incentive_legibility: 0.7
+  intersection_type: evolutionary
+  physical_constraints:
+  - resource scarcity
+  resource_dynamics: zero-sum
+  resource_type: fitness
+  thermodynamic_regime: medium/biological
 domain: Evolutionary Biology
-falsifiability_note: Predicts that species that stop evolving will quickly go extinct
-  even if their physical environment remains static.
+f_star_coordinates:
+  actor_complexity: 0.3
+  boundary_permeability: 0.6
+  coupling_tightness: 0.8
+  information_asymmetry: 0.4
+  resource_pressure: 1.0
+  time_pressure: 0.9
+falsifiability_note: Predicts that a species that stops evolving in an environment
+  with evolving competitors will quickly go extinct.
 id: red_queen_hypothesis
 key_refs:
-- Van Valen, L. (1973). A New Evolutionary Law.
+- 'Van Valen, L. (1973). A New Evolutionary Law.'
 known_failure_modes:
-- Abiotic extinction drivers
-- Stable niches with low competition
+- Resource exhaustion
+- Absolute fitness decline
+- Mutual extinction
 name: Red Queen Hypothesis
 scale_level: universal
-f_star_coordinates:
-  resource_pressure: 0.95
-  actor_complexity: 0.3
-  information_asymmetry: 0.75
-  coupling_tightness: 0.9
-  time_pressure: 0.65
-  boundary_permeability: 0.8
-distortion_profile:
-  resource_type: reproductive success/fitness
-  resource_dynamics: continuous adversarial
-  thermodynamic_regime: medium
-  physical_constraints: [mutation rate, generation time]
-  actor_intentionality: reflexive
-  actor_count_regime: massive
-  actor_autonomy: 0.5
-  incentive_legibility: 0.2
-  boundary_domains: [evolutionary_biology, game_theory]
-  emergent_problems: [arms race, zero net gain]
-  intersection_type: competitive
-coverage:
-  coverage_type: framework
-  fstar_dimensions_covered: [resource_pressure, adversarial_alignment, time_pressure]
-  breadth_score: 0.7
-  depth_score: 0.8
-  novel_concepts: [evolutionary_arms_race, zero_sum_adaptation]
-  convergent_discoveries: []
-  fstar_refinements: [continuous_adaptation_requirement_in_adversarial_systems]
 structural_tags:
 - evolutionary
 - adversarial
@@ -48,9 +67,7 @@ structural_topology:
   directionality: Co-evolutionary feedback
   feedback_loops: Arms race (Adaptation-Counteradaptation)
   roles:
-  - Host
-  - Parasite
-  - Predator
-  - Prey
-  scale: Global (Ecosystem)
-  time_horizon: Continuous
+  - Species A
+  - Species B (Competitor/Parasite)
+  scale: Universal
+  time_horizon: Continuous/Evolutionary

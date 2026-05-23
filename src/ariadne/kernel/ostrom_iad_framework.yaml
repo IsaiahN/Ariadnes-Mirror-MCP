@@ -26,7 +26,8 @@ coverage:
   - Action Arena
   - Rules-in-use
   - Working Rules
-description: A framework for analyzing how institutions (rules, norms, and shared strategies) affect the incentives and behaviors of actors in collective action situations.
+description: A framework for analyzing how institutions (rules, norms, and shared
+  strategies) affect the incentives and behaviors of actors in collective action situations.
 distortion_profile:
   actor_autonomy: 0.8
   actor_count_regime: medium
@@ -51,7 +52,9 @@ f_star_coordinates:
   information_asymmetry: 0.7
   resource_pressure: 0.8
   time_pressure: 0.5
-falsifiability_note: Predicts that a change in any of the seven rule types (boundary, position, choice, etc.) will result in a predictable shift in participant incentives and outcomes.
+falsifiability_note: Predicts that a change in any of the seven rule types (boundary,
+  position, choice, etc.) will result in a predictable shift in participant incentives
+  and outcomes.
 id: ostrom_iad_framework
 key_refs:
 - 'Ostrom, E. (2005). Understanding Institutional Diversity.'
