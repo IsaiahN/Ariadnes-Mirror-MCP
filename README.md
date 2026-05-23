@@ -6,7 +6,7 @@
 
 **Most hard problems remain hard because their solutions may already exist in another field, under a different name, invisible to keyword search.**
 
-Problems share deep structures: trade-offs, bottlenecks, incentive traps, search landscapes. Different fields have found heuristics for them, but jargon hides the commonality. Ariadne's Mirror maps your problem's skeleton to skeletons in other domains.
+Problems share deep structures: trade-offs, bottlenecks, incentive traps, search landscapes. Different fields have found heuristics for them, but jargon hides the commonality. Ariadne's Mirror acts as a looking glass that maps your problem's core structure to other domains.
 
 It doesn't give you the answer, but it does provide an analogical bridge that you can walk and validate.
 
