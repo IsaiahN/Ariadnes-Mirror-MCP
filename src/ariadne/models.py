@@ -40,4 +40,3 @@ class Hypothesis(BaseModel):
     novelty_score: float
     falsifiability_score: float
     final_score: float
-    confidence_interval: Tuple[float, float]

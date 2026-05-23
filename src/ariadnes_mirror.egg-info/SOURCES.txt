@@ -2,10 +2,12 @@ README.md
 pyproject.toml
 src/ariadne/__init__.py
 src/ariadne/ai.py
+src/ariadne/api.py
 src/ariadne/cli.py
 src/ariadne/config.py
 src/ariadne/engine.py
 src/ariadne/extractor.py
+src/ariadne/mcp_server.py
 src/ariadne/models.py
 src/ariadne/persistence.py
 src/ariadnes_mirror.egg-info/PKG-INFO

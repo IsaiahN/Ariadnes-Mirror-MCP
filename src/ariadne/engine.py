@@ -123,7 +123,7 @@ class AriadneEngine:
 
         theory = next((t for t in self.theories if t.id == theory_id), None)
         if not theory:
-            return
+            raise KeyError(f"Theory with ID '{theory_id}' not found.")
 
         normalized_rating = (rating - 1) / 4.0
         n = theory.n_uses
@@ -201,6 +201,13 @@ OUTPUT JSON format:
 
             data = json.loads(json_match.group())
 
+            structural_similarity = data["overall_score"] / 10.0
+            novelty_score = data["novelty_score"]
+            falsifiability_score = data["falsifiability_score"]
+
+            # final_score = (structural_similarity * 0.5 + novelty_score * 0.25 + falsifiability_score * 0.25) * theory.credibility_score
+            final_score = (structural_similarity * 0.5 + novelty_score * 0.25 + falsifiability_score * 0.25) * theory.credibility_score
+
             return Hypothesis(
                 source_theory_id=theory.id,
                 target_domain_name=target_profile.name,
@@ -210,11 +217,10 @@ OUTPUT JSON format:
                 testable_prediction=data["testable_prediction"],
                 failure_conditions=data["failure_conditions"],
                 falsification_path=data["falsification_path"],
-                structural_similarity=data["overall_score"] / 10.0,
-                novelty_score=data["novelty_score"],
-                falsifiability_score=data["falsifiability_score"],
-                final_score=data["overall_score"] / 10.0, # Simple for now
-                confidence_interval=(0.6, 0.9) # Placeholder
+                structural_similarity=structural_similarity,
+                novelty_score=novelty_score,
+                falsifiability_score=falsifiability_score,
+                final_score=final_score
             )
         except Exception as e:
             print(f"Error during LLM comparison for {theory.name}: {e}")
@@ -231,8 +237,7 @@ OUTPUT JSON format:
                 structural_similarity=0.0,
                 novelty_score=0.0,
                 falsifiability_score=0.0,
-                final_score=0.0,
-                confidence_interval=(0.0, 0.0)
+                final_score=0.0
             )
 
     @property

@@ -47,6 +47,7 @@ def analyze(domain, description):
     # Save session
     session_id = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     session_path = os.path.join(engine.storage_dir, f"sessions/session_{session_id}.json")
+    os.makedirs(os.path.dirname(session_path), exist_ok=True)
     with open(session_path, 'w') as f:
         json.dump([h.model_dump() for h in hypotheses], f, indent=2)
 
@@ -70,14 +71,14 @@ def list_library():
 
 @main.command()
 @click.option('--theory', required=True, help='Theory ID')
-@click.option('--rating', required=True, type=int, help='Rating (1-5)')
+@click.option('--rating', required=True, type=click.IntRange(1, 5), help='Rating (1-5)')
 def feedback(theory, rating):
     """Provide feedback on a theory to update its credibility."""
     engine = AriadneEngine()
     try:
         engine.update_credibility(theory, rating)
         click.echo(f"Feedback recorded for {theory}.")
-    except ValueError as e:
+    except (ValueError, KeyError) as e:
         click.echo(f"Error: {e}")
 
 if __name__ == '__main__':

@@ -1,12 +1,17 @@
 import os
-os.environ["OPENROUTER_API_KEY"] = "sk-test"
-from unittest.mock import MagicMock, patch
+import pytest
 import json
+from unittest.mock import MagicMock, patch
 from ariadne.cli import analyze
 from click.testing import CliRunner
 
+@pytest.fixture(autouse=True)
+def setup_env():
+    os.environ["OPENROUTER_API_KEY"] = "sk-test"
+
 @patch("ariadne.ai.OpenAI")
-def test_analyze_flow(mock_openai_class):
+def test_analyze_flow(mock_openai_class, tmp_path):
+    os.environ["ARIADNE_STORAGE_DIR"] = str(tmp_path)
     # Mock OpenAI client
     mock_client = MagicMock()
     mock_openai_class.return_value = mock_client
@@ -59,6 +64,3 @@ def test_analyze_flow(mock_openai_class):
     storage_dir = os.path.expanduser("~/.ariadne")
     assert os.path.exists(os.path.join(storage_dir, "domains/test_domain.json"))
     assert len(os.listdir(os.path.join(storage_dir, "sessions"))) > 0
-
-if __name__ == "__main__":
-    test_analyze_flow()

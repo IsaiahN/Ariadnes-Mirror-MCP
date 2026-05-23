@@ -25,3 +25,4 @@ test = [
 
 [project.scripts]
 ariadne = "ariadne.cli:main"
+ariadne-mcp = "ariadne.mcp_server:mcp.run"
