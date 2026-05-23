@@ -1,4 +1,4 @@
-from typing import List, Dict, Tuple, Optional, Literal, Any
+from typing import List, Dict, Optional, Literal, Any
 from pydantic import BaseModel, Field
 
 class ScaleLevel(BaseModel):

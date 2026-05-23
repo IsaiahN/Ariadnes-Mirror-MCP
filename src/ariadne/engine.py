@@ -6,7 +6,6 @@ import pickle
 import re
 import numpy as np
 from typing import List, Optional, Dict
-from importlib import resources
 from .models import Theory, DomainProfile, Hypothesis, FailureMode, DistortionProfile, SubtractiveAnalysis, DomainIntersection
 from .persistence import TheoryStateManager, ThreadStateManager
 from .config import settings
