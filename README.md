@@ -19,8 +19,7 @@ Ariadne's Mirror:
 4. Identifies emergent failure modes specific to the transfer
 5. Refines hypotheses using partial theories as precision instruments
 
-The core claim is modest: two domains that share structural fingerprints 
-may yield transferable insights. The outputs are hypotheses, not answers.
+Two domains that share structural fingerprints may yield transferable insights. The outputs provide direction and shape structural connections that point toward where answers might exist and what form they might take, giving you something concrete to follow up with and validate.
 
 ## Architecture
 
