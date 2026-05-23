@@ -153,11 +153,6 @@ Dissipative Structures, Autopoiesis, Bateson's Ecology of Mind.
 
 ### The F* Hypothesis
 
-Most hard problems stay hard because the people working on them don't know 
-that someone else already solved a structurally identical problem in a 
-completely different field under a different name, with different 
-vocabulary, invisible to any keyword search.
-
 The F* hypothesis is that coordination problems across all domains, how 
 bounded agents manage shared resources under uncertainty, share deep 
 structural regularities that persist after you strip away domain-specific 
