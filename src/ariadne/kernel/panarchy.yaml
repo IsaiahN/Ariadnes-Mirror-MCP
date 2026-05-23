@@ -11,6 +11,37 @@ known_failure_modes:
 - Rigidity traps
 - Poverty traps
 name: Panarchy
+scale_level: universal
+f_star_coordinates:
+  resource_pressure: 0.7
+  actor_complexity: 0.6
+  information_asymmetry: 0.4
+  coupling_tightness: 0.65
+  time_pressure: 0.2
+  boundary_permeability: 0.85
+distortion_profile:
+  resource_type: adaptive capacity/capital
+  resource_dynamics: multiscale cyclic
+  thermodynamic_regime: slow
+  physical_constraints: [scale hierarchy, connectivity]
+  actor_intentionality: reflexive/strategic
+  actor_count_regime: massive
+  actor_autonomy: 0.6
+  incentive_legibility: 0.3
+  boundary_domains: [ecology, institutional_theory]
+  emergent_problems: [rigidity trap, revolt, remember]
+  intersection_type: symbiotic
+coverage:
+  coverage_type: blueprint
+  fstar_dimensions_covered: [boundary_permeability, coupling_tightness, resource_pressure]
+  breadth_score: 0.9
+  depth_score: 0.7
+  novel_concepts: [adaptive_cycle, revolt_and_remember, cross_scale_nestedness]
+  convergent_discoveries:
+    - concept: cross_scale_nestedness
+      found_in: ostrom_polycentric_governance
+      local_name: nested_enterprise
+  fstar_refinements: [multi_scale_recursive_adaptation]
 structural_tags:
 - cyclic
 - hierarchical

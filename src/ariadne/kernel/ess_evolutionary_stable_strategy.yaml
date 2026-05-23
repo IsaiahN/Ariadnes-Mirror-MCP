@@ -11,6 +11,34 @@ known_failure_modes:
 - Changing environments
 - Non-transitive interactions
 name: Evolutionary Stable Strategy (ESS)
+scale_level: universal
+f_star_coordinates:
+  resource_pressure: 0.8
+  actor_complexity: 0.5
+  information_asymmetry: 0.6
+  coupling_tightness: 0.7
+  time_pressure: 0.4
+  boundary_permeability: 0.8
+distortion_profile:
+  resource_type: fitness payoffs
+  resource_dynamics: frequency-dependent
+  thermodynamic_regime: slow
+  physical_constraints: [reproduction rate, inheritance fidelity]
+  actor_intentionality: reflexive
+  actor_count_regime: massive
+  actor_autonomy: 0.6
+  incentive_legibility: 0.1
+  boundary_domains: [game_theory, biology]
+  emergent_problems: [suboptimal equilibrium, invasion]
+  intersection_type: competitive
+coverage:
+  coverage_type: framework
+  fstar_dimensions_covered: [resource_pressure, actor_complexity]
+  breadth_score: 0.6
+  depth_score: 0.9
+  novel_concepts: [evolutionary_stability, frequency_dependence]
+  convergent_discoveries: []
+  fstar_refinements: [stability_conditions_for_decentralized_strategies]
 structural_tags:
 - evolutionary
 - adversarial

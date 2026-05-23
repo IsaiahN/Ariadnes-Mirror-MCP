@@ -10,6 +10,34 @@ known_failure_modes:
 - Halting problem
 - Computational complexity limits
 name: Lambda Calculus
+scale_level: subatomic
+f_star_coordinates:
+  resource_pressure: 0.2
+  actor_complexity: 0.0
+  information_asymmetry: 0.1
+  coupling_tightness: 0.95
+  time_pressure: 0.0
+  boundary_permeability: 0.05
+distortion_profile:
+  resource_type: reduction steps
+  resource_dynamics: deterministic
+  thermodynamic_regime: static
+  physical_constraints: [syntax, recursion depth]
+  actor_intentionality: none
+  actor_count_regime: few
+  actor_autonomy: 0.0
+  incentive_legibility: 1.0
+  boundary_domains: [logic, programming_languages]
+  emergent_problems: [unbound variables, non-termination]
+  intersection_type: cooperative
+coverage:
+  coverage_type: partial
+  fstar_dimensions_covered: [coupling_tightness]
+  breadth_score: 0.1
+  depth_score: 1.0
+  novel_concepts: [beta_reduction, church_encoding]
+  convergent_discoveries: []
+  fstar_refinements: [pure_functional_decomposition_of_logic]
 structural_tags:
 - modular
 - hierarchical

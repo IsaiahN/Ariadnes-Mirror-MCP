@@ -36,8 +36,14 @@ class ThreadStateManager:
         return theories
 
     def save_candidate_evaluation(self, name: str, evaluation: dict):
-        # Implementation placeholder
-        pass
+        eval_path = os.path.join(self.thread_dir, "candidates.jsonl")
+        entry = {
+            "name": name,
+            "evaluation": evaluation,
+            "timestamp": datetime.datetime.now().isoformat()
+        }
+        with open(eval_path, 'a') as f:
+            f.write(json.dumps(entry) + "\n")
 
 class TheoryStateManager:
     def __init__(self):

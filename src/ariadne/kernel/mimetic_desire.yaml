@@ -11,6 +11,34 @@ known_failure_modes:
 - Strong individualistic values
 - External mediation
 name: Mimetic Desire
+scale_level: civilizational
+f_star_coordinates:
+  resource_pressure: 0.75
+  actor_complexity: 0.85
+  information_asymmetry: 0.65
+  coupling_tightness: 0.8
+  time_pressure: 0.4
+  boundary_permeability: 0.95
+distortion_profile:
+  resource_type: social status/prestige
+  resource_dynamics: zero-sum/rivalrous
+  thermodynamic_regime: slow
+  physical_constraints: [social network topology, visibility]
+  actor_intentionality: strategic
+  actor_count_regime: massive
+  actor_autonomy: 0.7
+  incentive_legibility: 0.2
+  boundary_domains: [anthropology, literature]
+  emergent_problems: [mimetic rivalry, scapegoating]
+  intersection_type: competitive
+coverage:
+  coverage_type: framework
+  fstar_dimensions_covered: [actor_complexity, resource_pressure, boundary_permeability]
+  breadth_score: 0.45
+  depth_score: 0.7
+  novel_concepts: [triadic_desire, mimetic_rivalry, scapegoat_mechanism]
+  convergent_discoveries: []
+  fstar_refinements: [conflict_emergence_through_actor_convergence]
 structural_tags:
 - adversarial
 - network

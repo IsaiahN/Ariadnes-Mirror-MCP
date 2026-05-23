@@ -10,6 +10,34 @@ known_failure_modes:
 - Small-scale fluctuations (Maxwell's Demon)
 - Non-isolated systems (Life)
 name: Second Law of Thermodynamics
+scale_level: subatomic
+f_star_coordinates:
+  resource_pressure: 1.0
+  actor_complexity: 0.0
+  information_asymmetry: 0.0
+  coupling_tightness: 1.0
+  time_pressure: 0.2
+  boundary_permeability: 0.0
+distortion_profile:
+  resource_type: free energy/exergy
+  resource_dynamics: terminal/decay
+  thermodynamic_regime: universal
+  physical_constraints: [conservation of energy, entropy increase]
+  actor_intentionality: none
+  actor_count_regime: massive
+  actor_autonomy: 0.0
+  incentive_legibility: 1.0
+  boundary_domains: [physics, chemistry]
+  emergent_problems: [heat death, dissipation]
+  intersection_type: competitive
+coverage:
+  coverage_type: partial
+  fstar_dimensions_covered: [resource_pressure, coupling_tightness]
+  breadth_score: 0.1
+  depth_score: 1.0
+  novel_concepts: [entropy, time_arrow]
+  convergent_discoveries: []
+  fstar_refinements: [irreducible_efficiency_limits_of_coordination]
 structural_tags:
 - evolutionary
 - cyclic

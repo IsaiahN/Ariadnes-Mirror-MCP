@@ -211,7 +211,6 @@ OUTPUT JSON format:
             novelty_score = data["novelty_score"]
             falsifiability_score = data["falsifiability_score"]
 
-            # final_score = (structural_similarity * 0.5 + novelty_score * 0.25 + falsifiability_score * 0.25) * theory.credibility_score
             final_score = (structural_similarity * 0.5 + novelty_score * 0.25 + falsifiability_score * 0.25) * theory.credibility_score
 
             active_dims = [dim for dim, score in [
@@ -527,6 +526,7 @@ OUTPUT JSON list of objects for residue_components.
         """
         Full intersection analysis pipeline (Orchestration placeholder).
         """
+        from .models import InterfaceSpec
         return DomainIntersection(
             domain_a=domain_a.name,
             domain_b=domain_b.name,
@@ -538,8 +538,8 @@ OUTPUT JSON list of objects for residue_components.
             tension_fstar_coordinates={},
             subsidiary_tensions=[],
             analog_domains=[],
-            interface_a_side={"domain": domain_a.name, "interface_requirements": [], "must_expose": [], "must_accept": [], "must_encapsulate": [], "exchange_protocol": "", "failure_modes": []},
-            interface_b_side={"domain": domain_b.name, "interface_requirements": [], "must_expose": [], "must_accept": [], "must_encapsulate": [], "exchange_protocol": "", "failure_modes": []},
+            interface_a_side=InterfaceSpec(domain=domain_a.name, interface_requirements=[], must_expose=[], must_accept=[], must_encapsulate=[], exchange_protocol="", failure_modes=[]),
+            interface_b_side=InterfaceSpec(domain=domain_b.name, interface_requirements=[], must_expose=[], must_accept=[], must_encapsulate=[], exchange_protocol="", failure_modes=[]),
             invariant_transferrables=[]
         )
 

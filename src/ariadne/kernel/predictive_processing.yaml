@@ -11,6 +11,34 @@ known_failure_modes:
 - Schizophrenia/Hallucinations (over-weighting priors)
 - Sensory deprivation
 name: Predictive Processing
+scale_level: organism
+f_star_coordinates:
+  resource_pressure: 0.5
+  actor_complexity: 0.9
+  information_asymmetry: 0.3
+  coupling_tightness: 0.9
+  time_pressure: 0.95
+  boundary_permeability: 0.75
+distortion_profile:
+  resource_type: evidence/prediction-error
+  resource_dynamics: continuous stream
+  thermodynamic_regime: fast
+  physical_constraints: [metabolic cost of inference, neural bandwidth]
+  actor_intentionality: deliberate
+  actor_count_regime: massive (neuronal)
+  actor_autonomy: 0.3
+  incentive_legibility: 0.9
+  boundary_domains: [neuroscience, philosophy of mind]
+  emergent_problems: [precision-weighting failure, hallucination]
+  intersection_type: cooperative
+coverage:
+  coverage_type: framework
+  fstar_dimensions_covered: [actor_complexity, coupling_tightness, time_pressure]
+  breadth_score: 0.6
+  depth_score: 0.9
+  novel_concepts: [active_inference, precision_weighting, error_minimization]
+  convergent_discoveries: []
+  fstar_refinements: [hierarchical_coordination_via_error_minimization]
 structural_tags:
 - predictive
 - layered

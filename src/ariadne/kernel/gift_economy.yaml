@@ -11,6 +11,34 @@ known_failure_modes:
 - Obligation traps
 - Commodification
 name: Gift Economy
+scale_level: social
+f_star_coordinates:
+  resource_pressure: 0.3
+  actor_complexity: 0.8
+  information_asymmetry: 0.2
+  coupling_tightness: 0.6
+  time_pressure: 0.4
+  boundary_permeability: 0.9
+distortion_profile:
+  resource_type: social capital/trust
+  resource_dynamics: circular/non-linear
+  thermodynamic_regime: slow
+  physical_constraints: [memory limits, kinship density]
+  actor_intentionality: strategic (social)
+  actor_count_regime: few to many
+  actor_autonomy: 1.0
+  incentive_legibility: 0.1
+  boundary_domains: [anthropology, economics]
+  emergent_problems: [status competition, debt traps]
+  intersection_type: cooperative
+coverage:
+  coverage_type: framework
+  fstar_dimensions_covered: [boundary_permeability, actor_complexity]
+  breadth_score: 0.35
+  depth_score: 0.75
+  novel_concepts: [generalized_reciprocity, obligation_loops]
+  convergent_discoveries: []
+  fstar_refinements: [non-monetary_resource_coordination_in_high_trust_clusters]
 structural_tags:
 - peer-to-peer
 - cooperative

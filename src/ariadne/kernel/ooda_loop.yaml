@@ -11,6 +11,34 @@ known_failure_modes:
 - Mis-orientation due to bias
 - Feedback delay
 name: OODA Loop
+scale_level: organism
+f_star_coordinates:
+  resource_pressure: 0.8
+  actor_complexity: 0.95
+  information_asymmetry: 0.9
+  coupling_tightness: 0.85
+  time_pressure: 1.0
+  boundary_permeability: 0.7
+distortion_profile:
+  resource_type: time/decision-advantage
+  resource_dynamics: real-time competitive
+  thermodynamic_regime: very_fast
+  physical_constraints: [sensory limits, communication delay]
+  actor_intentionality: strategic
+  actor_count_regime: few
+  actor_autonomy: 0.95
+  incentive_legibility: 0.8
+  boundary_domains: [military_science, cognitive_science]
+  emergent_problems: [disorientation, tactical surprise]
+  intersection_type: competitive
+coverage:
+  coverage_type: framework
+  fstar_dimensions_covered: [time_pressure, actor_complexity, information_asymmetry]
+  breadth_score: 0.5
+  depth_score: 0.9
+  novel_concepts: [observe_orient_decide_act, fast_transients]
+  convergent_discoveries: []
+  fstar_refinements: [iterative_model_update_under_adversarial_time_pressure]
 structural_tags:
 - cyclic
 - predictive

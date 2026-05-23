@@ -11,6 +11,34 @@ known_failure_modes:
 - Abiotic extinction drivers
 - Stable niches with low competition
 name: Red Queen Hypothesis
+scale_level: universal
+f_star_coordinates:
+  resource_pressure: 0.95
+  actor_complexity: 0.3
+  information_asymmetry: 0.75
+  coupling_tightness: 0.9
+  time_pressure: 0.65
+  boundary_permeability: 0.8
+distortion_profile:
+  resource_type: reproductive success/fitness
+  resource_dynamics: continuous adversarial
+  thermodynamic_regime: medium
+  physical_constraints: [mutation rate, generation time]
+  actor_intentionality: reflexive
+  actor_count_regime: massive
+  actor_autonomy: 0.5
+  incentive_legibility: 0.2
+  boundary_domains: [evolutionary_biology, game_theory]
+  emergent_problems: [arms race, zero net gain]
+  intersection_type: competitive
+coverage:
+  coverage_type: framework
+  fstar_dimensions_covered: [resource_pressure, adversarial_alignment, time_pressure]
+  breadth_score: 0.7
+  depth_score: 0.8
+  novel_concepts: [evolutionary_arms_race, zero_sum_adaptation]
+  convergent_discoveries: []
+  fstar_refinements: [continuous_adaptation_requirement_in_adversarial_systems]
 structural_tags:
 - evolutionary
 - adversarial

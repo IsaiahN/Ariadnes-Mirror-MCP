@@ -7,7 +7,7 @@ coverage:
   - concept: nested_enterprise
     found_in: panarchy
     local_name: cross_scale_adaptive_cycle
-  coverage_type: framework
+  coverage_type: blueprint
   depth_score: 0.8
   fstar_dimensions_covered:
   - resource_pressure

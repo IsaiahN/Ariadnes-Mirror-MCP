@@ -12,6 +12,34 @@ known_failure_modes:
 - Lack of shared vocabulary
 - Domination by a single agent
 name: Jazz Improvisation
+scale_level: organism
+f_star_coordinates:
+  resource_pressure: 0.4
+  actor_complexity: 0.9
+  information_asymmetry: 0.2
+  coupling_tightness: 0.8
+  time_pressure: 0.9
+  boundary_permeability: 0.6
+distortion_profile:
+  resource_type: attention/sonic-space
+  resource_dynamics: real-time
+  thermodynamic_regime: fast
+  physical_constraints: [acoustic limits, reaction time]
+  actor_intentionality: strategic
+  actor_count_regime: few
+  actor_autonomy: 0.9
+  incentive_legibility: 0.9
+  boundary_domains: [musicology, cognitive_psychology]
+  emergent_problems: [clashing, rhythmic drift]
+  intersection_type: cooperative
+coverage:
+  coverage_type: framework
+  fstar_dimensions_covered: [actor_complexity, coupling_tightness, time_pressure]
+  breadth_score: 0.4
+  depth_score: 0.85
+  novel_concepts: [call_and_response, shared_vocabulary_divergence]
+  convergent_discoveries: []
+  fstar_refinements: [real_time_peer_coordination_without_leader]
 structural_tags:
 - peer-to-peer
 - distributed

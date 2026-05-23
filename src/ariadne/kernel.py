@@ -19,6 +19,7 @@ class KernelManager:
         # We don't raise on first run if manifest is missing, we'll build it.
         if os.path.exists(os.path.join(self.kernel_dir, "manifest.json")):
             self._verify_kernel_integrity()
+            self._manifest = self._load_manifest()
 
     def _verify_kernel_integrity(self):
         """
@@ -45,6 +46,21 @@ class KernelManager:
     def _compute_hash(self, path: str) -> str:
         with open(path, 'rb') as f:
             return hashlib.sha256(f.read()).hexdigest()
+
+    def _load_manifest(self) -> Optional[KernelManifest]:
+        manifest_path = os.path.join(self.kernel_dir, "manifest.json")
+        if os.path.exists(manifest_path):
+            with open(manifest_path, 'r') as f:
+                data = json.load(f)
+                return KernelManifest(
+                    version=data["version"],
+                    theories=[],  # loaded separately as full objects
+                    manifest_hash=data["manifest_hash"],
+                    primary_blueprints=data.get("primary_blueprints", []),
+                    known_fstar_gaps=data.get("known_fstar_gaps", []),
+                    curator_notes=data.get("curator_notes", "")
+                )
+        return None
 
     @property
     def theories(self) -> List[Theory]:

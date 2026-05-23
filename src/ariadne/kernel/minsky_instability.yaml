@@ -10,6 +10,34 @@ known_failure_modes:
 - Strong counter-cyclical regulation
 - Resource-constrained economies
 name: Minsky Instability Hypothesis
+scale_level: institutional
+f_star_coordinates:
+  resource_pressure: 0.65
+  actor_complexity: 0.8
+  information_asymmetry: 0.5
+  coupling_tightness: 0.85
+  time_pressure: 0.55
+  boundary_permeability: 0.6
+distortion_profile:
+  resource_type: financial credit/liquidity
+  resource_dynamics: pro-cyclical expansion
+  thermodynamic_regime: medium
+  physical_constraints: [monetary policy, banking infrastructure]
+  actor_intentionality: strategic
+  actor_count_regime: many
+  actor_autonomy: 0.9
+  incentive_legibility: 0.4
+  boundary_domains: [macroeconomics, psychology]
+  emergent_problems: [ponzi finance, market crash]
+  intersection_type: competitive
+coverage:
+  coverage_type: framework
+  fstar_dimensions_covered: [coupling_tightness, resource_pressure, time_pressure]
+  breadth_score: 0.4
+  depth_score: 0.8
+  novel_concepts: [minsky_moment, financial_fragility_spectrum]
+  convergent_discoveries: []
+  fstar_refinements: [endogenous_emergence_of_instability_from_stability]
 structural_tags:
 - cyclic
 - evolutionary

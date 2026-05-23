@@ -14,6 +14,34 @@ known_failure_modes:
 - Client dropouts
 - Communication bottlenecks
 name: Federated Learning
+scale_level: institutional
+f_star_coordinates:
+  resource_pressure: 0.6
+  actor_complexity: 0.2
+  information_asymmetry: 0.9
+  coupling_tightness: 0.4
+  time_pressure: 0.6
+  boundary_permeability: 0.8
+distortion_profile:
+  resource_type: model weights/gradients
+  resource_dynamics: iterative aggregation
+  thermodynamic_regime: medium/digital
+  physical_constraints: [compute power, network bandwidth]
+  actor_intentionality: none (protocol followers)
+  actor_count_regime: massive
+  actor_autonomy: 0.8
+  incentive_legibility: 1.0
+  boundary_domains: [machine_learning, distributed_systems]
+  emergent_problems: [data heterogeneity, poisoning]
+  intersection_type: cooperative
+coverage:
+  coverage_type: framework
+  fstar_dimensions_covered: [information_asymmetry, boundary_permeability]
+  breadth_score: 0.4
+  depth_score: 0.9
+  novel_concepts: [local_data_privacy, gradient_averaging]
+  convergent_discoveries: []
+  fstar_refinements: [knowledge_synthesis_without_data_unification]
 structural_tags:
 - hub-spoke
 - peer-to-peer
