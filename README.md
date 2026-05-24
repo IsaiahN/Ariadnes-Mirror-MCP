@@ -8,7 +8,7 @@
 
 Problems share deep structures: trade-offs, bottlenecks, incentive traps, search landscapes. Different fields have found heuristics for them, but jargon hides the commonality. Ariadne's Mirror acts as a looking glass that maps your problem's core structure to other domains.
 
-It doesn't give you the answer, but it does provide an analogical bridge that you can walk and validate.
+It doesn't give you the answer, but it does provide an analogical bridge that you can traverse and validate.
 
 Where a researcher brings only one career of cross-domain reading, this brings a
 mapped library of theories across physics, biology, economics, computer
